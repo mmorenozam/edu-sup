@@ -23,7 +23,7 @@ callout-appearance: simple
 
 ## Quarto
 
-por la gran pukta
+por la gran pukta que chuckasdk 
 
 ## Running Code
 
