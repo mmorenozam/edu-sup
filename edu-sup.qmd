@@ -1,5 +1,5 @@
 ---
-title: "TBD"
+logo: images/icon1_nb.png
 lang: es
 format: 
   letterbox-revealjs:
