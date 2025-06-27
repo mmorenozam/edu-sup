@@ -17,27 +17,1613 @@ format:
       buttons: false
     revealjs-plugins:
       - pointer
+            
       
 callout-appearance: simple
 ---
 
-## Quarto
-
-por la gran pukta que chuckasdk 
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
 ```{r}
-1 + 1
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+source("00_Auxiliares.R")
+
 ```
 
-You can add options to executable code like this 
+## Nota Aclaratoria {.smaller}
+
+
+:::{.v-center-container}
+-   Esta presentación constituye un análisis semi-cuantitativo de la situación de la Educación Superior en el Ecuador con enfoque en el impacto de:
+
+    -   La Ley Orgánica de Educación Superior (LOES) en la profesionalización de la carrera docente,
+
+    -   Los programas de becas de la SENESCYT,
+    
+    -   Y, los vacíos de información para su mejora.
+
+-   Esta **NO** representa una opinión política, sino un comentario académico basado en los datos abiertos disponibles y su análisis.
+
+-   Tampoco representa un análisis jurídico profundo (no soy experto en leyes, sino un Estadístico), y el marco legal será brevemente mencionado para contextualizar las conclusiones a las que llegaré.
+:::
+
+::: notes
+
+lagrimas de hombrue
+
+:::
+
+## Fuentes de datos
+
+:::{.v-center-container}
+-   Base estadística de docentes UEP 2015 - 2022 (SENESCYT)
+
+-   Base de datos de Becarios actualizada agosto 2024 (SENESCYT)
+
+-   Base estadística de matrícula de UEP 2015 - 2023 (SENESCYT)
+
+-   Base de datos de oferta académica de las IES (SENESCYT)
+
+-   Base de datos de oferta académica vigente de las IES (CES)
+
+-   Encuesta ACTI (2012 - 2014) (SENESCYT - INEC)
+
+<!-- -   Boletín Anual: Educación superior, ciencia, tecnología e innovación 2020 (SENESCYT) -->
+
+<!-- -   Presentación "Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras", Julio 2020 (SENESCYT) -->
+
+
+
+<!-- -   Propuesta de indicadores de seguimiento a graduados 2018 - 2020 (INEC) -->
+:::
+
+## Introducción
+
+```{r, fig.align="center"}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+
+crono |>
+  timeline_all()
+
+```
+
+# Érase una LOES...
+
+## La primera LOES {.smaller}
+
+::: center
+
+*Ecuador probablemente tiene las peores universidades en sudamérica*
+
+:::
+
+::: {.v-right}
+*Rafael Correa, 2012$^{†}$*
+:::
+
+::: incremental
+
+-   Antes del año 2000, no existía una ley orgánica específica para la educación superior.
+
+-   Cada universidad establecía sus propios criterios para la contratación de docentes (tercer nivel y experiencia profesional o académica).
+
+-   La autonomía universitaria permitía a las instituciones definir políticas de contratación, sin una normativa unificada.
+
+-   En el 2000, se implementó la primera Ley Orgánica de Educación Superior (LOES) que creó el Consejo Nacional de Educación Superior (CONESUP) como organismo de control.
+
+-   Sin embargo, cómo en el resto de América Latina, *las universidades contaban con profesionales trabajando a medio tiempo como docentes, los mismos que no investigaban ni tenían grados doctorales*$^{††}$.
+
+:::
+
+::: footer
+†[**Neuman, W. (2012), The New York Times**](https://www.nytimes.com/2012/03/19/world/americas/in-ecuador-garage-universities-are-bracing-for-reform.html){target="_blank"}
+
+†† [**Johnson, M., A. (2017), Ed. Pol. An. Arch. (68)**](https://epaa.asu.edu/index.php/epaa/article/view/2794){target="_blank"}
+
+.
+
+.
+:::
+
+
+##
 
 ```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010")) |>
+  timeline(anio = 2010)
+
+```
+
+## LOES de 2010 {.smaller}
+
+-   Con el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.
+
+-   Establece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.
+
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+tabla_resumen <- data.frame(`Categoría` = c("Titular Auxiliar", "Titular Agregado", "Titular Principal"),
+                            `Título` = c("Maestría (PhD opcional)", "Maestría (PhD opcional)", "PhD (exclusivamente)"),
+                            `Experiencia` = c("Mínima", "Media", "Alta"),
+                            `Producción científica` = c("Mínima", "Media", "Alta (de impacto)\nProyectos de investigación"))
+
+# knitr::kable(tabla_resumen)
+tabla_resumen |> flextable::flextable() |> flextable::autofit()
+
+```
+
+
+
+## LOES de 2010 {.smaller visibility="uncounted"}
+
+-   Con el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.
+
+-   Establece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.
+
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+tabla_resumen <- data.frame(`Categoría` = c("Titular Auxiliar", "Titular Agregado", "Titular Principal"),
+                            `Título` = c("Maestría (PhD opcional)", "Maestría (PhD opcional)", "PhD (exclusivamente)"),
+                            `Experiencia` = c("Mínima", "Media", "Alta"),
+                            `Producción científica` = c("Mínima", "Media", "Alta (de impacto)\nProyectos de investigación"))
+
+# knitr::kable(tabla_resumen)
+tabla_resumen |> flextable::flextable() |> flextable::autofit()
+
+```
+
+
+-   **No contamos con datos precisos** del número de profesores con PhD antes de la LOES (ó 2015 para ser más preciso), pero estimo que era alrededor de entre el 0.8\% al 1.8\% del total de 26476 en 2008$^{†}$.
+
+
+::: footer
+::: center
+† Los pocos datos disponibles son contradictorios. En el informe **Logros 2014** de la SENESCYT, se informó de 226 profesores con PhD en 2008, mientras Ramirez 
+
+en su libro de 2016 **"Universidad Urgente para una sociedad emancipada"**, reporta 482 tan solo en el sector público.
+
+.
+
+.
+:::
+::: 
+
+##
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.")) |>
+  timeline(anio = 2017)
+
+```
+
+## 13ra. Transitoria y CEAACES {.smaller}
+
+:::{.v-center-container}
+
+::: incremental
+-   Se entiende por tanto que bajo esta nueva LOES, se buscaba alcanzar una planta docente con mayor preparación, tanto así que
+
+-   En su Décima Tercera disposición transitoria establecía: **"El requisito de doctorado (...) exigido para ser profesor titular principal (...) será obligatorio luego de 7 años a partir de la vigencia de esta Ley. De no cumplirse esta condición, los profesores titulares principales perderán automáticamente esta condición."** <!-- -   Establece requisitos para ser **profesor titular  -->
+
+-   Y, adicionalmente creó el Consejo de Evaluación, Acreditación y Aseguramiento de la Calidad de la Educación Superior (CEAACES) que llevó a cabo un proceso de categorización de las universidades, estableciendo$^{†}$:
+
+    -   70\% de profesores con título de doctor PhD, para universidades orientadas a docencia e investigación.
+
+    -   40\% de profesores con título de doctor PhD, para universidades orientadas a la docencia, y
+    
+    -   60\% de profesores con título de doctor PhD, para universidades orientadas a la educación contínua.
+
+:::
+:::
+
+::: footer
+† Reglamento Transitorio para Tipología de Universidades (CEAACES, 2012)
+
+.
+
+.
+
+:::
+
+# El boom de becas
+
+
+##
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.", 
+                           "Proyecto de Fortalecimiento")) |>
+  timeline(anio = 2011)
+
+```
+
+
+## Proyecto de Fortalecimiento {.smaller}
+
+::: incremental
+
+-   En 2011, la SENESCYT crea el proyecto de "Fortalecimiento del Conocimiento y Talento Humano" (ligado a la política de la transformación de la matriz productiva).
+
+-   Su objetivo general fue el de "Fortalecer las capacidades y el talento de los/as ecuatorianos/as garantizando su acceso a educación superior de calidad, y de esta manera aportar al nuevo esquema de desarrollo del país."
+
+-   El tiempo de ejecución fue establecido en 14 años (2011 a 2024).
+
+-   Con una inversión proyectada de ~3000 millones de dólares.
+
+-   Al término de su implementación, se esperaba contar un total de 77003 becarios.
+
+-   Entre sus indicadores, destaco:
+
+    -   Al 2020, adjudicar 19000 becas para estudios de 4to. nivel en universidades (...) en el extranjero.
+    
+    -   Al 2020, adjudicar 4200 becas (...) de excelencia académica (...) en 3er. y 4to. nivel en los más prestigiosos centros de educación superior del mundo.
+    
+    -   Al 2020, contar con 4575 servidores públicos con formación de 4to. nivel en universidades (...) de excelencia académica en el país o en el extranjero
+
+:::
+
+##
+
+
+![](images/proyec1.png){fig-align="center"}
+
+
+::: footer
+Cuadro tomado del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2012
+
+.
+
+.
+:::
+
+# ()
+
+## Lo que el viento confundió {.smaller}
+
+En el Boletín Anual Educación superior, ciencia, tecnología e innovación 2020:
+
+::: columns
+
+:::{.column width="50%"}
+
+![Imagen tomada de Boletín Anual: Educación superior, ciencia, tecnología e innovación 2020 (SENESCYT)](images/titulares_2.png)
+
+
+:::
+
+:::{.column width="50%"}
+
+:::incremental
+
+-   Las categorías no reflejan el escalafón docente establecido por la LOES. En específico:
+
+    -   Los docentes **titulares agregados** "desaparecen", y
+    
+    -   Aparentemente los **titulares auxiliares** son considerados No titulares (?)
+
+-   Adicionalmente, este Boletín Anual no presenta cifras de la cantidad de profesores titulares principales con título de PhD, y
+
+-   De manera más preocupante, este es el único boletín anual disponible.
+
+
+:::
+:::
+:::
+
+## Lo que el viento confundió {.smaller visibility="uncounted"}
+
+Por otra parte, en la presentación "Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras":
+
+::: columns
+
+:::{.column width="50%"}
+
+![Imagen tomada de la presentación "Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras", Julio 2020, SENESCYT](images/titulares_1.png)
+
+:::
+
+:::{.column width="50%"}
+
+
+-   Las mismas cifras son presentadas de manera más genérica: **Titulares** y **No titulares**
+
+:::
+:::
+
+
+## Lo que el viento confundió {.smaller visibility="uncounted"}
+
+Por otra parte, en la presentación "Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras":
+
+::: columns
+
+:::{.column width="50%"}
+
+![Imagen tomada de la presentación "Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras", Julio 2020, SENESCYT](images/titulares_3.png)
+
+:::
+
+:::{.column width="50%"}
+
+
+-   Las mismas cifras son presentadas de manera más genérica: **Titulares** y **No titulares**
+    
+-   Pero al menos nos muestra el número de docentes Titulares con PhD.
+
+::: incremental
+
+-   En definitiva, cruzando la información de los documentos oficiales disponibles, no me quedó de otra que asumir que el titular agregado desaparece (por algún motivo ajeno a mi entendimiento) y el docente auxiliar no califica como titular, dejándonos dos categorías: 
+
+    -   Titulares (principales), y 
+    
+    -   No titulares (auxiliares y ocasionales)
+    
+-   Vale recalcar que estos son los únicos datos disponibles acerca del número de docentes titulares principales con grado de PhD.
+    
+:::
+:::
+:::
+
+
+
+
+
+<!-- ::: incremental -->
+
+<!-- -    -->
+
+
+
+<!-- -   Lamentablemente, inconsistencias como estas no son cosa rara en estadísticas oficiales y me permito comentar algunas de ellas (en otras instituciones, no específicamente la SENESCYT): -->
+
+<!--     -   Series de tiempo desactualizadas. -->
+
+<!--     -   Datos innacesibles. -->
+
+<!--     -   Fichas técnicas vagamente descritas. -->
+
+<!--     -   Datos inexistentes. -->
+
+<!-- -   Eso me deja a pensar que la mayoría de proyectos y políticas públicas se toman sin criterios técnicos -->
+
+
+<!-- -   La clasificación del CEAACES de universidades de docencia y docencia-investigación aparentemente fue usada en las evaluaciones de la primera categorización. De ahí, se pierde el rastro de qué sucedió (obviamente no tenemos esa clasificación actualmente). -->
+
+<!-- -   La LOES establece un escalafón docente que la SENESCYT no registra, y hasta se contradice en sus propios informes oficiales. -->
+
+
+# El plazo: 2017
+
+## {.smaller}
+
+![El Comercio, 11 de julio de 2017](images/prensa_1.png){fig-align="center"}
+
+![Teleamazonas, 17 de julio de 2017](images/prensa_2.png){fig-align="center"}
+
+## Docentes Titulares {.smaller}
+::: {.v-center-container}
+::: columns
+::: {.column width="50%"}
+::: incremental
+A medida que el plazo se acercaba:
+
+-   Redujeron el número de profesores titulares con respecto al total de docentes.
+    
+-   Aumentaron el número de profesores titulares con PhD con respecto al total de titulares.
+
+-   En términos prácticos, fue imposible:
+
+      -   Cumplir con la transitoria 13ra. de contar con 100\% de docentes titulares principales con nivel PhD hasta 2017, ó
+      
+      -   Cumplir el 70\%, 40\% o 60\% del total de la planta docente con PhD para ser universidad de docencia-investigación, docencia ó educación contínua, respectivamente como lo estipulaba el CEAACES. 
+:::
+:::
+::: {.column width="50%" }
+
+
+```{r, out.width="80%", fig.asp=0.8, fig.align="center"}
+#| eval: true
 #| echo: false
-2 * 2
+#| message: false
+#| warning: false
+
+
+ratas <- data.frame(rate = c(11826/32276, 10870/33440, 10195/32462,9608/35324,
+                             892/11826, 1097/10870, 1273/10195, 1555/9608),
+                    year = c(2015:2018, 2015:2018),
+                    clas = c(rep("% Titular/Total", 4), rep("% Titular con PhD/Total Titular", 4)))
+
+ratas |>
+  ggplot(aes(x = year, y = rate, color = clas))+
+  geom_point()+
+  geom_line()+
+  ggrepel::geom_label_repel(aes(label = scales::percent(rate, accuracy = 0.1)), size = 7)+
+  scale_y_continuous(label = scales::percent)+
+  theme_bw(base_size = 20)+
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  labs(x = "Año", title = "Porcentaje de profesores titulares y titulares con PhD", y = "%", color = "Clase",
+       caption = "Porcentajes calculados a partir de la presentación 'Educación Superior, Ciencia,\nTecnología, Innovación y Saberes Ancestrales en Cifras', SENESCYT, 2020")
+
+nummers <- data.frame(nummer = c(32276, 33440, 32462, 35324,
+                                 2424, 2960, 3382, 4125),
+                      year = c(2015:2018, 2015:2018),
+                      clas = c(rep("# Total docentes", 4), rep("# Docentes con PhD", 4)))
+
+plt2 <- nummers |>
+  ggplot(aes(x = year, y = nummer, color = clas))+
+  geom_point()+
+  geom_line()+
+  ggrepel::geom_label_repel(aes(label = nummer), size = 5)+
+  theme_bw(base_size = 16)+
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  labs(x = "Año", title = "Total de docentes y docentes con PhD", y = "#", color = "Clase",
+       caption = "Datos de la presentación 'Educación Superior, Ciencia,\nTecnología, Innovación y Saberes Ancestrales en Cifras', SENESCYT, 2020")
+
+
+```
+:::
+:::
+:::
+
+## Y, ¿los becarios?
+
+
+```{r, out.width="100%", fig.align="center"}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+df_raw_bec <- read.csv("datos/basedatosabiertos_becas270824.csv") |>
+  mutate(NIVEL_DETALLADO = recode(NIVEL_DETALLADO,
+                                  `DOCTORado` = "DOCTORADO",
+                                  `doctorado` = "DOCTORADO"))
+
+df_bec <- df_raw_bec |>
+  #filter(PROGRAMA_GENERAL == "PROGRAMA DE BECAS SENESCYT") |>
+  mutate(FECHA_INICIO_ESTUDIOS = as_date(FECHA_INICIO_ESTUDIOS, origin = "1899-12-30"),
+         FECHA_FIN_ESTUDIOS = as_date(FECHA_FIN_ESTUDIOS, origin = "1899-12-30"),
+         FECHA_DE_SUSCRIPCION = as_date(as.numeric(FECHA_DE_SUSCRIPCION), origin = "1899-12-30"),
+         #year_init = year(FECHA_DE_SUSCRIPCION),
+         year_init = year(FECHA_INICIO_ESTUDIOS),
+         year_fini = year(FECHA_FIN_ESTUDIOS),
+         duracion = interval(FECHA_INICIO_ESTUDIOS, FECHA_FIN_ESTUDIOS)/months(1),
+         IDENTIFICADOR_BECARIO = recode(IDENTIFICADOR_BECARIO,
+                                        `ok` = "OK")) |>
+  filter(IDENTIFICADOR_BECARIO == "OK")|>
+  filter(!SUBPROGRAMA %in% c("LINEA DE AYUDAS ECONOMICAS") & duracion >=12)
+
+
+plop1 <- df_bec |>
+  filter(NIVEL_DE_ESTUDIOS == "POSTGRADO" & 
+           NIVEL_DETALLADO != "POSTDOCTORADO" & 
+           NIVEL_DETALLADO != "ESPECIALIZACION" &
+           year_init <= 2018 &
+           year_init >= 2011) |>
+  #  filter(PROVINCIA_RESIDENCIA_HOMOLOGADA == "EXTERIOR") |>
+  group_by(NIVEL_DETALLADO, year_init) |>
+  summarise(nummer = n()) |>
+  ggplot(aes(x = year_init, y = nummer, color = NIVEL_DETALLADO))+
+  geom_line()+
+  geom_point()+
+  ggrepel::geom_label_repel(aes(label = nummer), size = 3)+
+  theme_bw(base_size = 12)+
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  labs(title = "# de becarios de postgrado que iniciaron\nsus estudios entre 2011 y 2018", x = "Año de Inicio", y = "#",
+       color = "Nivel", caption = "Fuente: Base de datos de Becarios actualizada agosto 2024 (SENESCYT)\nNíveles excluidos: POSTDOCTORADO y ESPECIALIZACION\nComponente Excluído: LINEA DE AYUDAS ECONOMICAS\nDatos filtrados por un mínimo de tiempo de estudios de un año")
+
+df_dur <- df_bec |>
+  filter(NIVEL_DE_ESTUDIOS == "POSTGRADO" & 
+           NIVEL_DETALLADO != "POSTDOCTORADO" & 
+           NIVEL_DETALLADO != "ESPECIALIZACION" &
+           year_init <= 2018 &
+           year_init >= 2011 &
+           ESTADO_BECA != "INCUMPLIDOS") |>
+  mutate(duracion = duracion/12) 
+# |>
+#   filter(!(NIVEL_DETALLADO == "DOCTORADO" & duracion > 8)) |>
+#   filter(!(NIVEL_DETALLADO == "MAESTRIA" & duracion > 4))
+
+plop2 <- df_dur |>
+  ggplot(aes(x = NIVEL_DETALLADO, y = duracion))+
+  #geom_violin()+
+  geom_boxplot(width=0.25, fill = "orange")+
+  geom_text(data = df_dur |>
+              group_by(NIVEL_DETALLADO) |>
+              summarise(duracion = median(duracion)),
+            aes(label = sprintf("%1.1f", duracion)),
+            position = position_nudge(x=-0.2), color = "red", size = 3)+
+    theme_bw(base_size = 12)+
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  labs(title = "Duración en años del programa de postgrado de los becarios\nque iniciaron sus estudios entre 2011 y 2018", x = NULL, y = "Años", caption = "Fuente: Base de datos de Becarios actualizada agosto 2024 (SENESCYT)\nNíveles excluidos: POSTDOCTORADO y ESPECIALIZACION\nComponente Excluído: LINEA DE AYUDAS ECONOMICAS\nDatos filtrados por un mínimo de tiempo de estudios de un año\nEstado de beca excluído: INCUMPLIDOS")
+
+plop1 + plop2
+
+# solo para ver el numero de becarios que se graduaron antes del 2018
+# df_dur |> filter(year_fini <= 2017 & NIVEL_DETALLADO == "DOCTORADO") |> summarise(nummer = n())
+
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+## Proyecciones ingenuamente simplísticas {.smaller}
+
+:::{.v-center-container}
+
+::: incremental
+
+-   Entre 2011 y 2017, 1262 becarios iniciaron un doctorado. 
+
+-   De estos, 568 terminaron sus estudios antes del 2018 (44.9\% de 1262).
+
+-   Según propios datos de la SENESCYT, al 2017 existían 10195 docentes titulares principales, de los cuales 1273 contaban con PhD.
+
+-   Es decir, a 2017 existió de un déficit de 8922 PhDs para cumplir la transitoria décimo tercera.
+
+-   Entonces, se hubiesen necesitado adjudicar alrededor de 20000 becas (16 veces más) únicamente para doctorado para cumplir con la transitoria.
+
+-   Esto por supuesto, son generalizaciones muy simples pero que nos permiten llegar a la conclusión obvia: **hicieron falta más PhDs**
+
+
+:::
+:::
+
+## ¿Qué pasó? {.smaller}
+
+:::{.v-center-container}
+:::incremental
+-   Más allá del plazo límite de 2017 (que careció de un sustento técnico claro), hubiese sido lógico poder contar con programas nacionales de doctorado una vez que becarios altamente calificados hacían su regreso.
+
+-   Sin embargo, varias disposiciones legales limitaron seriamente la capacidad de las universidades para ofrecer programas de doctorado:
+
+    -   La LOES (Art. 117) solo permitía ofertar doctorados a universidades de docencia con investigación.
+    
+    -   Estas debían tener al menos 70\% de su planta con PhD (según el reglamento del CEAACES).
+    
+    -   Además, el 100\% de los titulares principales debían contar con PhD (transitoria 13ra.)
+
+
+-   Aparte de los números imposibles de alcanzar, debemos agregar una historia de una tradición muy nuestra de **burocratizarlo todo**: sucesivos cambios en legislación y reglamentos para otorgar títulos (doctorales especialmente). 
+
+-   Estas condiciones muy probablemente dejaron a las universidades sin posibilidad real de crear programas doctorales, dependiendo de los becarios en el exterior para cubrir esa demanda a futuro.
+:::
+:::
+
+<!-- El CEEACES, buscaba también (aunque no explícitamente) la creación de programas nacionales de postgrado para aprovechar del nuevo talento humano altamente especializado (spoiler: no se dió). -->
+
+## La oferta educativa de postgrados {.smaller}
+
+:::incremental
+-   Lástimosamente no contamos con datos a lo largo del tiempo sobre la vigencia de los programas de postgrado\*.
+
+-   Así, actualmente en las bases de datos de oferta académica de las IES\*\* encontramos:
+:::
+
+. . .
+
+```{r, out.width="100%", fig.align="center"}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+ies_vigentes <- data.frame(NIVEL = c("Doctorado", "Maestrías"),
+                           VIGENTES = c("47", "3009***"),
+                           NO_VIGENTES = c("8", "2779"))
+
+ies_vigentes |> flextable::flextable() |> flextable::align(align = "center", part = "all")  |> flextable::autofit()
+
+```
+
+::: incremental
+
+-   Y podemos intuir:
+
+    -   La estabilidad de los programas de maestría es baja.
+    
+    -   La oferta de programas de doctorado es marcadamente reducida.
+  
+:::
+
+::: footer
+<!-- † -->
+
+\* La vigencia de un programa depende de su renovación, por lo que las fechas disponibles corresponden a la última vez que el mismo fue renovado.
+
+\*\* De acuerdo a las bases de datos de oferta académica de las IES (SENESCYT) y de oferta académica vigente de las IES (CES)
+
+\*\*\* Incluye maestrías: académicas (864), académicas con trayectoria de investigación (187), académicas con trayectoria profesional (1861), de investigación (16), profesionales (17), y tecnológicas (64).
+
+
+
+.
+
+.
+
+:::
+
+## La oferta de programas de doctorado
+
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-align: 'center'
+
+oferta_actual <- openxlsx::read.xlsx("datos/Oferta_académica.xlsx",
+                              startRow = 16)
+
+phds <- oferta_actual |>
+  filter(TIPO.DE.PROGRAMA == "DOCTORADO") 
+
+phds_plt <- phds |>
+  group_by(CAMPO.AMPLIO) |>
+  summarise(nummer = n()) |>
+  mutate(CAMPO.AMPLIO = factor(CAMPO.AMPLIO),
+         CAMPO.AMPLIO = forcats::fct_reorder(CAMPO.AMPLIO, nummer))
+
+matri_ind_sum <- readRDS("datos/matriculados.rds")
+
+lvls <- levels(phds_plt$CAMPO.AMPLIO)
+
+matri_plt <- matri_ind_sum |>
+  #filter(year <= 2018) |>
+  group_by(CAMPO_AMPLIO) |>
+  summarise(nummer = sum(TOTAL)) 
+
+matri_plt <- bind_rows(matri_plt, 
+                       data.frame(CAMPO_AMPLIO = c("AGRICULTURA, SILVICULTURA, PESCA Y VETERINARIA", 
+                                                   "SALUD Y BIENESTAR"),
+                                  nummer = c(0,0))) |>
+  mutate(CAMPO_AMPLIO = factor(CAMPO_AMPLIO, levels = lvls))
+
+# plt_phds1 <- phds_plt |>
+#   ggplot(aes(y = CAMPO.AMPLIO, x = nummer))+
+#   geom_bar(stat = "identity", width = 0.75, fill = "skyblue", alpha = 0.75)+
+#   scale_x_continuous(breaks = c(0:10), minor_breaks = NULL)+
+#   labs(y = NULL, x = "# de programas")+
+#   theme_bw()+
+#   labs(title = "Oferta de programas vigentes de doctorado nacionales por\nCampo amplio de conocimiento",
+#        caption = "Fuente: Oferta académica vigente de las IES (CES) consultado en junio 2025")+
+#   theme_bw(base_size = 12)+
+#   theme(plot.caption = element_text(hjust = 0),
+#         legend.position = "bottom")
+
+plt_phds1 <- phds_plt |>
+  ggplot(aes(y = CAMPO.AMPLIO, x = nummer)) +
+  geom_bar(stat = "identity", width = 0.75, fill = "skyblue", alpha = 0.75) +
+  scale_x_continuous(breaks = c(0:10), minor_breaks = NULL) +
+  labs(y = NULL, x = "# de programas") +
+  theme_bw(base_size = 8) +
+  labs(
+       caption = "Fuente: Oferta académica vigente de las IES (CES) consultado en junio 2025") +
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")
+
+plt_phds2 <- matri_plt |>
+  ggplot(aes(y = CAMPO_AMPLIO, x = nummer)) +
+  geom_bar(stat = "identity", width = 0.75, fill = "skyblue", alpha = 0.75) +
+  geom_label(aes(label = nummer, x = 0.5*nummer), size = 3)+
+  labs(y = NULL, x = "# de estudiantes matriculados") +
+  theme_bw(base_size = 8) +
+  labs(
+       caption = "Fuente: Base estadística de matrícula de UEP 2015 - 2023 (SENESCYT)") +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    plot.caption = element_text(hjust = 0),
+    legend.position = "bottom"
+  )
+
+plt_phds1 + plt_phds2 +
+  plot_layout(ncol = 2, widths = c(1.1, 1)) +
+  plot_annotation(
+    title = "Oferta vigente y matrícula en programas de doctorado (2015 - 2023) por campo amplio de conocimiento",
+    theme = theme(plot.title = element_text(size = 14, face = "bold", hjust = 0.5))
+  )
+
+```
+
+# Reforma de la LOES 2018
+ 
+##
+ 
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.",
+                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light")) |>
+  timeline(anio = 2018)
+
+```
+
+## El Art. 117 y el CASES 
+
+:::{.v-center-container}
+::: incremental
+
+-   El Art. 117 Es reformado en su totalidad estableciendo que todas las universidades y escuelas politécnicas son instituciones de docencia e investigación.
+
+-   Se flexibiliza su capacidad de decidir las carreras o programas que oferten, indicando únicamente que aquellas que oferten programas doctorales, deberán ser acreditadas por el Consejo de Aseguramiento de la Calidad de la Educación Superior (CASES).
+
+:::
+:::
+
+##
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.", 
+                           "Proyecto de Fortalecimiento", "Plazo transitoria light")) |>
+  timeline(anio = 2023)
+
+```
+
+## La transitoria "light"
+
+:::{.v-center-container}
+
+-   La transitoria décimo tercera es cambiada, estableciendo: **El requisito de doctorado (...) exigido para ser profesor titular principal (...) será obligatorio a partir del primero (1o.) de enero de 2023. De no cumplirse la condición, los profesores titulares principales pasarán a formar parte del escalafón previo en los términos y condiciones establecidos por el Consejo de Educación Superior.**
+
+:::
+
+
+# Camino al 2023
+
+##
+ 
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.",
+                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light",
+                           "Fin Becas Abiertas y Excelencia")) |>
+  timeline(anio = 2019)
+
+```
+
+
+## Becas en coma
+
+::: {.v-center-container}
+::: columns
+::: {.column width="50%"}
+::: incremental
+-   Después de un crecimiento vertiginoso entre 2010 y 2013 - 2014,
+
+-   Un vertiginoso descenso ocurrió hasta el 2018 - 2019 para las becas más representativas del plan de fortalecimiento: **Convocatoria Abierta**, y **Universidades de Excelencia**.
+:::
+:::
+::: {.column width="50%" }
+
+
+```{r, out.width="80%", fig.asp=0.8, fig.align="center"}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+
+df_bec |>
+  filter(SUBPROGRAMA %in% c("CONVOCATORIA ABIERTA", "UNIVERSIDADES DE EXCELENCIA")) |>
+  group_by(SUBPROGRAMA, year_init) |>
+  summarise(nummer = n())|>
+  ggplot(aes(x = year_init, y = nummer, color = SUBPROGRAMA))+
+  geom_line()+
+  scale_x_continuous(breaks = c(2007:2022))+
+  ggrepel::geom_label_repel(aes(label = nummer), size = 5)+
+  theme_bw(base_size = 20)+
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  labs(x = "Año", title = "# de becarios por año de inicio de estudios becas\nConvocatoria abierta y Universidades de Excelencia", y = "#", color = "Tipo beca",
+       caption = "Fuente: base de datos de Becarios Actualiza agosto 2024 (SENESCYT)")
+
+```
+
+:::
+:::
+:::
+
+##
+ 
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.",
+                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light",
+                           "Fin Becas Abiertas y Excelencia",
+                           "Actualización al Proyecto de Fortalecimiento")) |>
+  timeline(anio = 2021)
+
+```
+
+## Reviviendo a un paciente en coma
+
+
+![](images/proyec_3.png){fig-align="center" width="80%"}
+
+
+::: footer
+Cuadro tomado de la Actualización del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2021
+
+.
+
+.
+:::
+
+
+## {.smaller .nostretch}
+
+::: {.center}
+
+
+![](images/shungo1.png){fig-align="center" width="70%"}
+
+
+
+*el paciente se nos fue al cielo...*
+
+:::
+
+:::footer
+
+Imágen creada en Gemini.ai
+
+.
+
+.
+
+:::
+
+##
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.",
+                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light",
+                           "Fin Becas Abiertas y Excelencia",
+                           "Actualización al Proyecto de Fortalecimiento", "Reglamento Escalafón 2022")) |>
+  timeline(anio = 2022)
+
+```
+
+# Reglamento del Escalafón 2022 {.smaller}
+
+<!-- :::{.v-center-container} -->
+::: incremental
+
+-   En 2022, es publicado el "Reglamento de Carrera y Escalafón del Personal Académico del Sistema de Educación Superior" en su décima disposición general se indica
+
+-   **El personal académico de las universidades (...) que alcanzaron la categoría de titular principal antes de la entrada en vigencia de la LOES del 12 de octubre del 2010, y que no cuenten con título de PhD hasta el primero de enero del 2023, pasarán a ser denominados profesores titulares principales de escalafón previo y se respetarán sus derechos adquiridos.**
+
+:::
+
+. . .
+
+![](images/escalafon.png){fig-align="center"}
+
+
+
+
+# Radiografía en números
+
+## Números en general {.smaller}
+
+:::{.v-center-container}
+::: columns
+::: {.column width="50%"}
+
+```{r, fig.asp=0.7}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+
+
+df_raw <- openxlsx::read.xlsx("datos/Reporte_estadistico_docentes_UEP_2015-2022.xlsx",
+                              startRow = 15) |>
+  mutate(NIVEL = gsub("CUARTO_NIVEL_", "CUARTO_NIVEL", NIVEL),
+         GRADO = recode(GRADO,
+                        `TERCER NIVEL DE GRADO` = "TERCER_NIVEL",
+                        `TERCER NIVEL TECNOLÓGICO` = "TERCER_NIVEL",
+                        `TERCER NIVEL TÉCNICO` = "TERCER_NIVEL")) |>
+  filter(NIVEL != "NO_DEFINIDO") # solo 7 casos
+
+df_raw <- left_join(df_raw, universities, by = c("NOMBRE_IES" = "nombre")) |>
+  distinct()
+
+colnames(df_raw)[1] <- "YEAR"
+
+df_raw |>
+  #filter(YEAR <= 2017) |>
+  group_by(YEAR) |>
+  summarise(total = sum(TOTAL)) |>
+  ggplot(aes(x = YEAR, y = total)) + 
+  geom_point()+
+  geom_line(linetype = "dashed")+
+  
+  #geom_vline(xintercept = 2020, color = "red", linetype = "dashed")+
+  ggrepel::geom_label_repel(aes(label = total), size = 5)+
+  xlim(c(2015,2022))+
+  theme_bw()+
+  theme_bw(base_size = 18)+
+  #facet_wrap(~clase)+
+  labs(x = "Año", title = "Total Docentes", y = "# Docentes", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022") +
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")
+```
+
+
+
+:::
+::: {.column width="50%" }
+
+
+```{r, fig.asp=0.9}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+df_raw |>
+  #filter(YEAR <= 2017) |>
+  filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA",
+                       "ESPECIALISTA")) |>
+  group_by(YEAR, GRADO) |>
+  summarise(total = sum(TOTAL)) |>
+  ggplot(aes(x = YEAR, y = total, color = GRADO)) + 
+  geom_point()+
+  geom_line(linetype = "dashed")+
+  
+  #geom_vline(xintercept = 2020, color = "red", linetype = "dashed")+
+  ggrepel::geom_label_repel(aes(label = total), size = 5)+
+  xlim(c(2015,2022))+
+  theme_bw()+
+  theme_bw(base_size = 18)+
+  #facet_wrap(~clase)+
+  labs(x = "Año", title = "Total Docentes por grado obtenido", y = "# Docentes", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") +
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  guides(color = guide_legend(nrow=2))
+```
+
+:::
+:::
+:::
+
+## Distribución porcentual de docentes {.smaller}
+
+:::{.center}
+::: columns
+::: {.column width="50%"}
+
+-   Notamos que los grados académicos de docentes universitarios de 2015 a 2022 presentaron:
+
+    -   Reducción de 2.6\% de Diplomados
+    
+    -   Aumento de 1.8\% de Doctorados
+    
+    -   Aumento de 2.6\% de Especialidades en Salud
+    
+    -   **Aumento de 6.7\% de Maestrías**
+
+    -   **Reducción de 8.7\% de Títulos de Tercer nivel**
+
+:::
+::: {.column width="50%" }
+
+
+```{r, fig.asp=0.9}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+per_df <- left_join(df_raw |>
+                      filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA",
+                                           "ESPECIALISTA")) |>
+                      group_by(YEAR, GRADO) |>
+                      summarise(total_grado = sum(TOTAL))|>
+                      ungroup(),
+                    df_raw |>
+                      filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA",
+                                           "ESPECIALISTA")) |>
+                      
+                      group_by(YEAR) |>
+                      summarise(total_docentes = sum(TOTAL)) |>
+                      ungroup(), by = "YEAR") |>
+  mutate(porcen = total_grado/total_docentes) |>
+  group_by(YEAR) |>
+  arrange(desc(GRADO)) |>
+  mutate(pos_label = cumsum(porcen) - porcen / 2)
+
+ggplot(per_df, aes(x = factor(YEAR), y = porcen, fill = GRADO)) +
+  geom_bar(stat = "identity", position = "fill", color = "white") +
+  geom_text(aes(y = pos_label, label = scales::percent(porcen, accuracy = 0.1)),
+            color = "white", size = 4.5, fontface = "bold")+
+  scale_y_continuous(label = scales::percent) +
+#  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.9) +
+  labs(title = "Distribución porcentual de docentes según grado académico",
+       x = "Año", y = "%", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "bottom",
+    plot.caption = element_text(hjust = 0))+
+    
+  guides(fill = guide_legend(nrow=2))
+```
+
+:::
+:::
+:::
+
+
+## Total docentes sector privado vs. público {.nostretch}
+
+```{r, out.width="57%", fig.asp=0.8, fig.align="center"}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+df_raw |>
+  mutate(clase = recode(clase, 
+                        `Public` = "Públicas",
+                        `Private` = "Privadas")) |>
+    filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA",
+                       "ESPECIALISTA")) |>
+  group_by(YEAR, GRADO, clase) |>
+  summarise(total = sum(TOTAL))|>
+  ggplot(aes(x = YEAR, y = total, color = GRADO)) + 
+  geom_point()+
+  geom_line(linetype = "dashed")+
+  
+  #geom_vline(xintercept = 2020, color = "red", linetype = "dashed")+
+  ggrepel::geom_label_repel(aes(label = total), size = 3.5)+
+  xlim(c(2015,2022))+
+  facet_wrap(~clase)+
+  theme_bw()+
+  theme_bw(base_size = 15)+
+  #facet_wrap(~clase)+
+  labs(x = "Año", title = "Total Docentes por grado obtenido y tipo de universidad", y = "# Docentes", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") +
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  guides(color = guide_legend(nrow=2))
+
+
+```
+
+## Porcentage docentes sector privado vs. público {.smaller}
+
+:::{.center}
+::: columns
+::: {.column width="50%"}
+
+```{r, fig.asp=0.9}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+per_df_pp <- left_join(df_raw |>
+                      filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA",
+                                           "ESPECIALISTA")) |>
+                      group_by(YEAR, GRADO, clase) |>
+                      summarise(total_grado = sum(TOTAL))|>
+                      ungroup(),
+                    df_raw |>
+                      filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA",
+                                           "ESPECIALISTA")) |>
+                      
+                      group_by(YEAR, clase) |>
+                      summarise(total_docentes = sum(TOTAL)) |>
+                      ungroup(), by = c("YEAR", "clase")) |>
+  mutate(porcen = total_grado/total_docentes) |>
+  group_by(YEAR, clase) |>
+  arrange(desc(GRADO), desc(clase)) |>
+  mutate(pos_label = cumsum(porcen) - porcen / 2)
+
+per_df_pp |>
+  filter(clase == "Private") |>
+
+ggplot(aes(x = factor(YEAR), y = porcen, fill = GRADO)) +
+  geom_bar(stat = "identity", position = "fill", color = "white") +
+  geom_text(aes(y = pos_label, label = scales::percent(porcen, accuracy = 0.1)),
+            color = "white", size = 4.5, fontface = "bold")+
+  scale_y_continuous(label = scales::percent) +
+#  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.9) +
+  labs(title = "Distribución porcentual de docentes según grado académico\nUniversidades privadas",
+       x = "Año", y = "%", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "bottom",
+    plot.caption = element_text(hjust = 0))+
+    
+  guides(fill = guide_legend(nrow=2))
+```
+
+:::
+::: {.column width="50%" }
+
+
+```{r, fig.asp=0.9}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+per_df_pp |>
+  filter(clase == "Public") |>
+
+ggplot(aes(x = factor(YEAR), y = porcen, fill = GRADO)) +
+  geom_bar(stat = "identity", position = "fill", color = "white") +
+  geom_text(aes(y = pos_label, label = scales::percent(porcen, accuracy = 0.1)),
+            color = "white", size = 4.5, fontface = "bold")+
+  scale_y_continuous(label = scales::percent) +
+#  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.9) +
+  labs(title = "Distribución porcentual de docentes según grado académico\nUniversidades públicas",
+       x = "Año", y = "%", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "bottom",
+    plot.caption = element_text(hjust = 0))+
+    
+  guides(fill = guide_legend(nrow=2))
+```
+
+:::
+:::
+:::
+
+
+<!-- ## Relación laboral sector privado vs. público -->
+
+<!-- ```{r, out.width="57%", fig.asp=0.8, fig.align="center"} -->
+<!-- #| eval: true -->
+<!-- #| echo: false -->
+<!-- #| message: false -->
+<!-- #| warning: false -->
+
+<!-- df_raw |> -->
+<!--   mutate(clase = recode(clase, -->
+<!--                         `Public` = "Públicas", -->
+<!--                         `Private` = "Privadas"), -->
+<!--          RELACION_IES = recode(RELACION_IES, -->
+<!--                                `CONTRATO_CON_RELACION_DE_DEPENDENCIA` = "RELACION DE DEPENDENCIA", -->
+<!--                                `CONTRATO_SIN_RELACION_DE_DEPENDENCIA` = "RELACION SIN DEPENDENCIA")) |> -->
+<!--   filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA", -->
+<!--                        "ESPECIALISTA")) |> -->
+<!--   filter(RELACION_IES != "PROMETEO") |> -->
+<!--   group_by(YEAR, clase, RELACION_IES) |> -->
+<!--   summarise(total = sum(TOTAL))|> -->
+<!--   ggplot(aes(x = YEAR, y = total, color = RELACION_IES)) + -->
+<!--   geom_point()+ -->
+<!--   geom_line(linetype = "dashed")+ -->
+
+<!--   #geom_vline(xintercept = 2020, color = "red", linetype = "dashed")+ -->
+<!--   ggrepel::geom_label_repel(aes(label = total), size = 3.5)+ -->
+<!--   xlim(c(2015,2022))+ -->
+<!--   facet_wrap(~clase)+ -->
+<!--   theme_bw()+ -->
+<!--   theme_bw(base_size = 15)+ -->
+<!--   #facet_wrap(~clase)+ -->
+<!--   labs(x = "Año", title = "Total Docentes por tipo de universidad y relacion laboral", y = "# Docentes", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") + -->
+<!--   theme(plot.caption = element_text(hjust = 0), -->
+<!--         legend.position = "bottom")+ -->
+<!--   guides(color = guide_legend(nrow=2)) -->
+
+
+<!-- ``` -->
+
+
+
+<!-- ## Relación laboral en el sector privado {.nostretch} -->
+
+<!-- ```{r, out.width="110%", fig.asp=0.47, fig.align="center"} -->
+<!-- #| eval: true -->
+<!-- #| echo: false -->
+<!-- #| message: false -->
+<!-- #| warning: false -->
+
+
+<!-- df_raw |> -->
+<!--   mutate(clase = recode(clase, -->
+<!--                         `Public` = "Públicas", -->
+<!--                         `Private` = "Privadas"), -->
+<!--          RELACION_IES = recode(RELACION_IES, -->
+<!--                                `CONTRATO_CON_RELACION_DE_DEPENDENCIA` = "RELACION DE DEPENDENCIA", -->
+<!--                                `CONTRATO_SIN_RELACION_DE_DEPENDENCIA` = "RELACION SIN DEPENDENCIA")) |> -->
+<!--   filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA", -->
+<!--                        "ESPECIALISTA")) |> -->
+<!--   filter(RELACION_IES != "PROMETEO") |> -->
+<!--   group_by(YEAR, clase, RELACION_IES, GRADO) |> -->
+<!--   summarise(total = sum(TOTAL))|> -->
+<!--   ungroup() |> -->
+<!--   filter(clase == "Privadas") |> -->
+<!--   ggplot(aes(x = YEAR, y = total, color = GRADO)) + -->
+<!--   geom_point()+ -->
+<!--   geom_line(linetype = "dashed")+ -->
+
+<!--   #geom_vline(xintercept = 2020, color = "red", linetype = "dashed")+ -->
+<!--   ggrepel::geom_label_repel(aes(label = total), size = 1.7)+ -->
+<!--   xlim(c(2015,2022))+ -->
+<!--   #facet_grid2(vars(clase), vars(RELACION_IES), scales = "free_y", independent = "y")+ -->
+<!--   theme_bw()+ -->
+<!--   theme_bw(base_size = 8)+ -->
+<!--   facet_wrap2(vars(RELACION_IES), scales = "free_y")+ -->
+<!--   labs(x = "Año", title = "Total Docentes sector privado y relación laboral", y = "# Docentes", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") + -->
+<!--   theme(plot.caption = element_text(hjust = 0), -->
+<!--         legend.position = "bottom")+ -->
+<!--   guides(color = guide_legend(nrow=1)) -->
+
+
+<!-- ``` -->
+
+# Relaciones laborales
+
+## Relación laboral en universidades privadas (\%)
+
+```{r, out.width="110%", fig.asp=0.47, fig.align="center"}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+per_df_rl <- left_join(df_raw |>
+                         filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA",
+                                              "ESPECIALISTA")) |>
+                         group_by(YEAR, GRADO, clase, RELACION_IES) |>
+                         summarise(total_grado = sum(TOTAL))|>
+                         ungroup(),
+                       df_raw |>
+                         filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA",
+                                              "ESPECIALISTA")) |>
+                         
+                         group_by(YEAR, clase) |>
+                         summarise(total_docentes = sum(TOTAL)) |>
+                         ungroup(), by = c("YEAR", "clase")) |>
+  mutate(porcen = total_grado/total_docentes) |>
+  mutate(RELACION_IES = recode(RELACION_IES,
+                               `CONTRATO_CON_RELACION_DE_DEPENDENCIA` = "RELACION DE DEPENDENCIA",
+                               `CONTRATO_SIN_RELACION_DE_DEPENDENCIA` = "RELACION SIN DEPENDENCIA")) |>
+  filter(RELACION_IES != "PROMETEO") |>
+  group_by(YEAR, clase, RELACION_IES) |>
+  arrange(desc(GRADO), desc(clase), desc(RELACION_IES)) |>
+  mutate(pos_label = cumsum(porcen) - porcen / 2)
+
+
+
+per_df_rl |>
+  filter(clase == "Private") |>
+  
+  ggplot(aes(x = factor(YEAR), y = porcen, fill = GRADO)) +
+  geom_bar(stat = "identity", position = "stack", color = "white") +
+  geom_text(aes(y = pos_label, label = scales::percent(porcen, accuracy = 0.1)),
+            color = "white", size = 2, fontface = "bold")+
+  scale_y_continuous(label = scales::percent) +
+  facet_wrap2(vars(RELACION_IES), scales = "free_y")+
+  #  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.9) +
+  labs(title = "Distribución porcentual de docentes según grado académico y relación laboral: Universidades privadas",
+       x = "Año", y = "%", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") +
+  theme_minimal(base_size = 8) +
+  theme(legend.position = "bottom",
+        plot.caption = element_text(hjust = 0))+
+  
+  guides(fill = guide_legend(nrow=1))
+```
+
+<!-- ## Relación laboral en el sector público {.nostretch} -->
+
+<!-- ```{r, out.width="100%", fig.asp=0.47, fig.align="center"} -->
+<!-- #| eval: true -->
+<!-- #| echo: false -->
+<!-- #| message: false -->
+<!-- #| warning: false -->
+
+<!-- df_raw |> -->
+<!--   mutate(clase = recode(clase,  -->
+<!--                         `Public` = "Públicas", -->
+<!--                         `Private` = "Privadas"), -->
+<!--          RELACION_IES = recode(RELACION_IES, -->
+<!--                                `CONTRATO_CON_RELACION_DE_DEPENDENCIA` = "RELACION DE DEPENDENCIA", -->
+<!--                                `CONTRATO_SIN_RELACION_DE_DEPENDENCIA` = "RELACION SIN DEPENDENCIA")) |> -->
+<!--   filter(!GRADO %in% c("DOCTOR EN FILOSOFIA O JURISPRUDENCIA", -->
+<!--                        "ESPECIALISTA")) |> -->
+<!--   filter(RELACION_IES != "PROMETEO") |> -->
+<!--   group_by(YEAR, clase, RELACION_IES, GRADO) |> -->
+<!--   summarise(total = sum(TOTAL))|> -->
+<!--   ungroup() |> -->
+<!--   filter(clase == "Públicas") |> -->
+<!--   ggplot(aes(x = YEAR, y = total, color = GRADO)) +  -->
+<!--   geom_point()+ -->
+<!--   geom_line(linetype = "dashed")+ -->
+
+<!--   #geom_vline(xintercept = 2020, color = "red", linetype = "dashed")+ -->
+<!--   ggrepel::geom_label_repel(aes(label = total), size = 1.7)+ -->
+<!--   xlim(c(2015,2022))+ -->
+<!--   #facet_grid2(vars(clase), vars(RELACION_IES), scales = "free_y", independent = "y")+ -->
+<!--   theme_bw()+ -->
+<!--   theme_bw(base_size = 8)+ -->
+<!--   facet_wrap2(vars(RELACION_IES), scales = "free_y")+ -->
+<!--   labs(x = "Año", title = "Total Docentes sector público y relación laboral", y = "# Docentes", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") + -->
+<!--   theme(plot.caption = element_text(hjust = 0), -->
+<!--         legend.position = "bottom")+ -->
+<!--   guides(color = guide_legend(nrow=1)) -->
+
+
+<!-- ``` -->
+
+## Relación laboral en universidades públicas (\%)
+
+```{r, out.width="110%", fig.asp=0.47, fig.align="center"}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+
+
+per_df_rl |>
+  filter(clase == "Public") |>
+
+ggplot(aes(x = factor(YEAR), y = porcen, fill = GRADO)) +
+  geom_bar(stat = "identity", position = "stack", color = "white") +
+  geom_text(aes(y = pos_label, label = scales::percent(porcen, accuracy = 0.1)),
+            color = "white", size = 2, fontface = "bold")+
+  scale_y_continuous(label = scales::percent) +
+  facet_wrap2(vars(RELACION_IES), scales = "free_y")+
+  #  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.9) +
+  labs(title = "Distribución porcentual de docentes según grado académico y relación laboral: Universidades públicas",
+       x = "Año", y = "%", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022\nGrados excluidos: DOCTOR EN FILOSOFIA O JURISPRUDENCIA, ESPECIALISTA.\nTercer Nivel: Agregadas TERCER NIVEL DE GRADO,\nTERCER NIVEL TECNOLOGICO Y TERCER NIVEL TECNICO.") +
+  theme_minimal(base_size = 8) +
+  theme(legend.position = "bottom",
+        plot.caption = element_text(hjust = 0))+
+  
+  guides(fill = guide_legend(nrow=1))
+
+```
+
+
+## La ACTI {.smaller}
+
+::: incremental
+
+-   El INEC, conjuntamente con la SENESCYT, llevaron a cabo para los periodos 2009-2011 y 2012-2014 la **Encuesta Nacional de Actividades de Ciencia, Tecnología e Innovación (ACTI)** dirigida a Universidades, Escuelas Politécnicas, Institutos Públicos de Investigación, entidades del Gobierno Central, Hospitales Públicos de Docencia y Organismos Privados sin Fines de lucro.
+
+-   El objetivo era conocer los indicadores relacionados a la investigación científica, desarrollo tecnológico e innovación del país.
+
+:::
+
+. . .
+
+![](images/acti_1.png){fig-align="center"}
+
+. . .
+
+-   En esta se incluyeron variables para recolectar el número de becarios de doctorado vinculados a estas instituciones como una manera de reflejar el gasto de la SENESCYT en su preparación.
+
+## Doctorantes en la ACTI
+
+
+
+# ¿Fallamos?
+
+## ¿Quién valida a quién en la universidad? {.smaller}
+
+::: incremental
+
+-   Sin adentrarnos en debates filosóficos profundos, el modelo de educación occidental ha sido impactado por contextos históricos:
+
+    -   El nacimiento del doctorado en el sistema alemán en el siglo XIX, considerado elitista al denominar a un reducido grupo de personas como investigadores-docentes.
+    
+    -   Estados Unidos tras la segunda guerra mundial masifica el modelo alemán, y el PhD se vuelve el ticket de entrada a la academia de "verdad".
+
+    -   La universidad latinoamericana, influida por la herencia colonial española (con mayor enfoque en enseñanza profesionalizante), reproduce aún formas de colonialidad del saber.
+    
+-   Sin embargo, actualmente la internacionalización de la educación superior empujada por rankings, adopta el PhD y la publicación de investigaciones científicas como indicadores de excelencia.
+
+-   Así, con la LOES del 2010 se buscaba alinear nuestra educación superior con esos parámetros globales de excelencia académica (respaldados por sugerencias de la UNESCO y el BID en los años 2000), no siempre definidos desde nuestros contextos y necesidades locales.
+
+-   En fin, en un mundo continuamente caminando hacia la globalización, pues sigamos en este análisis...
+
+:::
+
+## Una vista al vecindario
+
+
+```{r, fig.asp=0.7, out.width="70%", fig.align='center'}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+library(knitr)
+library(dplyr)
+
+vecindad <- data.frame(
+  país = c("Ecuador", "Colombia", "Argentina", "Chile", "México"),
+  porcentaje = c("12.8%", "11.8%", "12.8%", "16.9%", "17.6%"),
+  año = c(2022, 2023, 2022, 2024, 2023),
+  fuente = c(
+    "SENESCYT",
+    "Ministerio de Educación Nacional",
+    "Ministerio de Educación Argentina",
+    "Subsecretaría de Educación Superior",
+    "Sistema Integrado de Información de la Educación Superior"
+  )
+)
+
+vecindad %>%
+  kable(
+    caption = "Porcentaje de docentes con PhD en algunos países de América Latina",
+    align = "lccc"
+  )
+
+```
+
+. . .
+
+**Pero entonces, no estamos tan mal... verdad?**
+
+# Becarios: entre buenas intenciones, controversia, y fuga de cerebros?
+
+
+
+## Buenas intenciones
+
+Entre los indicadores establecidos, destacaba (en el hilo narrativo de esta presentación):
+
+::: {.center}
+
+*Al 2020, contar con 4575 servidores públicos con *
+
+:::
+
+```{r, fig.asp=0.7, out.width="70%", fig.align='center'}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+ratas2 <- data.frame(rate = c(11826, 10870, 10195,9608,
+                             892, 1097, 1273, 1555),
+                    year = c(2015:2018, 2015:2018),
+                    clas = c(rep("Titular", 4), rep("Titular con PhD", 4)))
+
+ratas_tit <- ratas2 |>
+  filter(clas == "Titular")
+
+fit1 <- lm(rate ~ year, data = ratas_tit)
+
+new_tit <- data.frame(year = 2019:2026)
+
+pred1 <- predict(fit1, newdata = new_tit)
+
+pred_tit <- data.frame(rate = round(pred1,0), year = new_tit$year, clas = "Titular")
+
+ratas_tit2 <- ratas2 |>
+  filter(clas == "Titular con PhD")
+
+fit2 <- lm(rate ~ year, data = ratas_tit2)
+
+pred2 <- predict(fit2, newdata = new_tit)
+
+pred_tit2 <- data.frame(rate = round(pred2,0), year = new_tit$year, clas = "Titular con PhD")
+
+preds <- rbind(ratas2, pred_tit, pred_tit2)
+
+preds |>
+  ggplot(aes(x = year, y = rate, color = clas))+
+  geom_point()+
+  geom_line()+
+  ggrepel::geom_label_repel(aes(label = rate), size = 5)+
+  theme_bw(base_size = 16)+
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  labs(x = "Año", title = "Proyección profesores titulares y titulares con PhD", y = "# Docentes", color = "Clase")+
+  scale_x_continuous(breaks = c(2015, 2017, 2019, 2021, 2023, 2025))
+
+# df_phd_tit <- data.frame(year = 2015:2018,
+#                          perc = c(3492/11826, 3850/10870, 4077/10195, 4504/9608))
+# 
+# plt_phd_p <- df_phd_tit |>
+#   ggplot(aes(x = year, y = perc))+
+#   geom_point()+
+#   geom_line(linetype = "dashed")+
+#   ggrepel::geom_label_repel(aes(label = scales::percent(perc, accuracy = 0.1)), size = 6)+
+#   scale_y_continuous(label = scales::percent)+
+#   theme_bw(base_size = 16)+
+#   labs(x = "Año", title = "Porcentaje Docentes Titulares Principales con nivel Doctor (Ph.D)", y = "%", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022") +
+#   theme(plot.caption = element_text(hjust = 0))
+# 
+# library(patchwork)
+
+
+
+```
+
+
+
+
+<!--     -   Establece como requisitos para ser **profesor titular principal**: -->
+
+<!--         -   Título de doctorado (PhD o equivalente) en el área afin. -->
+
+<!--         -   Publicaciones relevantes en los últimos cinco años. -->
+
+<!--         -   Ingreso mediante concurso público de méritos y oposición. -->
+
+<!--     -   Transitoriedad: El requisito de doctorado se volvía obligatorio siete años después de la promulgación de la ley, es decir en 2017. -->
+
+<!-- -   Reforma LOES 2018 -->
+
+<!--     -   Requisitos para **profesor titular principal** actualizados: -->
+
+<!--         -   Título de doctorado (PhD o quivalente) en el área afín. -->
+
+<!--         -   Ingreso mediante concurso público de méritos y oposición. -->
+
+<!--     -   Requisitos paraq **profeoser -->
+

@@ -1,16 +1,247 @@
 [
   {
-    "objectID": "edu-sup.html#quarto",
-    "href": "edu-sup.html#quarto",
+    "objectID": "edu-sup.html#nota-aclaratoria",
+    "href": "edu-sup.html#nota-aclaratoria",
     "title": "edu-sup",
-    "section": "Quarto",
-    "text": "Quarto\npor la gran pukta que chuckasdk"
+    "section": "Nota Aclaratoria",
+    "text": "Nota Aclaratoria\n\n\nEsta presentación constituye un análisis semi-cuantitativo de la situación de la Educación Superior en el Ecuador con enfoque en el impacto de:\n\nLa Ley Orgánica de Educación Superior (LOES) en la profesionalización de la carrera docente,\nLos programas de becas de la SENESCYT,\nY, los vacíos de información para su mejora.\n\nEsta NO representa una opinión política, sino un comentario académico basado en los datos abiertos disponibles y su análisis.\nTampoco representa un análisis jurídico profundo (no soy experto en leyes, sino un Estadístico), y el marco legal será brevemente mencionado para contextualizar las conclusiones a las que llegaré.\n\n\n\nlagrimas de hombrue"
   },
   {
-    "objectID": "edu-sup.html#running-code",
-    "href": "edu-sup.html#running-code",
+    "objectID": "edu-sup.html#fuentes-de-datos",
+    "href": "edu-sup.html#fuentes-de-datos",
     "title": "edu-sup",
-    "section": "Running Code",
-    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+    "section": "Fuentes de datos",
+    "text": "Fuentes de datos\n\n\nBase estadística de docentes UEP 2015 - 2022 (SENESCYT)\nBase de datos de Becarios actualizada agosto 2024 (SENESCYT)\nBase estadística de matrícula de UEP 2015 - 2023 (SENESCYT)\nBase de datos de oferta académica de las IES (SENESCYT)\nBase de datos de oferta académica vigente de las IES (CES)\nEncuesta ACTI (2012 - 2014) (SENESCYT - INEC)"
+  },
+  {
+    "objectID": "edu-sup.html#introducción",
+    "href": "edu-sup.html#introducción",
+    "title": "edu-sup",
+    "section": "Introducción",
+    "text": "Introducción"
+  },
+  {
+    "objectID": "edu-sup.html#la-primera-loes",
+    "href": "edu-sup.html#la-primera-loes",
+    "title": "edu-sup",
+    "section": "La primera LOES",
+    "text": "La primera LOES\n\nEcuador probablemente tiene las peores universidades en sudamérica\n\n\nRafael Correa, 2012\\(^{†}\\)\n\n\nAntes del año 2000, no existía una ley orgánica específica para la educación superior.\nCada universidad establecía sus propios criterios para la contratación de docentes (tercer nivel y experiencia profesional o académica).\nLa autonomía universitaria permitía a las instituciones definir políticas de contratación, sin una normativa unificada.\nEn el 2000, se implementó la primera Ley Orgánica de Educación Superior (LOES) que creó el Consejo Nacional de Educación Superior (CONESUP) como organismo de control.\nSin embargo, cómo en el resto de América Latina, las universidades contaban con profesionales trabajando a medio tiempo como docentes, los mismos que no investigaban ni tenían grados doctorales\\(^{††}\\).\n\n\n†Neuman, W. (2012), The New York Times\n†† Johnson, M., A. (2017), Ed. Pol. An. Arch. (68)\n.\n."
+  },
+  {
+    "objectID": "edu-sup.html#loes-de-2010",
+    "href": "edu-sup.html#loes-de-2010",
+    "title": "edu-sup",
+    "section": "LOES de 2010",
+    "text": "LOES de 2010\n\nCon el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.\nEstablece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.\n\n\n\nCategoríaTítuloExperienciaProducción.científicaTitular AuxiliarMaestría (PhD opcional)MínimaMínimaTitular AgregadoMaestría (PhD opcional)MediaMediaTitular PrincipalPhD (exclusivamente)AltaAlta (de impacto)Proyectos de investigación"
+  },
+  {
+    "objectID": "edu-sup.html#loes-de-2010-1",
+    "href": "edu-sup.html#loes-de-2010-1",
+    "title": "edu-sup",
+    "section": "LOES de 2010",
+    "text": "LOES de 2010\n\nCon el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.\nEstablece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.\n\n\n\nCategoríaTítuloExperienciaProducción.científicaTitular AuxiliarMaestría (PhD opcional)MínimaMínimaTitular AgregadoMaestría (PhD opcional)MediaMediaTitular PrincipalPhD (exclusivamente)AltaAlta (de impacto)Proyectos de investigación\n\n\n\nNo contamos con datos precisos del número de profesores con PhD antes de la LOES (ó 2015 para ser más preciso), pero estimo que era alrededor de entre el 0.8% al 1.8% del total de 26476 en 2008\\(^{†}\\).\n\n\n\n† Los pocos datos disponibles son contradictorios. En el informe Logros 2014 de la SENESCYT, se informó de 226 profesores con PhD en 2008, mientras Ramirez\nen su libro de 2016 “Universidad Urgente para una sociedad emancipada”, reporta 482 tan solo en el sector público.\n.\n."
+  },
+  {
+    "objectID": "edu-sup.html#ra.-transitoria-y-ceaaces",
+    "href": "edu-sup.html#ra.-transitoria-y-ceaaces",
+    "title": "edu-sup",
+    "section": "13ra. Transitoria y CEAACES",
+    "text": "13ra. Transitoria y CEAACES\n\n\nSe entiende por tanto que bajo esta nueva LOES, se buscaba alcanzar una planta docente con mayor preparación, tanto así que\nEn su Décima Tercera disposición transitoria establecía: “El requisito de doctorado (…) exigido para ser profesor titular principal (…) será obligatorio luego de 7 años a partir de la vigencia de esta Ley. De no cumplirse esta condición, los profesores titulares principales perderán automáticamente esta condición.” \nY, adicionalmente creó el Consejo de Evaluación, Acreditación y Aseguramiento de la Calidad de la Educación Superior (CEAACES) que llevó a cabo un proceso de categorización de las universidades, estableciendo\\(^{†}\\):\n\n70% de profesores con título de doctor PhD, para universidades orientadas a docencia e investigación.\n40% de profesores con título de doctor PhD, para universidades orientadas a la docencia, y\n60% de profesores con título de doctor PhD, para universidades orientadas a la educación contínua.\n\n\n\n\n† Reglamento Transitorio para Tipología de Universidades (CEAACES, 2012)\n.\n."
+  },
+  {
+    "objectID": "edu-sup.html#proyecto-de-fortalecimiento",
+    "href": "edu-sup.html#proyecto-de-fortalecimiento",
+    "title": "edu-sup",
+    "section": "Proyecto de Fortalecimiento",
+    "text": "Proyecto de Fortalecimiento\n\nEn 2011, la SENESCYT crea el proyecto de “Fortalecimiento del Conocimiento y Talento Humano” (ligado a la política de la transformación de la matriz productiva).\nSu objetivo general fue el de “Fortalecer las capacidades y el talento de los/as ecuatorianos/as garantizando su acceso a educación superior de calidad, y de esta manera aportar al nuevo esquema de desarrollo del país.”\nEl tiempo de ejecución fue establecido en 14 años (2011 a 2024).\nCon una inversión proyectada de ~3000 millones de dólares.\nAl término de su implementación, se esperaba contar un total de 77003 becarios.\nEntre sus indicadores, destaco:\n\nAl 2020, adjudicar 19000 becas para estudios de 4to. nivel en universidades (…) en el extranjero.\nAl 2020, adjudicar 4200 becas (…) de excelencia académica (…) en 3er. y 4to. nivel en los más prestigiosos centros de educación superior del mundo.\nAl 2020, contar con 4575 servidores públicos con formación de 4to. nivel en universidades (…) de excelencia académica en el país o en el extranjero"
+  },
+  {
+    "objectID": "edu-sup.html#section-3",
+    "href": "edu-sup.html#section-3",
+    "title": "edu-sup",
+    "section": "",
+    "text": "Cuadro tomado del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2012\n.\n."
+  },
+  {
+    "objectID": "edu-sup.html#lo-que-el-viento-confundió",
+    "href": "edu-sup.html#lo-que-el-viento-confundió",
+    "title": "edu-sup",
+    "section": "Lo que el viento confundió",
+    "text": "Lo que el viento confundió\nEn el Boletín Anual Educación superior, ciencia, tecnología e innovación 2020:\n\n\n\n\n\nImagen tomada de Boletín Anual: Educación superior, ciencia, tecnología e innovación 2020 (SENESCYT)\n\n\n\n\nLas categorías no reflejan el escalafón docente establecido por la LOES. En específico:\n\nLos docentes titulares agregados “desaparecen”, y\nAparentemente los titulares auxiliares son considerados No titulares (?)\n\nAdicionalmente, este Boletín Anual no presenta cifras de la cantidad de profesores titulares principales con título de PhD, y\nDe manera más preocupante, este es el único boletín anual disponible."
+  },
+  {
+    "objectID": "edu-sup.html#lo-que-el-viento-confundió-1",
+    "href": "edu-sup.html#lo-que-el-viento-confundió-1",
+    "title": "edu-sup",
+    "section": "Lo que el viento confundió",
+    "text": "Lo que el viento confundió\nPor otra parte, en la presentación “Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras”:\n\n\n\n\n\nImagen tomada de la presentación “Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras”, Julio 2020, SENESCYT\n\n\n\n\nLas mismas cifras son presentadas de manera más genérica: Titulares y No titulares"
+  },
+  {
+    "objectID": "edu-sup.html#lo-que-el-viento-confundió-2",
+    "href": "edu-sup.html#lo-que-el-viento-confundió-2",
+    "title": "edu-sup",
+    "section": "Lo que el viento confundió",
+    "text": "Lo que el viento confundió\nPor otra parte, en la presentación “Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras”:\n\n\n\n\n\nImagen tomada de la presentación “Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras”, Julio 2020, SENESCYT\n\n\n\n\nLas mismas cifras son presentadas de manera más genérica: Titulares y No titulares\nPero al menos nos muestra el número de docentes Titulares con PhD.\n\n\nEn definitiva, cruzando la información de los documentos oficiales disponibles, no me quedó de otra que asumir que el titular agregado desaparece (por algún motivo ajeno a mi entendimiento) y el docente auxiliar no califica como titular, dejándonos dos categorías:\n\nTitulares (principales), y\nNo titulares (auxiliares y ocasionales)\n\nVale recalcar que estos son los únicos datos disponibles acerca del número de docentes titulares principales con grado de PhD."
+  },
+  {
+    "objectID": "edu-sup.html#section-5",
+    "href": "edu-sup.html#section-5",
+    "title": "edu-sup",
+    "section": "",
+    "text": "El Comercio, 11 de julio de 2017\n\n\n\n\n\nTeleamazonas, 17 de julio de 2017"
+  },
+  {
+    "objectID": "edu-sup.html#docentes-titulares",
+    "href": "edu-sup.html#docentes-titulares",
+    "title": "edu-sup",
+    "section": "Docentes Titulares",
+    "text": "Docentes Titulares\n\n\n\nA medida que el plazo se acercaba:\n\nRedujeron el número de profesores titulares con respecto al total de docentes.\nAumentaron el número de profesores titulares con PhD con respecto al total de titulares.\nEn términos prácticos, fue imposible:\n\nCumplir con la transitoria 13ra. de contar con 100% de docentes titulares principales con nivel PhD hasta 2017, ó\nCumplir el 70%, 40% o 60% del total de la planta docente con PhD para ser universidad de docencia-investigación, docencia ó educación contínua, respectivamente como lo estipulaba el CEAACES."
+  },
+  {
+    "objectID": "edu-sup.html#y-los-becarios",
+    "href": "edu-sup.html#y-los-becarios",
+    "title": "edu-sup",
+    "section": "Y, ¿los becarios?",
+    "text": "Y, ¿los becarios?"
+  },
+  {
+    "objectID": "edu-sup.html#proyecciones-ingenuamente-simplísticas",
+    "href": "edu-sup.html#proyecciones-ingenuamente-simplísticas",
+    "title": "edu-sup",
+    "section": "Proyecciones ingenuamente simplísticas",
+    "text": "Proyecciones ingenuamente simplísticas\n\n\nEntre 2011 y 2017, 1262 becarios iniciaron un doctorado.\nDe estos, 568 terminaron sus estudios antes del 2018 (44.9% de 1262).\nSegún propios datos de la SENESCYT, al 2017 existían 10195 docentes titulares principales, de los cuales 1273 contaban con PhD.\nEs decir, a 2017 existió de un déficit de 8922 PhDs para cumplir la transitoria décimo tercera.\nEntonces, se hubiesen necesitado adjudicar alrededor de 20000 becas (16 veces más) únicamente para doctorado para cumplir con la transitoria.\nEsto por supuesto, son generalizaciones muy simples pero que nos permiten llegar a la conclusión obvia: hicieron falta más PhDs"
+  },
+  {
+    "objectID": "edu-sup.html#qué-pasó",
+    "href": "edu-sup.html#qué-pasó",
+    "title": "edu-sup",
+    "section": "¿Qué pasó?",
+    "text": "¿Qué pasó?\n\n\nMás allá del plazo límite de 2017 (que careció de un sustento técnico claro), hubiese sido lógico poder contar con programas nacionales de doctorado una vez que becarios altamente calificados hacían su regreso.\nSin embargo, varias disposiciones legales limitaron seriamente la capacidad de las universidades para ofrecer programas de doctorado:\n\nLa LOES (Art. 117) solo permitía ofertar doctorados a universidades de docencia con investigación.\nEstas debían tener al menos 70% de su planta con PhD (según el reglamento del CEAACES).\nAdemás, el 100% de los titulares principales debían contar con PhD (transitoria 13ra.)\n\nAparte de los números imposibles de alcanzar, debemos agregar una historia de una tradición muy nuestra de burocratizarlo todo: sucesivos cambios en legislación y reglamentos para otorgar títulos (doctorales especialmente).\nEstas condiciones muy probablemente dejaron a las universidades sin posibilidad real de crear programas doctorales, dependiendo de los becarios en el exterior para cubrir esa demanda a futuro."
+  },
+  {
+    "objectID": "edu-sup.html#la-oferta-educativa-de-postgrados",
+    "href": "edu-sup.html#la-oferta-educativa-de-postgrados",
+    "title": "edu-sup",
+    "section": "La oferta educativa de postgrados",
+    "text": "La oferta educativa de postgrados\n\nLástimosamente no contamos con datos a lo largo del tiempo sobre la vigencia de los programas de postgrado*.\nAsí, actualmente en las bases de datos de oferta académica de las IES** encontramos:\n\n\n\n\nNIVELVIGENTESNO_VIGENTESDoctorado478Maestrías3009***2779\n\n\n\nY podemos intuir:\n\nLa estabilidad de los programas de maestría es baja.\nLa oferta de programas de doctorado es marcadamente reducida.\n\n\n\n\n* La vigencia de un programa depende de su renovación, por lo que las fechas disponibles corresponden a la última vez que el mismo fue renovado.\n** De acuerdo a las bases de datos de oferta académica de las IES (SENESCYT) y de oferta académica vigente de las IES (CES)\n*** Incluye maestrías: académicas (864), académicas con trayectoria de investigación (187), académicas con trayectoria profesional (1861), de investigación (16), profesionales (17), y tecnológicas (64).\n.\n."
+  },
+  {
+    "objectID": "edu-sup.html#la-oferta-de-programas-de-doctorado",
+    "href": "edu-sup.html#la-oferta-de-programas-de-doctorado",
+    "title": "edu-sup",
+    "section": "La oferta de programas de doctorado",
+    "text": "La oferta de programas de doctorado"
+  },
+  {
+    "objectID": "edu-sup.html#el-art.-117-y-el-cases",
+    "href": "edu-sup.html#el-art.-117-y-el-cases",
+    "title": "edu-sup",
+    "section": "El Art. 117 y el CASES",
+    "text": "El Art. 117 y el CASES\n\n\nEl Art. 117 Es reformado en su totalidad estableciendo que todas las universidades y escuelas politécnicas son instituciones de docencia e investigación.\nSe flexibiliza su capacidad de decidir las carreras o programas que oferten, indicando únicamente que aquellas que oferten programas doctorales, deberán ser acreditadas por el Consejo de Aseguramiento de la Calidad de la Educación Superior (CASES)."
+  },
+  {
+    "objectID": "edu-sup.html#la-transitoria-light",
+    "href": "edu-sup.html#la-transitoria-light",
+    "title": "edu-sup",
+    "section": "La transitoria “light”",
+    "text": "La transitoria “light”\n\n\nLa transitoria décimo tercera es cambiada, estableciendo: El requisito de doctorado (…) exigido para ser profesor titular principal (…) será obligatorio a partir del primero (1o.) de enero de 2023. De no cumplirse la condición, los profesores titulares principales pasarán a formar parte del escalafón previo en los términos y condiciones establecidos por el Consejo de Educación Superior."
+  },
+  {
+    "objectID": "edu-sup.html#becas-en-coma",
+    "href": "edu-sup.html#becas-en-coma",
+    "title": "edu-sup",
+    "section": "Becas en coma",
+    "text": "Becas en coma\n\n\n\n\nDespués de un crecimiento vertiginoso entre 2010 y 2013 - 2014,\nUn vertiginoso descenso ocurrió hasta el 2018 - 2019 para las becas más representativas del plan de fortalecimiento: Convocatoria Abierta, y Universidades de Excelencia."
+  },
+  {
+    "objectID": "edu-sup.html#reviviendo-a-un-paciente-en-coma",
+    "href": "edu-sup.html#reviviendo-a-un-paciente-en-coma",
+    "title": "edu-sup",
+    "section": "Reviviendo a un paciente en coma",
+    "text": "Reviviendo a un paciente en coma\n\n\nCuadro tomado de la Actualización del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2021\n.\n."
+  },
+  {
+    "objectID": "edu-sup.html#section-10",
+    "href": "edu-sup.html#section-10",
+    "title": "edu-sup",
+    "section": "",
+    "text": "el paciente se nos fue al cielo…\n\n\nImágen creada en Gemini.ai\n.\n."
+  },
+  {
+    "objectID": "edu-sup.html#números-en-general",
+    "href": "edu-sup.html#números-en-general",
+    "title": "edu-sup",
+    "section": "Números en general",
+    "text": "Números en general"
+  },
+  {
+    "objectID": "edu-sup.html#distribución-porcentual-de-docentes",
+    "href": "edu-sup.html#distribución-porcentual-de-docentes",
+    "title": "edu-sup",
+    "section": "Distribución porcentual de docentes",
+    "text": "Distribución porcentual de docentes\n\n\n\n\nNotamos que los grados académicos de docentes universitarios de 2015 a 2022 presentaron:\n\nReducción de 2.6% de Diplomados\nAumento de 1.8% de Doctorados\nAumento de 2.6% de Especialidades en Salud\nAumento de 6.7% de Maestrías\nReducción de 8.7% de Títulos de Tercer nivel"
+  },
+  {
+    "objectID": "edu-sup.html#total-docentes-sector-privado-vs.-público",
+    "href": "edu-sup.html#total-docentes-sector-privado-vs.-público",
+    "title": "edu-sup",
+    "section": "Total docentes sector privado vs. público",
+    "text": "Total docentes sector privado vs. público"
+  },
+  {
+    "objectID": "edu-sup.html#porcentage-docentes-sector-privado-vs.-público",
+    "href": "edu-sup.html#porcentage-docentes-sector-privado-vs.-público",
+    "title": "edu-sup",
+    "section": "Porcentage docentes sector privado vs. público",
+    "text": "Porcentage docentes sector privado vs. público"
+  },
+  {
+    "objectID": "edu-sup.html#relación-laboral-en-universidades-privadas",
+    "href": "edu-sup.html#relación-laboral-en-universidades-privadas",
+    "title": "edu-sup",
+    "section": "Relación laboral en universidades privadas (%)",
+    "text": "Relación laboral en universidades privadas (%)"
+  },
+  {
+    "objectID": "edu-sup.html#relación-laboral-en-universidades-públicas",
+    "href": "edu-sup.html#relación-laboral-en-universidades-públicas",
+    "title": "edu-sup",
+    "section": "Relación laboral en universidades públicas (%)",
+    "text": "Relación laboral en universidades públicas (%)"
+  },
+  {
+    "objectID": "edu-sup.html#la-acti",
+    "href": "edu-sup.html#la-acti",
+    "title": "edu-sup",
+    "section": "La ACTI",
+    "text": "La ACTI\n\nEl INEC, conjuntamente con la SENESCYT, llevaron a cabo para los periodos 2009-2011 y 2012-2014 la Encuesta Nacional de Actividades de Ciencia, Tecnología e Innovación (ACTI) dirigida a Universidades, Escuelas Politécnicas, Institutos Públicos de Investigación, entidades del Gobierno Central, Hospitales Públicos de Docencia y Organismos Privados sin Fines de lucro.\nEl objetivo era conocer los indicadores relacionados a la investigación científica, desarrollo tecnológico e innovación del país.\n\n\n\n\n\n\n\n\n\n\nEn esta se incluyeron variables para recolectar el número de becarios de doctorado vinculados a estas instituciones como una manera de reflejar el gasto de la SENESCYT en su preparación."
+  },
+  {
+    "objectID": "edu-sup.html#doctorantes-en-la-acti",
+    "href": "edu-sup.html#doctorantes-en-la-acti",
+    "title": "edu-sup",
+    "section": "Doctorantes en la ACTI",
+    "text": "Doctorantes en la ACTI"
+  },
+  {
+    "objectID": "edu-sup.html#quién-valida-a-quién-en-la-universidad",
+    "href": "edu-sup.html#quién-valida-a-quién-en-la-universidad",
+    "title": "edu-sup",
+    "section": "¿Quién valida a quién en la universidad?",
+    "text": "¿Quién valida a quién en la universidad?\n\nSin adentrarnos en debates filosóficos profundos, el modelo de educación occidental ha sido impactado por contextos históricos:\n\nEl nacimiento del doctorado en el sistema alemán en el siglo XIX, considerado elitista al denominar a un reducido grupo de personas como investigadores-docentes.\nEstados Unidos tras la segunda guerra mundial masifica el modelo alemán, y el PhD se vuelve el ticket de entrada a la academia de “verdad”.\nLa universidad latinoamericana, influida por la herencia colonial española (con mayor enfoque en enseñanza profesionalizante), reproduce aún formas de colonialidad del saber.\n\nSin embargo, actualmente la internacionalización de la educación superior empujada por rankings, adopta el PhD y la publicación de investigaciones científicas como indicadores de excelencia.\nAsí, con la LOES del 2010 se buscaba alinear nuestra educación superior con esos parámetros globales de excelencia académica (respaldados por sugerencias de la UNESCO y el BID en los años 2000), no siempre definidos desde nuestros contextos y necesidades locales.\nEn fin, en un mundo continuamente caminando hacia la globalización, pues sigamos en este análisis…"
+  },
+  {
+    "objectID": "edu-sup.html#una-vista-al-vecindario",
+    "href": "edu-sup.html#una-vista-al-vecindario",
+    "title": "edu-sup",
+    "section": "Una vista al vecindario",
+    "text": "Una vista al vecindario\n\n\n\nPorcentaje de docentes con PhD en algunos países de América Latina\n\n\n\n\n\n\n\n\npaís\nporcentaje\naño\nfuente\n\n\n\n\nEcuador\n12.8%\n2022\nSENESCYT\n\n\nColombia\n11.8%\n2023\nMinisterio de Educación Nacional\n\n\nArgentina\n12.8%\n2022\nMinisterio de Educación Argentina\n\n\nChile\n16.9%\n2024\nSubsecretaría de Educación Superior\n\n\nMéxico\n17.6%\n2023\nSistema Integrado de Información de la Educación Superior\n\n\n\n\n\n\nPero entonces, no estamos tan mal… verdad?"
+  },
+  {
+    "objectID": "edu-sup.html#buenas-intenciones",
+    "href": "edu-sup.html#buenas-intenciones",
+    "title": "edu-sup",
+    "section": "Buenas intenciones",
+    "text": "Buenas intenciones\nEntre los indicadores establecidos, destacaba (en el hilo narrativo de esta presentación):\n\nAl 2020, contar con 4575 servidores públicos con"
   }
 ]
