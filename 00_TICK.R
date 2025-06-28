@@ -114,4 +114,7 @@ tics_alles <- bind_rows(tic2010, tic2012)
 
 saveRDS(tics_alles, "datos/tics.rds")
 
-tics_alles |> group_by(year) |> summarise(investigadores = sum(total_gentusa), phdeses = sum(total_becarios))
+tics_alles |> 
+  group_by(year) |> 
+  summarise(investigadores = sum(total_gentusa), phdeses = sum(total_becarios)) |>
+  

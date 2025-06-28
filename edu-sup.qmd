@@ -68,7 +68,7 @@ lagrimas de hombrue
 
 -   Base de datos de oferta académica vigente de las IES (CES)
 
--   Encuesta ACTI (2012 - 2014) (SENESCYT - INEC)
+-   Encuesta ACTI (2009 - 2014) (SENESCYT - INEC)
 
 <!-- -   Boletín Anual: Educación superior, ciencia, tecnología e innovación 2020 (SENESCYT) -->
 
@@ -972,7 +972,7 @@ crono |>
 ::: columns
 ::: {.column width="50%"}
 
-```{r, fig.asp=0.7}
+```{r, fig.asp=0.8}
 #| eval: true
 #| echo: false
 #| message: false
@@ -1466,7 +1466,80 @@ ggplot(aes(x = factor(YEAR), y = porcen, fill = GRADO)) +
 
 ## Doctorantes en la ACTI
 
+:::{.v-center-container}
+::: columns
+::: {.column width="50%"}
 
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+acti <- readRDS("datos/tics.rds")
+
+acti |> 
+  group_by(year) |>
+  summarise(Investigadores = sum(total_gentusa), Becarios_doctorado = sum(total_becarios)) |>
+  pivot_longer(cols = c("Investigadores", "Becarios_doctorado"), names_to = "tipo", values_to = "nummer") |>
+  ggplot(aes(x = year, y = nummer, color = tipo, group = tipo)) + 
+  geom_point()+
+  geom_line(linetype = "dashed")+
+  #geom_vline(xintercept = 2020, color = "red", linetype = "dashed")+
+  ggrepel::geom_label_repel(aes(label = nummer), size = 5)+
+  #xlim(c(2015,2022))+
+  theme_bw()+
+  theme_bw(base_size = 18)+
+  #facet_wrap(~clase)+
+  labs(x = "Año", title = "Total investigadores e investigadores becarios", y = "# Investigadores", caption = "Fuente: Base de datos ACTI 2009- 2014 (INEC, SENESCYT)") +
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")
+```
+
+
+
+:::
+::: {.column width="50%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+acti |> 
+  group_by(year, tipo) |>
+  summarise(Total_investigadores = sum(total_gentusa), Becarios_doctorado = sum(total_becarios)) |>
+  pivot_longer(cols = c("Total_investigadores", "Becarios_doctorado"), names_to = "tipes", values_to = "nummer") |>
+  filter(tipes == "Becarios_doctorado") |>
+  ggplot(aes(x = year, y = nummer, color = tipo, group = tipo)) + 
+  geom_point()+
+  geom_line(linetype = "dashed")+
+  #geom_vline(xintercept = 2020, color = "red", linetype = "dashed")+
+  ggrepel::geom_label_repel(aes(label = nummer), size = 5)+
+  #xlim(c(2015,2022))+
+  theme_bw()+
+  theme_bw(base_size = 18)+
+  #facet_wrap(~clase)+
+  labs(x = "Año", title = "Investigadores becarios de doctorado por tipo de institución", y = "# Investigadores", caption = "Fuente: Base de datos ACTI 2009- 2014 (INEC, SENESCYT)") +
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")
+```
+
+:::
+:::
+:::
+
+## Desempleo de los becarios
+
+::: incremental
+
+-   ¿Podemos cuántificarlo? [**si**, un poquito]{.fragment} [y en gran medida, **no**]{.fragment}
+
+:::
 
 # ¿Fallamos?
 

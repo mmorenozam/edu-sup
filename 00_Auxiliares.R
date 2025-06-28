@@ -3,6 +3,7 @@ library(ggplot2)
 library(patchwork)
 library(lubridate)
 library(ggh4x)
+library(tidyr)
 
 universities <- data.frame(
   nombre = c(
