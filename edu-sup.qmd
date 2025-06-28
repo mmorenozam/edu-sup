@@ -1539,143 +1539,145 @@ acti |>
 
 -   ¿Podemos cuántificarlo? [**si**, un poquito]{.fragment} [y en gran medida, **no**]{.fragment}
 
-:::
-
-# ¿Fallamos?
-
-## ¿Quién valida a quién en la universidad? {.smaller}
-
-::: incremental
-
--   Sin adentrarnos en debates filosóficos profundos, el modelo de educación occidental ha sido impactado por contextos históricos:
-
-    -   El nacimiento del doctorado en el sistema alemán en el siglo XIX, considerado elitista al denominar a un reducido grupo de personas como investigadores-docentes.
-    
-    -   Estados Unidos tras la segunda guerra mundial masifica el modelo alemán, y el PhD se vuelve el ticket de entrada a la academia de "verdad".
-
-    -   La universidad latinoamericana, influida por la herencia colonial española (con mayor enfoque en enseñanza profesionalizante), reproduce aún formas de colonialidad del saber.
-    
--   Sin embargo, actualmente la internacionalización de la educación superior empujada por rankings, adopta el PhD y la publicación de investigaciones científicas como indicadores de excelencia.
-
--   Así, con la LOES del 2010 se buscaba alinear nuestra educación superior con esos parámetros globales de excelencia académica (respaldados por sugerencias de la UNESCO y el BID en los años 2000), no siempre definidos desde nuestros contextos y necesidades locales.
-
--   En fin, en un mundo continuamente caminando hacia la globalización, pues sigamos en este análisis...
+-   sera si o que mi jazmin
 
 :::
 
-## Una vista al vecindario
+<!-- # ¿Fallamos? -->
+
+<!-- ## ¿Quién valida a quién en la universidad? {.smaller} -->
+
+<!-- ::: incremental -->
+
+<!-- -   Sin adentrarnos en debates filosóficos profundos, el modelo de educación occidental ha sido impactado por contextos históricos: -->
+
+<!--     -   El nacimiento del doctorado en el sistema alemán en el siglo XIX, considerado elitista al denominar a un reducido grupo de personas como investigadores-docentes. -->
+
+<!--     -   Estados Unidos tras la segunda guerra mundial masifica el modelo alemán, y el PhD se vuelve el ticket de entrada a la academia de "verdad". -->
+
+<!--     -   La universidad latinoamericana, influida por la herencia colonial española (con mayor enfoque en enseñanza profesionalizante), reproduce aún formas de colonialidad del saber. -->
+
+<!-- -   Sin embargo, actualmente la internacionalización de la educación superior empujada por rankings, adopta el PhD y la publicación de investigaciones científicas como indicadores de excelencia. -->
+
+<!-- -   Así, con la LOES del 2010 se buscaba alinear nuestra educación superior con esos parámetros globales de excelencia académica (respaldados por sugerencias de la UNESCO y el BID en los años 2000), no siempre definidos desde nuestros contextos y necesidades locales. -->
+
+<!-- -   En fin, en un mundo continuamente caminando hacia la globalización, pues sigamos en este análisis... -->
+
+<!-- ::: -->
+
+<!-- ## Una vista al vecindario -->
 
 
-```{r, fig.asp=0.7, out.width="70%", fig.align='center'}
-#|echo: false
-#|eval: true
-#|message: false
-#|warning: false
+<!-- ```{r, fig.asp=0.7, out.width="70%", fig.align='center'} -->
+<!-- #|echo: false -->
+<!-- #|eval: true -->
+<!-- #|message: false -->
+<!-- #|warning: false -->
 
-library(knitr)
-library(dplyr)
+<!-- library(knitr) -->
+<!-- library(dplyr) -->
 
-vecindad <- data.frame(
-  país = c("Ecuador", "Colombia", "Argentina", "Chile", "México"),
-  porcentaje = c("12.8%", "11.8%", "12.8%", "16.9%", "17.6%"),
-  año = c(2022, 2023, 2022, 2024, 2023),
-  fuente = c(
-    "SENESCYT",
-    "Ministerio de Educación Nacional",
-    "Ministerio de Educación Argentina",
-    "Subsecretaría de Educación Superior",
-    "Sistema Integrado de Información de la Educación Superior"
-  )
-)
+<!-- vecindad <- data.frame( -->
+<!--   país = c("Ecuador", "Colombia", "Argentina", "Chile", "México"), -->
+<!--   porcentaje = c("12.8%", "11.8%", "12.8%", "16.9%", "17.6%"), -->
+<!--   año = c(2022, 2023, 2022, 2024, 2023), -->
+<!--   fuente = c( -->
+<!--     "SENESCYT", -->
+<!--     "Ministerio de Educación Nacional", -->
+<!--     "Ministerio de Educación Argentina", -->
+<!--     "Subsecretaría de Educación Superior", -->
+<!--     "Sistema Integrado de Información de la Educación Superior" -->
+<!--   ) -->
+<!-- ) -->
 
-vecindad %>%
-  kable(
-    caption = "Porcentaje de docentes con PhD en algunos países de América Latina",
-    align = "lccc"
-  )
+<!-- vecindad %>% -->
+<!--   kable( -->
+<!--     caption = "Porcentaje de docentes con PhD en algunos países de América Latina", -->
+<!--     align = "lccc" -->
+<!--   ) -->
 
-```
+<!-- ``` -->
 
-. . .
+<!-- . . . -->
 
-**Pero entonces, no estamos tan mal... verdad?**
+<!-- **Pero entonces, no estamos tan mal... verdad?** -->
 
-# Becarios: entre buenas intenciones, controversia, y fuga de cerebros?
-
-
-
-## Buenas intenciones
-
-Entre los indicadores establecidos, destacaba (en el hilo narrativo de esta presentación):
-
-::: {.center}
-
-*Al 2020, contar con 4575 servidores públicos con *
-
-:::
-
-```{r, fig.asp=0.7, out.width="70%", fig.align='center'}
-#|echo: false
-#|eval: true
-#|message: false
-#|warning: false
-
-ratas2 <- data.frame(rate = c(11826, 10870, 10195,9608,
-                             892, 1097, 1273, 1555),
-                    year = c(2015:2018, 2015:2018),
-                    clas = c(rep("Titular", 4), rep("Titular con PhD", 4)))
-
-ratas_tit <- ratas2 |>
-  filter(clas == "Titular")
-
-fit1 <- lm(rate ~ year, data = ratas_tit)
-
-new_tit <- data.frame(year = 2019:2026)
-
-pred1 <- predict(fit1, newdata = new_tit)
-
-pred_tit <- data.frame(rate = round(pred1,0), year = new_tit$year, clas = "Titular")
-
-ratas_tit2 <- ratas2 |>
-  filter(clas == "Titular con PhD")
-
-fit2 <- lm(rate ~ year, data = ratas_tit2)
-
-pred2 <- predict(fit2, newdata = new_tit)
-
-pred_tit2 <- data.frame(rate = round(pred2,0), year = new_tit$year, clas = "Titular con PhD")
-
-preds <- rbind(ratas2, pred_tit, pred_tit2)
-
-preds |>
-  ggplot(aes(x = year, y = rate, color = clas))+
-  geom_point()+
-  geom_line()+
-  ggrepel::geom_label_repel(aes(label = rate), size = 5)+
-  theme_bw(base_size = 16)+
-  theme(plot.caption = element_text(hjust = 0),
-        legend.position = "bottom")+
-  labs(x = "Año", title = "Proyección profesores titulares y titulares con PhD", y = "# Docentes", color = "Clase")+
-  scale_x_continuous(breaks = c(2015, 2017, 2019, 2021, 2023, 2025))
-
-# df_phd_tit <- data.frame(year = 2015:2018,
-#                          perc = c(3492/11826, 3850/10870, 4077/10195, 4504/9608))
-# 
-# plt_phd_p <- df_phd_tit |>
-#   ggplot(aes(x = year, y = perc))+
-#   geom_point()+
-#   geom_line(linetype = "dashed")+
-#   ggrepel::geom_label_repel(aes(label = scales::percent(perc, accuracy = 0.1)), size = 6)+
-#   scale_y_continuous(label = scales::percent)+
-#   theme_bw(base_size = 16)+
-#   labs(x = "Año", title = "Porcentaje Docentes Titulares Principales con nivel Doctor (Ph.D)", y = "%", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022") +
-#   theme(plot.caption = element_text(hjust = 0))
-# 
-# library(patchwork)
+<!-- # Becarios: entre buenas intenciones, controversia, y fuga de cerebros? -->
 
 
 
-```
+<!-- ## Buenas intenciones -->
+
+<!-- Entre los indicadores establecidos, destacaba (en el hilo narrativo de esta presentación): -->
+
+<!-- ::: {.center} -->
+
+<!-- *Al 2020, contar con 4575 servidores públicos con * -->
+
+<!-- ::: -->
+
+<!-- ```{r, fig.asp=0.7, out.width="70%", fig.align='center'} -->
+<!-- #|echo: false -->
+<!-- #|eval: true -->
+<!-- #|message: false -->
+<!-- #|warning: false -->
+
+<!-- ratas2 <- data.frame(rate = c(11826, 10870, 10195,9608, -->
+<!--                              892, 1097, 1273, 1555), -->
+<!--                     year = c(2015:2018, 2015:2018), -->
+<!--                     clas = c(rep("Titular", 4), rep("Titular con PhD", 4))) -->
+
+<!-- ratas_tit <- ratas2 |> -->
+<!--   filter(clas == "Titular") -->
+
+<!-- fit1 <- lm(rate ~ year, data = ratas_tit) -->
+
+<!-- new_tit <- data.frame(year = 2019:2026) -->
+
+<!-- pred1 <- predict(fit1, newdata = new_tit) -->
+
+<!-- pred_tit <- data.frame(rate = round(pred1,0), year = new_tit$year, clas = "Titular") -->
+
+<!-- ratas_tit2 <- ratas2 |> -->
+<!--   filter(clas == "Titular con PhD") -->
+
+<!-- fit2 <- lm(rate ~ year, data = ratas_tit2) -->
+
+<!-- pred2 <- predict(fit2, newdata = new_tit) -->
+
+<!-- pred_tit2 <- data.frame(rate = round(pred2,0), year = new_tit$year, clas = "Titular con PhD") -->
+
+<!-- preds <- rbind(ratas2, pred_tit, pred_tit2) -->
+
+<!-- preds |> -->
+<!--   ggplot(aes(x = year, y = rate, color = clas))+ -->
+<!--   geom_point()+ -->
+<!--   geom_line()+ -->
+<!--   ggrepel::geom_label_repel(aes(label = rate), size = 5)+ -->
+<!--   theme_bw(base_size = 16)+ -->
+<!--   theme(plot.caption = element_text(hjust = 0), -->
+<!--         legend.position = "bottom")+ -->
+<!--   labs(x = "Año", title = "Proyección profesores titulares y titulares con PhD", y = "# Docentes", color = "Clase")+ -->
+<!--   scale_x_continuous(breaks = c(2015, 2017, 2019, 2021, 2023, 2025)) -->
+
+<!-- # df_phd_tit <- data.frame(year = 2015:2018, -->
+<!-- #                          perc = c(3492/11826, 3850/10870, 4077/10195, 4504/9608)) -->
+<!-- #  -->
+<!-- # plt_phd_p <- df_phd_tit |> -->
+<!-- #   ggplot(aes(x = year, y = perc))+ -->
+<!-- #   geom_point()+ -->
+<!-- #   geom_line(linetype = "dashed")+ -->
+<!-- #   ggrepel::geom_label_repel(aes(label = scales::percent(perc, accuracy = 0.1)), size = 6)+ -->
+<!-- #   scale_y_continuous(label = scales::percent)+ -->
+<!-- #   theme_bw(base_size = 16)+ -->
+<!-- #   labs(x = "Año", title = "Porcentaje Docentes Titulares Principales con nivel Doctor (Ph.D)", y = "%", caption = "Fuente: Base estadística de docentes UEP 2015 - 2022") + -->
+<!-- #   theme(plot.caption = element_text(hjust = 0)) -->
+<!-- #  -->
+<!-- # library(patchwork) -->
+
+
+
+<!-- ``` -->
 
 
 
