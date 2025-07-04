@@ -1,17 +1,24 @@
 [
   {
+    "objectID": "edu-sup.html#section",
+    "href": "edu-sup.html#section",
+    "title": "edu-sup",
+    "section": "",
+    "text": "Del Papel a la Práctica:\n\n\nUn Análisis semi-cuantitativo de la LOES, las Becas y la Profesionalización Docente en Ecuador\n\n Mauricio Moreno, PhD"
+  },
+  {
     "objectID": "edu-sup.html#nota-aclaratoria",
     "href": "edu-sup.html#nota-aclaratoria",
     "title": "edu-sup",
     "section": "Nota Aclaratoria",
-    "text": "Nota Aclaratoria\n\n\nEsta presentación constituye un análisis semi-cuantitativo de la situación de la Educación Superior en el Ecuador con enfoque en el impacto de:\n\nLa Ley Orgánica de Educación Superior (LOES) en la profesionalización de la carrera docente,\nLos programas de becas de la SENESCYT,\nY, los vacíos de información para su mejora.\n\nEsta NO representa una opinión política, sino un comentario académico basado en los datos abiertos disponibles y su análisis.\nTampoco representa un análisis jurídico profundo (no soy experto en leyes, sino un Estadístico), y el marco legal será brevemente mencionado para contextualizar las conclusiones a las que llegaré.\n\n\n\nlagrimas de hombrue"
+    "text": "Nota Aclaratoria\nEsta presentación es un análisis semi-cuantitativo y académico sobre la situación de la Educación Superior en Ecuador, enfocado en:\n\n🎓 El impacto de la Ley Orgánica de Educación Superior (LOES) en la profesionalización docente\n\n🎓 Los efectos de los programas de becas impulsados por la SENESCYT\n\n🧩 Y los vacíos de información disponibles para su mejora continua\n\n🔍 Importante:\n\nEsta presentación NO representa una postura política\n\nNO es un análisis jurídico profundo\n\nLas opiniones y recomendaciones expresadas son personales y basadas en datos abiertos\n\n🧠 Soy estadístico, no abogado: El marco legal se menciona únicamente para contextualizar los resultados"
   },
   {
     "objectID": "edu-sup.html#fuentes-de-datos",
     "href": "edu-sup.html#fuentes-de-datos",
     "title": "edu-sup",
     "section": "Fuentes de datos",
-    "text": "Fuentes de datos\n\n\nBase estadística de docentes UEP 2015 - 2022 (SENESCYT)\nBase de datos de Becarios actualizada agosto 2024 (SENESCYT)\nBase estadística de matrícula de UEP 2015 - 2023 (SENESCYT)\nBase de datos de oferta académica de las IES (SENESCYT)\nBase de datos de oferta académica vigente de las IES (CES)\nEncuesta ACTI (2009 - 2014) (SENESCYT - INEC)"
+    "text": "Fuentes de datos\n\n\nBase estadística de docentes UEP 2015 - 2022 (SENESCYT)\nBase de datos de Becarios actualizada agosto 2024 (SENESCYT)\nBase estadística de matrícula de UEP 2015 - 2023 (SENESCYT)\nBase de datos de oferta académica de las IES (SENESCYT)\nBase de datos de oferta académica vigente de las IES (CES)\nEncuesta ACTI (2009 - 2014) (SENESCYT - INEC)\nEncuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU) años: 2016 a 2024 (INEC)"
   },
   {
     "objectID": "edu-sup.html#introducción",
@@ -21,32 +28,46 @@
     "text": "Introducción"
   },
   {
+    "objectID": "edu-sup.html#section-1",
+    "href": "edu-sup.html#section-1",
+    "title": "edu-sup",
+    "section": "",
+    "text": "Érase una LOES…\n\n\n\n\nFoto por Florian Klauer en Unsplash"
+  },
+  {
     "objectID": "edu-sup.html#la-primera-loes",
     "href": "edu-sup.html#la-primera-loes",
     "title": "edu-sup",
     "section": "La primera LOES",
-    "text": "La primera LOES\n\nEcuador probablemente tiene las peores universidades en sudamérica\n\n\nRafael Correa, 2012\\(^{†}\\)\n\n\nAntes del año 2000, no existía una ley orgánica específica para la educación superior.\nCada universidad establecía sus propios criterios para la contratación de docentes (tercer nivel y experiencia profesional o académica).\nLa autonomía universitaria permitía a las instituciones definir políticas de contratación, sin una normativa unificada.\nEn el 2000, se implementó la primera Ley Orgánica de Educación Superior (LOES) que creó el Consejo Nacional de Educación Superior (CONESUP) como organismo de control.\nSin embargo, cómo en el resto de América Latina, las universidades contaban con profesionales trabajando a medio tiempo como docentes, los mismos que no investigaban ni tenían grados doctorales\\(^{††}\\).\n\n\n†Neuman, W. (2012), The New York Times\n†† Johnson, M., A. (2017), Ed. Pol. An. Arch. (68)\n.\n."
+    "text": "La primera LOES\n\nEcuador probablemente tiene las peores universidades en sudamérica\n\n\nRafael Correa, 2012\\(^{†}\\)\n\n\nAntes del año 2000, no existía una ley orgánica específica para la educación superior.\nCada universidad establecía sus propios criterios para la contratación de docentes (tercer nivel y experiencia profesional o académica).\nLa autonomía universitaria permitía a las instituciones definir políticas de contratación, sin una normativa unificada.\nEn el 2000, se implementó la primera Ley Orgánica de Educación Superior (LOES) que creó el Consejo Nacional de Educación Superior (CONESUP) como organismo de control.\nSin embargo, cómo en el resto de América Latina, las universidades contaban con profesionales trabajando a medio tiempo como docentes, los mismos que no investigaban ni tenían grados doctorales\\(^{††}\\).\n\n\n†Neuman, W. (2012), The New York Times\n†† Johnson, M., A. (2017), Ed. Pol. An. Arch. (68)"
   },
   {
     "objectID": "edu-sup.html#loes-de-2010",
     "href": "edu-sup.html#loes-de-2010",
     "title": "edu-sup",
     "section": "LOES de 2010",
-    "text": "LOES de 2010\n\nCon el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.\nEstablece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.\n\n\n\nCategoríaTítuloExperienciaProducción.científicaTitular AuxiliarMaestría (PhD opcional)MínimaMínimaTitular AgregadoMaestría (PhD opcional)MediaMediaTitular PrincipalPhD (exclusivamente)AltaAlta (de impacto)Proyectos de investigación"
+    "text": "LOES de 2010\n\n\n\nCon el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.\nEstablece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.\n\n\n\n\n\n\n\n\n\nCategoría\nTítulo\nExperiencia\nProducción científica\n\n\n\n\nTitular Auxiliar\nMaestría (PhD opcional)\nMínima\nMínima\n\n\nTitular Agregado\nMaestría (PhD opcional)\nMedia\nMedia\n\n\nTitular Principal\nPhD (exclusivamente)\nAlta\nAlta (de impacto) Proyectos de investigación"
   },
   {
     "objectID": "edu-sup.html#loes-de-2010-1",
     "href": "edu-sup.html#loes-de-2010-1",
     "title": "edu-sup",
     "section": "LOES de 2010",
-    "text": "LOES de 2010\n\nCon el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.\nEstablece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.\n\n\n\nCategoríaTítuloExperienciaProducción.científicaTitular AuxiliarMaestría (PhD opcional)MínimaMínimaTitular AgregadoMaestría (PhD opcional)MediaMediaTitular PrincipalPhD (exclusivamente)AltaAlta (de impacto)Proyectos de investigación\n\n\n\nNo contamos con datos precisos del número de profesores con PhD antes de la LOES (ó 2015 para ser más preciso), pero estimo que era alrededor de entre el 0.8% al 1.8% del total de 26476 en 2008\\(^{†}\\).\n\n\n\n† Los pocos datos disponibles son contradictorios. En el informe Logros 2014 de la SENESCYT, se informó de 226 profesores con PhD en 2008, mientras Ramirez\nen su libro de 2016 “Universidad Urgente para una sociedad emancipada”, reporta 482 tan solo en el sector público.\n.\n."
+    "text": "LOES de 2010\n\n\n\nCon el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.\nEstablece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.\n\n\n\n\n\n\n\n\n\nCategoría\nTítulo\nExperiencia\nProducción científica\n\n\n\n\nTitular Auxiliar\nMaestría (PhD opcional)\nMínima\nMínima\n\n\nTitular Agregado\nMaestría (PhD opcional)\nMedia\nMedia\n\n\nTitular Principal\nPhD (exclusivamente)\nAlta\nAlta (de impacto) Proyectos de investigación\n\n\n\n\n\n\n\n\nNo contamos con datos precisos del número de profesores con PhD antes de la LOES (ó 2015 para ser más preciso), pero estimo que era alrededor de entre el 0.8% al 1.8% del total de 26476 en 2008\\(^{†}\\).\n\n\n\n\n\n\n† Los pocos datos disponibles son contradictorios. En el informe Logros 2014 de la SENESCYT, se informó de 226 profesores con PhD en 2008, mientras Ramirez\nen su libro de 2016 “Universidad Urgente para una sociedad emancipada”, reporta 482 tan solo en el sector público."
   },
   {
     "objectID": "edu-sup.html#ra.-transitoria-y-ceaaces",
     "href": "edu-sup.html#ra.-transitoria-y-ceaaces",
     "title": "edu-sup",
     "section": "13ra. Transitoria y CEAACES",
-    "text": "13ra. Transitoria y CEAACES\n\n\nSe entiende por tanto que bajo esta nueva LOES, se buscaba alcanzar una planta docente con mayor preparación, tanto así que\nEn su Décima Tercera disposición transitoria establecía: “El requisito de doctorado (…) exigido para ser profesor titular principal (…) será obligatorio luego de 7 años a partir de la vigencia de esta Ley. De no cumplirse esta condición, los profesores titulares principales perderán automáticamente esta condición.” \nY, adicionalmente creó el Consejo de Evaluación, Acreditación y Aseguramiento de la Calidad de la Educación Superior (CEAACES) que llevó a cabo un proceso de categorización de las universidades, estableciendo\\(^{†}\\):\n\n70% de profesores con título de doctor PhD, para universidades orientadas a docencia e investigación.\n40% de profesores con título de doctor PhD, para universidades orientadas a la docencia, y\n60% de profesores con título de doctor PhD, para universidades orientadas a la educación contínua.\n\n\n\n\n† Reglamento Transitorio para Tipología de Universidades (CEAACES, 2012)\n.\n."
+    "text": "13ra. Transitoria y CEAACES\n\n\n\n13ra. disposición transitoria: “El requisito de doctorado (…) exigido para ser profesor titular principal (…) será obligatorio luego de 7 años a partir de la vigencia de esta Ley. De no cumplirse esta condición, los profesores titulares principales perderán automáticamente esta condición.” \nSe creó el Consejo de Evaluación, Acreditación y Aseguramiento de la Calidad de la Educación Superior (CEAACES) que llevó a cabo un proceso de categorización de las universidades, estableciendo\\(^{†}\\):\n\n70% de profesores con título de doctor PhD, para universidades orientadas a docencia e investigación.\n40% de profesores con título de doctor PhD, para universidades orientadas a la docencia, y\n60% de profesores con título de doctor PhD, para universidades orientadas a la educación contínua.\n\n\n\n\n\n\n† Reglamento Transitorio para Tipología de Universidades (CEAACES, 2012)"
+  },
+  {
+    "objectID": "edu-sup.html#section-4",
+    "href": "edu-sup.html#section-4",
+    "title": "edu-sup",
+    "section": "",
+    "text": "El boom de las becas\n\n\n\n\nFoto por Andrew S en Unsplash"
   },
   {
     "objectID": "edu-sup.html#proyecto-de-fortalecimiento",
@@ -56,11 +77,18 @@
     "text": "Proyecto de Fortalecimiento\n\nEn 2011, la SENESCYT crea el proyecto de “Fortalecimiento del Conocimiento y Talento Humano” (ligado a la política de la transformación de la matriz productiva).\nSu objetivo general fue el de “Fortalecer las capacidades y el talento de los/as ecuatorianos/as garantizando su acceso a educación superior de calidad, y de esta manera aportar al nuevo esquema de desarrollo del país.”\nEl tiempo de ejecución fue establecido en 14 años (2011 a 2024).\nCon una inversión proyectada de ~3000 millones de dólares.\nAl término de su implementación, se esperaba contar un total de 77003 becarios.\nEntre sus indicadores, destaco:\n\nAl 2020, adjudicar 19000 becas para estudios de 4to. nivel en universidades (…) en el extranjero.\nAl 2020, adjudicar 4200 becas (…) de excelencia académica (…) en 3er. y 4to. nivel en los más prestigiosos centros de educación superior del mundo.\nAl 2020, contar con 4575 servidores públicos con formación de 4to. nivel en universidades (…) de excelencia académica en el país o en el extranjero"
   },
   {
-    "objectID": "edu-sup.html#section-3",
-    "href": "edu-sup.html#section-3",
+    "objectID": "edu-sup.html#section-6",
+    "href": "edu-sup.html#section-6",
     "title": "edu-sup",
     "section": "",
-    "text": "Cuadro tomado del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2012\n.\n."
+    "text": "Cuadro tomado del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2012"
+  },
+  {
+    "objectID": "edu-sup.html#section-7",
+    "href": "edu-sup.html#section-7",
+    "title": "edu-sup",
+    "section": "",
+    "text": "(paréntesis)\n\n\n\n\nFoto por Trisha Canillas en Unsplash"
   },
   {
     "objectID": "edu-sup.html#lo-que-el-viento-confundió",
@@ -84,8 +112,15 @@
     "text": "Lo que el viento confundió\nPor otra parte, en la presentación “Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras”:\n\n\n\n\n\nImagen tomada de la presentación “Educación Superior, Ciencia, Tecnología, Innovación y Saberes Ancestrales en Cifras”, Julio 2020, SENESCYT\n\n\n\n\nLas mismas cifras son presentadas de manera más genérica: Titulares y No titulares\nPero al menos nos muestra el número de docentes Titulares con PhD.\n\n\nEn definitiva, cruzando la información de los documentos oficiales disponibles, no me quedó de otra que asumir que el titular agregado desaparece (por algún motivo ajeno a mi entendimiento) y el docente auxiliar no califica como titular, dejándonos dos categorías:\n\nTitulares (principales), y\nNo titulares (auxiliares y ocasionales)\n\nVale recalcar que estos son los únicos datos disponibles acerca del número de docentes titulares principales con grado de PhD."
   },
   {
-    "objectID": "edu-sup.html#section-5",
-    "href": "edu-sup.html#section-5",
+    "objectID": "edu-sup.html#section-8",
+    "href": "edu-sup.html#section-8",
+    "title": "edu-sup",
+    "section": "",
+    "text": "Hacia 2017\n\n\n\n\nFoto por Annie Spratt de Unsplash"
+  },
+  {
+    "objectID": "edu-sup.html#section-9",
+    "href": "edu-sup.html#section-9",
     "title": "edu-sup",
     "section": "",
     "text": "El Comercio, 11 de julio de 2017\n\n\n\n\n\nTeleamazonas, 17 de julio de 2017"
@@ -98,53 +133,95 @@
     "text": "Docentes Titulares\n\n\n\nA medida que el plazo se acercaba:\n\nRedujeron el número de profesores titulares con respecto al total de docentes.\nAumentaron el número de profesores titulares con PhD con respecto al total de titulares.\nEn términos prácticos, fue imposible:\n\nCumplir con la transitoria 13ra. de contar con 100% de docentes titulares principales con nivel PhD hasta 2017, ó\nCumplir el 70%, 40% o 60% del total de la planta docente con PhD para ser universidad de docencia-investigación, docencia ó educación contínua, respectivamente como lo estipulaba el CEAACES."
   },
   {
-    "objectID": "edu-sup.html#y-los-becarios",
-    "href": "edu-sup.html#y-los-becarios",
+    "objectID": "edu-sup.html#y-los-becarios-senescyt",
+    "href": "edu-sup.html#y-los-becarios-senescyt",
     "title": "edu-sup",
-    "section": "Y, ¿los becarios?",
-    "text": "Y, ¿los becarios?"
+    "section": "Y, ¿los becarios SENESCYT?",
+    "text": "Y, ¿los becarios SENESCYT?"
   },
   {
     "objectID": "edu-sup.html#proyecciones-ingenuamente-simplísticas",
     "href": "edu-sup.html#proyecciones-ingenuamente-simplísticas",
     "title": "edu-sup",
     "section": "Proyecciones ingenuamente simplísticas",
-    "text": "Proyecciones ingenuamente simplísticas\n\n\nEntre 2011 y 2017, 1262 becarios iniciaron un doctorado.\nDe estos, 568 terminaron sus estudios antes del 2018 (44.9% de 1262).\nSegún propios datos de la SENESCYT, al 2017 existían 10195 docentes titulares principales, de los cuales 1273 contaban con PhD.\nEs decir, a 2017 existió de un déficit de 8922 PhDs para cumplir la transitoria décimo tercera.\nEntonces, se hubiesen necesitado adjudicar alrededor de 20000 becas (16 veces más) únicamente para doctorado para cumplir con la transitoria.\nEsto por supuesto, son generalizaciones muy simples pero que nos permiten llegar a la conclusión obvia: hicieron falta más PhDs"
+    "text": "Proyecciones ingenuamente simplísticas\n\n\nEntre 2011 y 2017, 1262 becarios iniciaron un doctorado.\nDe estos, 568 terminaron sus estudios antes del 2018 (44.9% de 1262).\nSegún propios datos de la SENESCYT, al 2017 existían 10195 docentes titulares principales, de los cuales 1273 contaban con PhD.\nEs decir, a 2017 existió de un déficit de 8922 PhDs para cumplir la transitoria décimo tercera.\nEntonces, se hubiesen necesitado adjudicar alrededor de 20000 becas (16 veces más) únicamente para doctorado para cumplir con la transitoria.\nEsto por supuesto, son generalizaciones muy simples pero que nos permiten llegar a la conclusión obvia: hicieron falta más PhDs\nHubiese sido lógico contar con programas doctorales nacionales que complementasen el programa de becas."
+  },
+  {
+    "objectID": "edu-sup.html#reglamento-de-doctorados",
+    "href": "edu-sup.html#reglamento-de-doctorados",
+    "title": "edu-sup",
+    "section": "Reglamento de doctorados",
+    "text": "Reglamento de doctorados\n\n\n\nEn 2016, fue publicado el reglamento de doctorados por parte del CES que derrogó el reglamento transitorio de 2013."
+  },
+  {
+    "objectID": "edu-sup.html#reglamento-de-doctorados-1",
+    "href": "edu-sup.html#reglamento-de-doctorados-1",
+    "title": "edu-sup",
+    "section": "Reglamento de doctorados",
+    "text": "Reglamento de doctorados\n\n\n\nEn 2016, fue publicado el reglamento de doctorados por parte del CES que derrogó el reglamento transitorio de 2013.\nSeis años después de la última Ley Orgánica de Educación Superior y un año antes de concluir el plazo de la transitoria 13ra."
+  },
+  {
+    "objectID": "edu-sup.html#reglamento-de-doctorados-2",
+    "href": "edu-sup.html#reglamento-de-doctorados-2",
+    "title": "edu-sup",
+    "section": "Reglamento de doctorados",
+    "text": "Reglamento de doctorados\n\n\n\nEn 2016, fue publicado el reglamento de doctorados por parte del CES que derrogó el reglamento transitorio de 2013.\nSeis años después de la última Ley Orgánica de Educación Superior y un año antes de concluir el plazo de la transitoria 13ra.\nEstablece tres tipos de programas de doctorado:\n\nEstructurado\nSemiestructurado\nPersonalizado/Tutelado"
   },
   {
     "objectID": "edu-sup.html#qué-pasó",
     "href": "edu-sup.html#qué-pasó",
     "title": "edu-sup",
     "section": "¿Qué pasó?",
-    "text": "¿Qué pasó?\n\n\nMás allá del plazo límite de 2017 (que careció de un sustento técnico claro), hubiese sido lógico poder contar con programas nacionales de doctorado una vez que becarios altamente calificados hacían su regreso.\nSin embargo, varias disposiciones legales limitaron seriamente la capacidad de las universidades para ofrecer programas de doctorado:\n\nLa LOES (Art. 117) solo permitía ofertar doctorados a universidades de docencia con investigación.\nEstas debían tener al menos 70% de su planta con PhD (según el reglamento del CEAACES).\nAdemás, el 100% de los titulares principales debían contar con PhD (transitoria 13ra.)\n\nAparte de los números imposibles de alcanzar, debemos agregar una historia de una tradición muy nuestra de burocratizarlo todo: sucesivos cambios en legislación y reglamentos para otorgar títulos (doctorales especialmente).\nEstas condiciones muy probablemente dejaron a las universidades sin posibilidad real de crear programas doctorales, dependiendo de los becarios en el exterior para cubrir esa demanda a futuro."
+    "text": "¿Qué pasó?\n\n\nMás allá del plazo límite de 2017 (que careció de un sustento técnico claro), varias disposiciones legales limitaron seriamente la capacidad de las universidades para ofrecer programas de doctorado:\n\nLa LOES (Art. 117) solo permitía ofertar doctorados a universidades de docencia con investigación.\nEstas debían tener al menos 70% de su planta con PhD (según el reglamento del CEAACES).\nAdemás, el 100% de los titulares principales debían contar con PhD (transitoria 13ra.)\n\nAparte de los números imposibles de alcanzar, debemos agregar el tiempo que nos tomó contar con un primer reglamento definitivo de doctorados.\nEstas condiciones muy probablemente dejaron a las universidades sin posibilidad real de crear oportunamente programas doctorales, dependiendo de los becarios en el exterior para cubrir esa demanda a futuro."
   },
   {
     "objectID": "edu-sup.html#la-oferta-educativa-de-postgrados",
     "href": "edu-sup.html#la-oferta-educativa-de-postgrados",
     "title": "edu-sup",
     "section": "La oferta educativa de postgrados",
-    "text": "La oferta educativa de postgrados\n\nLástimosamente no contamos con datos a lo largo del tiempo sobre la vigencia de los programas de postgrado*.\nAsí, actualmente en las bases de datos de oferta académica de las IES** encontramos:\n\n\n\n\nNIVELVIGENTESNO_VIGENTESDoctorado478Maestrías3009***2779\n\n\n\nY podemos intuir:\n\nLa estabilidad de los programas de maestría es baja.\nLa oferta de programas de doctorado es marcadamente reducida.\n\n\n\n\n* La vigencia de un programa depende de su renovación, por lo que las fechas disponibles corresponden a la última vez que el mismo fue renovado.\n** De acuerdo a las bases de datos de oferta académica de las IES (SENESCYT) y de oferta académica vigente de las IES (CES)\n*** Incluye maestrías: académicas (864), académicas con trayectoria de investigación (187), académicas con trayectoria profesional (1861), de investigación (16), profesionales (17), y tecnológicas (64).\n.\n."
+    "text": "La oferta educativa de postgrados\n\nLástimosamente no contamos con datos a lo largo del tiempo sobre la vigencia de los programas de postgrado*.\nAsí, actualmente en las bases de datos de oferta académica de las IES** encontramos:\n\n\n\n\nNIVELVIGENTESNO_VIGENTESDoctorado478Maestrías3009***2779\n\n\n\nY podemos intuir:\n\nLa estabilidad de los programas de maestría es baja.\nLa oferta de programas de doctorado es marcadamente reducida.\n\n\n\n\n* La vigencia de un programa depende de su renovación, por lo que las fechas disponibles corresponden a la última vez que el mismo fue renovado.\n** De acuerdo a las bases de datos de oferta académica de las IES (SENESCYT) y de oferta académica vigente de las IES (CES)\n*** Incluye maestrías: académicas (864), académicas con trayectoria de investigación (187), académicas con trayectoria profesional (1861), de investigación (16), profesionales (17), y tecnológicas (64)."
   },
   {
-    "objectID": "edu-sup.html#la-oferta-de-programas-de-doctorado",
-    "href": "edu-sup.html#la-oferta-de-programas-de-doctorado",
+    "objectID": "edu-sup.html#la-oferta-nacional-de-doctorado",
+    "href": "edu-sup.html#la-oferta-nacional-de-doctorado",
     "title": "edu-sup",
-    "section": "La oferta de programas de doctorado",
-    "text": "La oferta de programas de doctorado"
+    "section": "La oferta nacional de doctorado",
+    "text": "La oferta nacional de doctorado"
+  },
+  {
+    "objectID": "edu-sup.html#la-oferta-nacional-de-doctorado-1",
+    "href": "edu-sup.html#la-oferta-nacional-de-doctorado-1",
+    "title": "edu-sup",
+    "section": "La oferta nacional de doctorado (%)",
+    "text": "La oferta nacional de doctorado (%)"
+  },
+  {
+    "objectID": "edu-sup.html#section-11",
+    "href": "edu-sup.html#section-11",
+    "title": "edu-sup",
+    "section": "",
+    "text": "Reforma de la LOES 2018\n\n\n\n\nFoto por Vincent Lin en Unsplash"
   },
   {
     "objectID": "edu-sup.html#el-art.-117-y-el-cases",
     "href": "edu-sup.html#el-art.-117-y-el-cases",
     "title": "edu-sup",
     "section": "El Art. 117 y el CASES",
-    "text": "El Art. 117 y el CASES\n\n\nEl Art. 117 Es reformado en su totalidad estableciendo que todas las universidades y escuelas politécnicas son instituciones de docencia e investigación.\nSe flexibiliza su capacidad de decidir las carreras o programas que oferten, indicando únicamente que aquellas que oferten programas doctorales, deberán ser acreditadas por el Consejo de Aseguramiento de la Calidad de la Educación Superior (CASES)."
+    "text": "El Art. 117 y el CASES\n\n\n \n\nEl Art. 117 Es reformado en su totalidad estableciendo que todas las universidades y escuelas politécnicas son instituciones de docencia e investigación.\nSe flexibiliza su capacidad de decidir las carreras o programas que oferten, indicando únicamente que aquellas que oferten programas doctorales, deberán ser acreditadas por el Consejo de Aseguramiento de la Calidad de la Educación Superior (CASES)."
   },
   {
     "objectID": "edu-sup.html#la-transitoria-light",
     "href": "edu-sup.html#la-transitoria-light",
     "title": "edu-sup",
     "section": "La transitoria “light”",
-    "text": "La transitoria “light”\n\n\nLa transitoria décimo tercera es cambiada, estableciendo: El requisito de doctorado (…) exigido para ser profesor titular principal (…) será obligatorio a partir del primero (1o.) de enero de 2023. De no cumplirse la condición, los profesores titulares principales pasarán a formar parte del escalafón previo en los términos y condiciones establecidos por el Consejo de Educación Superior."
+    "text": "La transitoria “light”\n\n\n \n\nLa transitoria décimo tercera es cambiada, estableciendo:\n\nEl requisito de doctorado (…) exigido para ser profesor titular principal (…) será obligatorio a partir del primero (1o.) de enero de 2023. De no cumplirse la condición, los profesores titulares principales pasarán a formar parte del escalafón previo en los términos y condiciones establecidos por el Consejo de Educación Superior."
+  },
+  {
+    "objectID": "edu-sup.html#section-14",
+    "href": "edu-sup.html#section-14",
+    "title": "edu-sup",
+    "section": "",
+    "text": "Hacia este momento\n\n\n\n\nFoto por Rayson Tan en Unsplash"
   },
   {
     "objectID": "edu-sup.html#becas-en-coma",
@@ -158,14 +235,35 @@
     "href": "edu-sup.html#reviviendo-a-un-paciente-en-coma",
     "title": "edu-sup",
     "section": "Reviviendo a un paciente en coma",
-    "text": "Reviviendo a un paciente en coma\n\n\nCuadro tomado de la Actualización del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2021\n.\n."
+    "text": "Reviviendo a un paciente en coma\n\n\nCuadro tomado de la Actualización del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2021"
   },
   {
-    "objectID": "edu-sup.html#section-10",
-    "href": "edu-sup.html#section-10",
+    "objectID": "edu-sup.html#total-becarios-al-momento",
+    "href": "edu-sup.html#total-becarios-al-momento",
+    "title": "edu-sup",
+    "section": "Total becarios al momento",
+    "text": "Total becarios al momento\n\n\n\nHasta el año 2025, el programa de becas SENESCYT ha beneficiado a alrededor de 22500 personas con 7700 becas a nivel internacional y 14800 a nivel nacional.\nHasta el año de corte de la base de Becarios, se observa que existen aún subprogramas de becas ofertando oportunidades de doctorado (por ejemplo: Fulbright y Cooperaciones internacionales).\nSin embargo, las becas del proyecto de fortalecimiento inicial no se retomaron.\nHoy por hoy, la mayor cantidad de becas SENESCYT está direccionada para estudios de pregrado a nivel nacional."
+  },
+  {
+    "objectID": "edu-sup.html#section-17",
+    "href": "edu-sup.html#section-17",
     "title": "edu-sup",
     "section": "",
-    "text": "el paciente se nos fue al cielo…\n\n\nImágen creada en Gemini.ai\n.\n."
+    "text": "el paciente se nos fue al cielo…\n\n\nImagen creada en Gemini.ai"
+  },
+  {
+    "objectID": "edu-sup.html#reglamento-del-escalafón-2022",
+    "href": "edu-sup.html#reglamento-del-escalafón-2022",
+    "title": "edu-sup",
+    "section": "Reglamento del Escalafón 2022",
+    "text": "Reglamento del Escalafón 2022\n\n\n\nEn 2022, es publicado el “Reglamento de Carrera y Escalafón del Personal Académico del Sistema de Educación Superior” en su décima disposición general se indica\nEl personal académico de las universidades (…) que alcanzaron la categoría de titular principal antes de la entrada en vigencia de la LOES del 12 de octubre del 2010, y que no cuenten con título de PhD hasta el primero de enero del 2023, pasarán a ser denominados profesores titulares principales de escalafón previo y se respetarán sus derechos adquiridos."
+  },
+  {
+    "objectID": "edu-sup.html#section-19",
+    "href": "edu-sup.html#section-19",
+    "title": "edu-sup",
+    "section": "",
+    "text": "Radiografía en números\n\n\n\n\nFoto por Owen Beard de Unsplash"
   },
   {
     "objectID": "edu-sup.html#números-en-general",
@@ -189,11 +287,18 @@
     "text": "Total docentes sector privado vs. público"
   },
   {
-    "objectID": "edu-sup.html#porcentage-docentes-sector-privado-vs.-público",
-    "href": "edu-sup.html#porcentage-docentes-sector-privado-vs.-público",
+    "objectID": "edu-sup.html#porcentaje-docentes-sector-privado-vs.-público",
+    "href": "edu-sup.html#porcentaje-docentes-sector-privado-vs.-público",
     "title": "edu-sup",
-    "section": "Porcentage docentes sector privado vs. público",
-    "text": "Porcentage docentes sector privado vs. público"
+    "section": "Porcentaje docentes sector privado vs. público",
+    "text": "Porcentaje docentes sector privado vs. público"
+  },
+  {
+    "objectID": "edu-sup.html#section-20",
+    "href": "edu-sup.html#section-20",
+    "title": "edu-sup",
+    "section": "",
+    "text": "Relaciones laborales\n\n\n\n\nFoto por Scott Graham en Unsplash"
   },
   {
     "objectID": "edu-sup.html#relación-laboral-en-universidades-privadas",
@@ -220,14 +325,175 @@
     "objectID": "edu-sup.html#doctorantes-en-la-acti",
     "href": "edu-sup.html#doctorantes-en-la-acti",
     "title": "edu-sup",
-    "section": "Doctorantes en la ACTI",
-    "text": "Doctorantes en la ACTI"
+    "section": "Doctorantes en la ACTI*",
+    "text": "Doctorantes en la ACTI*\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n* ¿Son estos números representación de la realidad?"
   },
   {
-    "objectID": "edu-sup.html#desempleo-de-los-becarios",
-    "href": "edu-sup.html#desempleo-de-los-becarios",
+    "objectID": "edu-sup.html#empleo-de-los-becarios",
+    "href": "edu-sup.html#empleo-de-los-becarios",
     "title": "edu-sup",
-    "section": "Desempleo de los becarios",
-    "text": "Desempleo de los becarios\n\n¿Podemos cuántificarlo? si, un poquito y en gran medida, no\nsera si o que mi jazmin"
+    "section": "Empleo de los becarios",
+    "text": "Empleo de los becarios\n\n¿Podemos cuántificarlo? En una palabra: no\n¿Podemos hacernos una idea? muy difusa, si. De manera indirecta\nComo parte de las obligaciones contractuales de los becarios, la más importante sin duda, era la compensación:\n\nEstablecía como regla general el compensar con trabajo por el doble del tiempo estudiado.\nEn un principio se obligaba a llevarla a cabo en Ecuador, luego cambió a poder hacerla también desde el exterior (en el año 2021).\nVarios mecanismos se establecieron para la misma.\n\nOtra fuente de información es la ENEMDU, que gracias al uso de una nueva codificación de los títulos de nivel superior permite calcular indicadores de empleo de este segmento de la población desde 2016 (pero no específicamente de los becarios)."
+  },
+  {
+    "objectID": "edu-sup.html#compensación-todos-los-niveles",
+    "href": "edu-sup.html#compensación-todos-los-niveles",
+    "title": "edu-sup",
+    "section": "Compensación (todos los niveles)",
+    "text": "Compensación (todos los niveles)\n\n\n\n\nEn estudios: 6.4%\nEx becario/finalizo beca/terminó estudios: 64.5%\nIncumplidos: 12.3%\nEn compensación: 6.1%\nNo reporta compensación: 6.6%\n\n\n\n\nESTADO_BECARIOEN ESTUDIOSEX BECARIOFINALIZO BECAINCUMPLIDOSSEGUIMIENTO A LA COMPENSACIONTERMINO ESTUDIOS / COMPENSACIONTotalBECARIO EN COMPENSACION00001,56201,562BECARIO EN ESTUDIOS1,649000001,649BECARIO EN PERIODO DE GRACIA DE COMPENSACION00001,02201,022BECARIO FINALIZO COMPENSACION00742008301,572BECARIO NO REPORTA COMPENSACION00001,70001,700DIFERIMIENTO DEL PERIODO DE COMPENSACION000031031EN PROCESO DE SUSPENSION DEFINITIVA0002,269002,269EX BECARIO06,75500006,755RENUNCIA DE BECA033120018TERMINACION POR MUERTE031200033TERMINACION POR MUTUO ACUERDO057280033118TERMINACION UNILATERAL01,045313878002,236TERMINO ESTUDIOS00448006,2816,729Total1,6497,8911,5363,1594,3157,14425,694"
+  },
+  {
+    "objectID": "edu-sup.html#compensación-solo-maestrías",
+    "href": "edu-sup.html#compensación-solo-maestrías",
+    "title": "edu-sup",
+    "section": "Compensación (solo maestrías)",
+    "text": "Compensación (solo maestrías)\n\n\n\n\nEn estudios: 17.7%\nEx becario/finalizo beca/terminó estudios: 49.2%\nIncumplidos: 5.7%\nEn compensación: 6.2%\nNo reporta compensación: 7.6%\n\n\n\n\nESTADO_BECARIOEN ESTUDIOSEX BECARIOFINALIZO BECAINCUMPLIDOSSEGUIMIENTO A LA COMPENSACIONTERMINO ESTUDIOS / COMPENSACIONTotalBECARIO EN COMPENSACION00004100410BECARIO EN ESTUDIOS1,162000001,162BECARIO EN PERIODO DE GRACIA DE COMPENSACION00008740874BECARIO FINALIZO COMPENSACION00573005251,098BECARIO NO REPORTA COMPENSACION00005020502DIFERIMIENTO DEL PERIODO DE COMPENSACION000019019EN PROCESO DE SUSPENSION DEFINITIVA00028700287EX BECARIO01,96800001,968RENUNCIA DE BECA0002002TERMINACION POR MUERTE0300003TERMINACION POR MUTUO ACUERDO0197001238TERMINACION UNILATERAL064318700182TERMINO ESTUDIOS000003535Total1,1622,0546113761,8055726,580"
+  },
+  {
+    "objectID": "edu-sup.html#compensación-solo-doctorados",
+    "href": "edu-sup.html#compensación-solo-doctorados",
+    "title": "edu-sup",
+    "section": "Compensación (solo doctorados)",
+    "text": "Compensación (solo doctorados)\n\n\n\n\nEn estudios: 0.3%\nEx becario/finalizo beca/terminó estudios: 84.5%\nIncumplidos: 8.3%\nEn compensación: 35%\nNo reporta compensación: 29%\n\n\n\n\nESTADO_BECARIOEN ESTUDIOSEX BECARIOFINALIZO BECAINCUMPLIDOSSEGUIMIENTO A LA COMPENSACIONTERMINO ESTUDIOS / COMPENSACIONTotalBECARIO EN COMPENSACION00005410541BECARIO EN ESTUDIOS4000004BECARIO EN PERIODO DE GRACIA DE COMPENSACION000076076BECARIO FINALIZO COMPENSACION003100100131BECARIO NO REPORTA COMPENSACION00004480448DIFERIMIENTO DEL PERIODO DE COMPENSACION0000606EN PROCESO DE SUSPENSION DEFINITIVA00010000100EX BECARIO01540000154RENUNCIA DE BECA0002002TERMINACION POR MUERTE0510006TERMINACION POR MUTUO ACUERDO015700729TERMINACION UNILATERAL0158270050Total4189471291,0711071,547"
+  },
+  {
+    "objectID": "edu-sup.html#desempleo",
+    "href": "edu-sup.html#desempleo",
+    "title": "edu-sup",
+    "section": "Desempleo",
+    "text": "Desempleo\n\n\n\n\nA nivel nacional, el desempleo en 2024 fue de: 3.7% (1 de cada 27 personas no tienen empleo).\nPara el segmento de ecuatorianos con postgrado, fue de 2.9% (1 de cada 34 personas con postgrado no tienen empleo)."
+  },
+  {
+    "objectID": "edu-sup.html#empleo-y-subempleo",
+    "href": "edu-sup.html#empleo-y-subempleo",
+    "title": "edu-sup",
+    "section": "Empleo y subempleo",
+    "text": "Empleo y subempleo\n\n\n\n\nA nivel nacional, el empleo adecuado en 2024 fue de 35.9% (1 de cada 3 personas tuvieron empleo adecuado), y el subempleo fue de 21% (1 de cada 5 personas tuvieron subempleo).\nPara el segmento de ecuatorianos con postgrado, el empleo adecuado fue de 85.7% (857 de cada 1000 personas con postgrado tuvieron empleo adecuado), y el subempleo fue de 5.6% (1 de cada 18 personas con personas con postgrado tuvieron subempleo)."
+  },
+  {
+    "objectID": "edu-sup.html#tipos-de-programas-de-doctorado",
+    "href": "edu-sup.html#tipos-de-programas-de-doctorado",
+    "title": "edu-sup",
+    "section": "Tipos de programas de doctorado",
+    "text": "Tipos de programas de doctorado\n\n\n\n\n\n\n\n\n\nComparativo de Tipos de Doctorado\n\n\n🧾 Característica\n🧱 Estructurado\n🔀 Semiestructurado\n👤 Personalizado/Tutelado\n\n\n\n\nEnfoque inicial\nFase de cursos al inicio con currículo fijo\nTronco común inicial, obligatorio para todos\nEnfocado desde el inicio en la tesis de investigación\n\n\nPlan de estudios\nDefinido por la institución; cursos pueden ser tomados en otros programas afines\nComienza con tronco común; luego asignaturas dependen del plan de investigación aprobado\nTotalmente guiado por el plan de investigación aprobado por el comité doctoral\n\n\nFlexibilidad curricular\nBaja: currículo fijo en los primeros años\nMedia: después del tronco común, el doctorando elige lo necesario según su tema\nAlta: el doctorando construye su trayecto según su investigación\n\n\nRol del tutor\nMenor durante la fase de cursos, aumenta en fase de investigación\nAcompaña desde el plan de investigación\nEs central: tutor guía desde el inicio el diseño del plan de investigación\n\n\nAsignaturas externas\nPermitidas si son parte de programas doctorales afines\nPermitidas si cumplen requisitos (modalidad, carga horaria, acreditación, etc.)\nIdem semiestructurado, pero más centrado en pertinencia directa con el tema\n\n\nCursos de nivel inferior\nTodos los cursos deben ser de grado doctoral\nTodos los cursos deben ser de grado doctoral\nTodos los cursos deben ser de grado doctoral\n\n\nInicio de investigación\nSe articula desde el inicio, pero tras la fase de formación teórica\nComienza después del tronco común y aprobación del plan\nComienza desde el primer momento del programa\n\n\nOferta institucional\nUniversidad debe tener el programa definido\nIgual que el estructurado\nSolo puede existir si ya hay programas estructurados o semiestructurados vigentes en la institución"
+  },
+  {
+    "objectID": "edu-sup.html#tipos-de-programas-de-doctorado-1",
+    "href": "edu-sup.html#tipos-de-programas-de-doctorado-1",
+    "title": "edu-sup",
+    "section": "Tipos de programas de doctorado",
+    "text": "Tipos de programas de doctorado\n\n\n\n\nEnfoque inicial\nPlan de estudios\nFlexibilidad curricular\nRol del tutor\nInicio de investigación"
+  },
+  {
+    "objectID": "edu-sup.html#tipos-de-programas-de-doctorado-2",
+    "href": "edu-sup.html#tipos-de-programas-de-doctorado-2",
+    "title": "edu-sup",
+    "section": "Tipos de programas de doctorado",
+    "text": "Tipos de programas de doctorado\n\n\n\n\nEnfoque inicial\nPlan de estudios\nFlexibilidad curricular\nRol del tutor\nInicio de investigación\nCursos de nivel inferior\nOferta institucional"
+  },
+  {
+    "objectID": "edu-sup.html#requisitos-institucionales",
+    "href": "edu-sup.html#requisitos-institucionales",
+    "title": "edu-sup",
+    "section": "Requisitos institucionales",
+    "text": "Requisitos institucionales\n\n\n\nArtículo 14, literal b:\n\nHaber ejecutado programas y/o proyectos de investigación en el campo del conocimiento específico o detallado del programa propuesto (…) durante los últimos cinco (5) años.. Esto debe reflejarse en: la existencia de grupos de investigación activos, la publicación de libros o artículos en revistas especializadas indexadas (…)"
+  },
+  {
+    "objectID": "edu-sup.html#requisitos-académicos",
+    "href": "edu-sup.html#requisitos-académicos",
+    "title": "edu-sup",
+    "section": "Requisitos académicos",
+    "text": "Requisitos académicos\n\n\n\nArtículo 18:\n\nPara el desarrollo y ejecución de programas doctorales se podrán conformar redes académicas entre universidades y escuelas politécnicas nacionales y de éstas con universidades o instituciones de investigación extranjeras legalmente reconocidas, evaluadas, acreditadas o su equivalente en su país de origen."
+  },
+  {
+    "objectID": "edu-sup.html#section-23",
+    "href": "edu-sup.html#section-23",
+    "title": "edu-sup",
+    "section": "",
+    "text": "Actualidad\n\n\n\n\nFoto por Chan Chai Kee en Unsplash"
+  },
+  {
+    "objectID": "edu-sup.html#estamos-tan-mal",
+    "href": "edu-sup.html#estamos-tan-mal",
+    "title": "edu-sup",
+    "section": "¿Estamos tan mal?",
+    "text": "¿Estamos tan mal?"
+  },
+  {
+    "objectID": "edu-sup.html#estamos-tan-mal-1",
+    "href": "edu-sup.html#estamos-tan-mal-1",
+    "title": "edu-sup",
+    "section": "¿Estamos tan mal?",
+    "text": "¿Estamos tan mal?\n\n\n\n\nDejando de lado la utopía de universidades encajando en un 100% en el esquema anglosajón, el principal indicador que impulsó la reforma no pinta tan mal cuando nos comparamos a otros países en la región:\n\n\n\n\n\n\n\n\n\nPorcentaje de docentes con PhD\n\n\nPaís\n%\nAño\nFuente\n\n\n\n\nEcuador\n12.8%\n2022\nSENESCYT\n\n\nColombia\n11.8%\n2023\nMinisterio de Educación Nacional\n\n\nArgentina\n12.8%\n2022\nMinisterio de Educación Argentina\n\n\nChile\n16.9%\n2024\nSubsecretaría de Educación Superior\n\n\nMéxico\n17.6%\n2023\nSistema Integrado de Información de la Educación Superior\n\n\n\n\n\n\n\n\nPero, aún nos queda mucho por mejorar."
+  },
+  {
+    "objectID": "edu-sup.html#calidad-y-disponibilidad-de-datos",
+    "href": "edu-sup.html#calidad-y-disponibilidad-de-datos",
+    "title": "edu-sup",
+    "section": "Calidad y disponibilidad de datos",
+    "text": "Calidad y disponibilidad de datos\n\n\n\n\nAparentemente las decisiones políticas tomadas no tuvieron sustento técnico alguno.\nEl más claro ejemplo, el plazo de 2017.\nEn la toma de decisiones, el líneamiento mínimo que deberíamos esperar es la cuantificación del problema que queremos resolver.\nY, lamentablemente al momento estamos perdiendo la oportunidad de levantar datos nuevos de mejor calidad y la consistencia de los disponibles.\n\n\n\n\n\nImagen creada en Gemini.ai"
+  },
+  {
+    "objectID": "edu-sup.html#un-ejemplo-de-qué-datos-evitar",
+    "href": "edu-sup.html#un-ejemplo-de-qué-datos-evitar",
+    "title": "edu-sup",
+    "section": "Un ejemplo de qué datos evitar",
+    "text": "Un ejemplo de qué datos evitar\n\n\nImagen creada con ChatGPT"
+  },
+  {
+    "objectID": "edu-sup.html#un-ejemplo-de-qué-datos-evitar-1",
+    "href": "edu-sup.html#un-ejemplo-de-qué-datos-evitar-1",
+    "title": "edu-sup",
+    "section": "Un ejemplo de qué datos evitar",
+    "text": "Un ejemplo de qué datos evitar\n\n\n\n\nLa base de datos de becarios es un registro administrativo.\n\n\n\nLa ACTI fue una encuesta a instituciones.\n\n\n\nDar prioridad a registros administrativos y encuestas a individuos (como la ENEMDU)."
+  },
+  {
+    "objectID": "edu-sup.html#datos-que-faltan-fuga-de-cerebros",
+    "href": "edu-sup.html#datos-que-faltan-fuga-de-cerebros",
+    "title": "edu-sup",
+    "section": "Datos que faltan: ¿fuga de cerebros?",
+    "text": "Datos que faltan: ¿fuga de cerebros?\n\n\nImagen creada con ChatGPT"
+  },
+  {
+    "objectID": "edu-sup.html#datos-que-faltan-fuga-de-cerebros-1",
+    "href": "edu-sup.html#datos-que-faltan-fuga-de-cerebros-1",
+    "title": "edu-sup",
+    "section": "Datos que faltan: ¿fuga de cerebros?",
+    "text": "Datos que faltan: ¿fuga de cerebros?\n\n\nLa SENESCYT lleva a cabo el seguimiento de los becarios a través del Sistema de Información y de Atención al Usuario (SIAU).\nEn este portal, el becario reporta periodicamente el progreso de la compensación compartiendo, entre otras, información laboral y a veces de su residencia actual.\nSin embargo, si el becario no ha reportado compensación alguna, los datos de residencia permanecen tal cual fueron ingresados al inicio de su contrato de beca.\nEsto hace que el campo correspondiente a la residencia del becario en la base de datos sea poco confiable.\nEn su lugar, quizá la única aproximación que tenemos al número de becarios que “fugaron” es concentrarnos en los que estudiaron en el extranjero y no reportan compensación, especialmente si tenemos en mente que:\n\nSi el becario estudió en el exterior, le sería más fácil a aplicar a un empleo inmediatamente terminado sus estudios en el país anfitrión o inclusive otro.\n\n\nEsto sin embargo, no consideraría el número que han migrado después de terminar su compensación en Ecuador."
+  },
+  {
+    "objectID": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero",
+    "href": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero",
+    "title": "edu-sup",
+    "section": "Sin compensación y estudios en el extranjero",
+    "text": "Sin compensación y estudios en el extranjero\n\n\n\n\nTodos: 19.4%\n\n\n\n\n\nBecarios que estudiaron en el extranjero: TODOS\n\n\nESTADO_BECARIOEN ESTUDIOSEX BECARIOFINALIZO BECAINCUMPLIDOSSEGUIMIENTO A LA COMPENSACIONTERMINO ESTUDIOS / COMPENSACIONTotalBECARIO EN COMPENSACION00001,51601,516BECARIO EN ESTUDIOS210000021BECARIO EN PERIODO DE GRACIA DE COMPENSACION00001480148BECARIO FINALIZO COMPENSACION00740008161,556BECARIO NO REPORTA COMPENSACION00001,64001,640DIFERIMIENTO DEL PERIODO DE COMPENSACION000029029EN PROCESO DE SUSPENSION DEFINITIVA00053600536EX BECARIO02,53700002,537RENUNCIA DE BECA0105006TERMINACION POR MUERTE012100013TERMINACION POR MUTUO ACUERDO04522002794TERMINACION UNILATERAL01005419100345TERMINO ESTUDIOS00100910Total212,6958187323,3338528,451"
+  },
+  {
+    "objectID": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero-1",
+    "href": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero-1",
+    "title": "edu-sup",
+    "section": "Sin compensación y estudios en el extranjero",
+    "text": "Sin compensación y estudios en el extranjero\n\n\n\n\nTodos: 19.4%\nPregrado: 29.6%\n\n\n\n\n\nBecarios que estudiaron en el extranjero: PREGRADO\n\n\nESTADO_BECARIOEN ESTUDIOSEX BECARIOFINALIZO BECAINCUMPLIDOSSEGUIMIENTO A LA COMPENSACIONTERMINO ESTUDIOS / COMPENSACIONTotalBECARIO EN COMPENSACION00005050505BECARIO EN ESTUDIOS120000012BECARIO EN PERIODO DE GRACIA DE COMPENSACION000068068BECARIO FINALIZO COMPENSACION008900142231BECARIO NO REPORTA COMPENSACION00006290629DIFERIMIENTO DEL PERIODO DE COMPENSACION0000404EN PROCESO DE SUSPENSION DEFINITIVA00022500225EX BECARIO02940000294RENUNCIA DE BECA0101002TERMINACION POR MUERTE0400004TERMINACION POR MUTUO ACUERDO0138001132TERMINACION UNILATERAL020157700112TERMINO ESTUDIOS0010089Total123321133031,2061612,127"
+  },
+  {
+    "objectID": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero-2",
+    "href": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero-2",
+    "title": "edu-sup",
+    "section": "Sin compensación y estudios en el extranjero",
+    "text": "Sin compensación y estudios en el extranjero\n\n\n\n\nTodos: 19.4%\nPregrado: 29.6%\nMaestría: 11.2%\n\n\n\n\n\nBecarios que estudiaron en el extranjero: MAESTRIA\n\n\nESTADO_BECARIOEN ESTUDIOSEX BECARIOFINALIZO BECAINCUMPLIDOSSEGUIMIENTO A LA COMPENSACIONTERMINO ESTUDIOS / COMPENSACIONTotalBECARIO EN COMPENSACION00003710371BECARIO EN ESTUDIOS5000005BECARIO EN PERIODO DE GRACIA DE COMPENSACION0000707BECARIO FINALIZO COMPENSACION00571005111,082BECARIO NO REPORTA COMPENSACION00004830483DIFERIMIENTO DEL PERIODO DE COMPENSACION000019019EN PROCESO DE SUSPENSION DEFINITIVA00018700187EX BECARIO01,94700001,947RENUNCIA DE BECA0002002TERMINACION POR MUERTE0200002TERMINACION POR MUTUO ACUERDO017700933TERMINACION UNILATERAL063318500179TERMINO ESTUDIOS0000011Total52,0296092748805214,318"
+  },
+  {
+    "objectID": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero-3",
+    "href": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero-3",
+    "title": "edu-sup",
+    "section": "Sin compensación y estudios en el extranjero",
+    "text": "Sin compensación y estudios en el extranjero\n\n\n\n\nTodos: 19.4%\nPregrado: 29.6%\nMaestría: 11.2%\nEspecialización: 18%\n\n\n\n\n\nBecarios que estudiaron en el extranjero: ESPECIALIZACION\n\n\nESTADO_BECARIOEX BECARIOFINALIZO BECAINCUMPLIDOSSEGUIMIENTO A LA COMPENSACIONTERMINO ESTUDIOS / COMPENSACIONTotalBECARIO EN COMPENSACION0001010101BECARIO EN PERIODO DE GRACIA DE COMPENSACION000101BECARIO FINALIZO COMPENSACION0490063112BECARIO NO REPORTA COMPENSACION00085085EN PROCESO DE SUSPENSION DEFINITIVA00240024EX BECARIO1430000143TERMINACION POR MUERTE100001TERMINACION UNILATERAL202004Total146492618763471"
+  },
+  {
+    "objectID": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero-4",
+    "href": "edu-sup.html#sin-compensación-y-estudios-en-el-extranjero-4",
+    "title": "edu-sup",
+    "section": "Sin compensación y estudios en el extranjero",
+    "text": "Sin compensación y estudios en el extranjero\n\n\n\n\nTodos: 19.4%\nPregrado: 29.6%\nMaestría: 11.2%\nEspecialización: 18%\nDoctorado: 28.9%\n\n\n\n\n\nBecarios que estudiaron en el extranjero: DOCTORADO\n\n\nESTADO_BECARIOEN ESTUDIOSEX BECARIOFINALIZO BECAINCUMPLIDOSSEGUIMIENTO A LA COMPENSACIONTERMINO ESTUDIOS / COMPENSACIONTotalBECARIO EN COMPENSACION00005390539BECARIO EN ESTUDIOS4000004BECARIO EN PERIODO DE GRACIA DE COMPENSACION000072072BECARIO FINALIZO COMPENSACION003100100131BECARIO NO REPORTA COMPENSACION00004430443DIFERIMIENTO DEL PERIODO DE COMPENSACION0000606EN PROCESO DE SUSPENSION DEFINITIVA00010000100EX BECARIO01530000153RENUNCIA DE BECA0002002TERMINACION POR MUERTE0510006TERMINACION POR MUTUO ACUERDO015700729TERMINACION UNILATERAL0158270050Total4188471291,0601071,535"
   }
 ]

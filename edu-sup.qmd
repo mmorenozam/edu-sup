@@ -32,28 +32,51 @@ source("00_Auxiliares.R")
 
 ```
 
+## {.smaller}
+
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+Del Papel a la Práctica: 
+:::
+
+::: {.subtitle data-id="subtitle"}
+Un Análisis semi-cuantitativo de la LOES, las Becas y la Profesionalización Docente en Ecuador
+:::
+
+<br>
+Mauricio Moreno, PhD
+::::
+::::::
+
+![](images/portada.png){.image-left}
+
 ## Nota Aclaratoria {.smaller}
 
 
-:::{.v-center-container}
--   Esta presentación constituye un análisis semi-cuantitativo de la situación de la Educación Superior en el Ecuador con enfoque en el impacto de:
 
-    -   La Ley Orgánica de Educación Superior (LOES) en la profesionalización de la carrera docente,
+Esta presentación es un análisis **semi-cuantitativo y académico** sobre la situación de la Educación Superior en Ecuador, enfocado en:
 
-    -   Los programas de becas de la SENESCYT,
-    
-    -   Y, los vacíos de información para su mejora.
+- 🎓 El impacto de la **Ley Orgánica de Educación Superior (LOES)** en la profesionalización docente  
+- 🎓 Los efectos de los **programas de becas** impulsados por la SENESCYT  
+- 🧩 Y los vacíos de información disponibles para su mejora continua
 
--   Esta **NO** representa una opinión política, sino un comentario académico basado en los datos abiertos disponibles y su análisis.
 
--   Tampoco representa un análisis jurídico profundo (no soy experto en leyes, sino un Estadístico), y el marco legal será brevemente mencionado para contextualizar las conclusiones a las que llegaré.
-:::
+🔍 **Importante:**
 
-::: notes
+- Esta presentación **NO** representa una postura política  
+- **NO** es un análisis jurídico profundo  
+- Las opiniones y recomendaciones expresadas son **personales y basadas en datos abiertos**
 
-lagrimas de hombrue
+🧠 *Soy estadístico, no abogado*: El marco legal se menciona únicamente para contextualizar los resultados
 
-:::
+
+
+
 
 ## Fuentes de datos
 
@@ -69,6 +92,8 @@ lagrimas de hombrue
 -   Base de datos de oferta académica vigente de las IES (CES)
 
 -   Encuesta ACTI (2009 - 2014) (SENESCYT - INEC)
+
+-   Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU) años: 2016 a 2024 (INEC)
 
 <!-- -   Boletín Anual: Educación superior, ciencia, tecnología e innovación 2020 (SENESCYT) -->
 
@@ -93,7 +118,33 @@ crono |>
 
 ```
 
-# Érase una LOES...
+##
+
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+Érase una LOES...
+:::
+
+
+::::
+::::::
+
+![](images/img1.png){.image-left}
+
+::: footer
+
+Foto por <a href="https://unsplash.com/@florianklauer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Florian Klauer</a> en <a href="https://unsplash.com/photos/black-fayorit-typewriter-with-printer-paper-mk7D-4UCfmg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+<br>
+<br>
+
+:::
+
 
 ## La primera LOES {.smaller}
 
@@ -126,9 +177,8 @@ crono |>
 
 †† [**Johnson, M., A. (2017), Ed. Pol. An. Arch. (68)**](https://epaa.asu.edu/index.php/epaa/article/view/2794){target="_blank"}
 
-.
-
-.
+<br>
+<br>
 :::
 
 
@@ -148,6 +198,8 @@ crono |>
 
 ## LOES de 2010 {.smaller}
 
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="70%"}
 -   Con el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.
 
 -   Establece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.
@@ -159,20 +211,47 @@ crono |>
 #|message: false
 #|warning: false
 
-tabla_resumen <- data.frame(`Categoría` = c("Titular Auxiliar", "Titular Agregado", "Titular Principal"),
-                            `Título` = c("Maestría (PhD opcional)", "Maestría (PhD opcional)", "PhD (exclusivamente)"),
-                            `Experiencia` = c("Mínima", "Media", "Alta"),
-                            `Producción científica` = c("Mínima", "Media", "Alta (de impacto)\nProyectos de investigación"))
+tabla_resumen <- data.frame(cat = c("Titular Auxiliar", "Titular Agregado", "Titular Principal"),
+                            tit = c("Maestría (PhD opcional)", "Maestría (PhD opcional)", "PhD (exclusivamente)"),
+                            exp = c("Mínima", "Media", "Alta"),
+                            prod = c("Mínima", "Media", "Alta (de impacto)\nProyectos de investigación"))
 
-# knitr::kable(tabla_resumen)
-tabla_resumen |> flextable::flextable() |> flextable::autofit()
+
+# tabla_resumen |> flextable::flextable() |> flextable::autofit()
+tabla_resumen |>
+gt() |>
+  cols_label(
+    cat = "Categoría",
+    tit = "Título",
+    exp = "Experiencia",
+    prod = "Producción científica"
+  ) |>
+  cols_align(
+    align = "center", columns = prod  # <-- Esto centra la columna Fuente
+  ) |>
+  tab_options(
+    table.font.names = "Arial",
+    table.width = pct(100),
+    row.striping.include_table_body = TRUE
+  ) |>
+  opt_row_striping()
 
 ```
+:::
+
+::: {.column style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike1.png)
+:::
+:::
+
+
 
 
 
 ## LOES de 2010 {.smaller visibility="uncounted"}
 
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="70%"}
 -   Con el objetivo de mejorar la calidad y la regulación de la educación superior, durante el gobierno de Rafael Correa se crea una nueva LOES.
 
 -   Establece un escalafón en la docencia superior basado en meritocracia, que en el ámbito público exige concursos públicos para su adjudicación.
@@ -184,18 +263,40 @@ tabla_resumen |> flextable::flextable() |> flextable::autofit()
 #|message: false
 #|warning: false
 
-tabla_resumen <- data.frame(`Categoría` = c("Titular Auxiliar", "Titular Agregado", "Titular Principal"),
-                            `Título` = c("Maestría (PhD opcional)", "Maestría (PhD opcional)", "PhD (exclusivamente)"),
-                            `Experiencia` = c("Mínima", "Media", "Alta"),
-                            `Producción científica` = c("Mínima", "Media", "Alta (de impacto)\nProyectos de investigación"))
+tabla_resumen <- data.frame(cat = c("Titular Auxiliar", "Titular Agregado", "Titular Principal"),
+                            tit = c("Maestría (PhD opcional)", "Maestría (PhD opcional)", "PhD (exclusivamente)"),
+                            exp = c("Mínima", "Media", "Alta"),
+                            prod = c("Mínima", "Media", "Alta (de impacto)\nProyectos de investigación"))
 
-# knitr::kable(tabla_resumen)
-tabla_resumen |> flextable::flextable() |> flextable::autofit()
+
+# tabla_resumen |> flextable::flextable() |> flextable::autofit()
+tabla_resumen |>
+gt() |>
+  cols_label(
+    cat = "Categoría",
+    tit = "Título",
+    exp = "Experiencia",
+    prod = "Producción científica"
+  ) |>
+  cols_align(
+    align = "center", columns = prod  # <-- Esto centra la columna Fuente
+  ) |>
+  tab_options(
+    table.font.names = "Arial",
+    table.width = pct(100),
+    row.striping.include_table_body = TRUE
+  ) |>
+  opt_row_striping()
 
 ```
 
-
 -   **No contamos con datos precisos** del número de profesores con PhD antes de la LOES (ó 2015 para ser más preciso), pero estimo que era alrededor de entre el 0.8\% al 1.8\% del total de 26476 en 2008$^{†}$.
+:::
+
+::: {.column style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike1.png)
+:::
+:::
 
 
 ::: footer
@@ -204,9 +305,8 @@ tabla_resumen |> flextable::flextable() |> flextable::autofit()
 
 en su libro de 2016 **"Universidad Urgente para una sociedad emancipada"**, reporta 482 tan solo en el sector público.
 
-.
-
-.
+<br>
+<br>
 :::
 ::: 
 
@@ -226,34 +326,66 @@ crono |>
 
 ## 13ra. Transitoria y CEAACES {.smaller}
 
-:::{.v-center-container}
+
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="70%"}
 
 ::: incremental
--   Se entiende por tanto que bajo esta nueva LOES, se buscaba alcanzar una planta docente con mayor preparación, tanto así que
 
--   En su Décima Tercera disposición transitoria establecía: **"El requisito de doctorado (...) exigido para ser profesor titular principal (...) será obligatorio luego de 7 años a partir de la vigencia de esta Ley. De no cumplirse esta condición, los profesores titulares principales perderán automáticamente esta condición."** <!-- -   Establece requisitos para ser **profesor titular  -->
+-   13ra. disposición transitoria: **"El requisito de doctorado (...) exigido para ser profesor titular principal (...) será obligatorio luego de 7 años a partir de la vigencia de esta Ley. De no cumplirse esta condición, los profesores titulares principales perderán automáticamente esta condición."** <!-- -   Establece requisitos para ser **profesor titular  -->
 
--   Y, adicionalmente creó el Consejo de Evaluación, Acreditación y Aseguramiento de la Calidad de la Educación Superior (CEAACES) que llevó a cabo un proceso de categorización de las universidades, estableciendo$^{†}$:
+-   Se creó el Consejo de Evaluación, Acreditación y Aseguramiento de la Calidad de la Educación Superior (CEAACES) que llevó a cabo un proceso de categorización de las universidades, estableciendo$^{†}$:
 
     -   70\% de profesores con título de doctor PhD, para universidades orientadas a docencia e investigación.
 
     -   40\% de profesores con título de doctor PhD, para universidades orientadas a la docencia, y
     
     -   60\% de profesores con título de doctor PhD, para universidades orientadas a la educación contínua.
+:::
 
 :::
+
+::: {.column style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike2.png)
 :::
+:::
+
+
+
 
 ::: footer
 † Reglamento Transitorio para Tipología de Universidades (CEAACES, 2012)
 
-.
-
-.
+<br>
+<br>
 
 :::
 
-# El boom de becas
+##
+
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+El boom de las becas
+:::
+
+
+::::
+::::::
+
+![](images/img2.png){.image-left}
+
+::: footer
+
+Foto por <a href="https://unsplash.com/@sita2?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrew S</a> en <a href="https://unsplash.com/photos/red-and-yellow-fireworks-display-during-night-time-70BWtd9RG7c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+<br>
+<br>
+:::
 
 
 ##
@@ -305,12 +437,38 @@ crono |>
 ::: footer
 Cuadro tomado del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2012
 
-.
-
-.
+<br>
+<br>
 :::
 
-# ()
+##
+
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+(paréntesis)
+:::
+
+
+::::
+::::::
+
+![](images/img3.png){.image-left}
+
+::: footer
+
+Foto por <a href="https://unsplash.com/@_tresyahbi?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Trisha Canillas</a> en <a href="https://unsplash.com/photos/a-person-holding-a-cat-up-to-a-door-u8-WhhgmMBk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+<br>
+<br>
+
+:::
+
+
 
 ## Lo que el viento confundió {.smaller}
 
@@ -425,8 +583,32 @@ Por otra parte, en la presentación "Educación Superior, Ciencia, Tecnología, 
 
 <!-- -   La LOES establece un escalafón docente que la SENESCYT no registra, y hasta se contradice en sus propios informes oficiales. -->
 
+##
 
-# El plazo: 2017
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+Hacia 2017
+:::
+
+
+::::
+::::::
+
+![](images/img4.png){.image-left}
+
+::: footer
+
+Foto por <a href="https://unsplash.com/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> de <a href="https://unsplash.com/photos/pathway-between-trees-and-plants-TswA7-ubi68?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+<br>
+<br>
+
+:::
 
 ## {.smaller}
 
@@ -470,7 +652,7 @@ ratas <- data.frame(rate = c(11826/32276, 10870/33440, 10195/32462,9608/35324,
 ratas |>
   ggplot(aes(x = year, y = rate, color = clas))+
   geom_point()+
-  geom_line()+
+  geom_line(linetype = "dashed")+
   ggrepel::geom_label_repel(aes(label = scales::percent(rate, accuracy = 0.1)), size = 7)+
   scale_y_continuous(label = scales::percent)+
   theme_bw(base_size = 20)+
@@ -501,7 +683,7 @@ plt2 <- nummers |>
 :::
 :::
 
-## Y, ¿los becarios?
+## Y, ¿los becarios SENESCYT?
 
 
 ```{r, out.width="100%", fig.align="center"}
@@ -526,8 +708,10 @@ df_bec <- df_raw_bec |>
          duracion = interval(FECHA_INICIO_ESTUDIOS, FECHA_FIN_ESTUDIOS)/months(1),
          IDENTIFICADOR_BECARIO = recode(IDENTIFICADOR_BECARIO,
                                         `ok` = "OK")) |>
-  filter(IDENTIFICADOR_BECARIO == "OK")|>
-  filter(!SUBPROGRAMA %in% c("LINEA DE AYUDAS ECONOMICAS") & duracion >=12)
+  filter(IDENTIFICADOR_BECARIO == "OK") |>
+  filter(!SUBPROGRAMA %in% c("LINEA DE AYUDAS ECONOMICAS") & duracion >=12) |>
+  filter(FINANCIAMIENTO %in% c("SENESCYT", "GASTO CORRIENTE SENESCYT")) |>
+  filter(!NIVEL_DETALLADO %in% c("CAPACITACION", "EDUCACION BASICA Y BACHILLERATO", "INVESTIGACION", "TECNICO / TECNOLOGICO", "NIVELACION"))
 
 
 plop1 <- df_bec |>
@@ -540,7 +724,7 @@ plop1 <- df_bec |>
   group_by(NIVEL_DETALLADO, year_init) |>
   summarise(nummer = n()) |>
   ggplot(aes(x = year_init, y = nummer, color = NIVEL_DETALLADO))+
-  geom_line()+
+  geom_line(linetype = "dashed")+
   geom_point()+
   ggrepel::geom_label_repel(aes(label = nummer), size = 3)+
   theme_bw(base_size = 12)+
@@ -600,17 +784,84 @@ plop1 + plop2
 
 -   Esto por supuesto, son generalizaciones muy simples pero que nos permiten llegar a la conclusión obvia: **hicieron falta más PhDs**
 
+-   Hubiese sido lógico contar con programas doctorales nacionales que complementasen el programa de becas.
+
 
 :::
 :::
+
+##
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.", 
+                           "Proyecto de Fortalecimiento",
+                           "Reglamento de doctorados 2016")) |>
+  timeline(anio = 2016)
+
+```
+
+## Reglamento de doctorados {.smaller}
+
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+-   En 2016, fue publicado el reglamento de doctorados por parte del CES que derrogó el reglamento transitorio de 2013.
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike1.png)
+:::
+:::
+
+## Reglamento de doctorados {.smaller visibility="uncounted"}
+
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+-   En 2016, fue publicado el reglamento de doctorados por parte del CES que derrogó el reglamento transitorio de 2013.
+
+-   [Seis años después de la última Ley Orgánica de Educación Superior y un año antes de concluir el plazo de la transitoria 13ra.]{style="color:red;"}
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike2.png)
+:::
+:::
+
+## Reglamento de doctorados {.smaller visibility="uncounted"}
+
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+-   En 2016, fue publicado el reglamento de doctorados por parte del CES que derrogó el reglamento transitorio de 2013.
+
+-   [Seis años después de la última Ley Orgánica de Educación Superior y un año antes de concluir el plazo de la transitoria 13ra.]{style="color:red;"}
+
+-   Establece tres tipos de programas de doctorado:
+
+    -   Estructurado
+    
+    -   Semiestructurado
+    
+    -   Personalizado/Tutelado
+    
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike1.png)
+:::
+:::
+
+
 
 ## ¿Qué pasó? {.smaller}
 
 :::{.v-center-container}
 :::incremental
--   Más allá del plazo límite de 2017 (que careció de un sustento técnico claro), hubiese sido lógico poder contar con programas nacionales de doctorado una vez que becarios altamente calificados hacían su regreso.
-
--   Sin embargo, varias disposiciones legales limitaron seriamente la capacidad de las universidades para ofrecer programas de doctorado:
+-   Más allá del plazo límite de 2017 (que careció de un sustento técnico claro), varias disposiciones legales limitaron seriamente la capacidad de las universidades para ofrecer programas de doctorado:
 
     -   La LOES (Art. 117) solo permitía ofertar doctorados a universidades de docencia con investigación.
     
@@ -619,9 +870,9 @@ plop1 + plop2
     -   Además, el 100\% de los titulares principales debían contar con PhD (transitoria 13ra.)
 
 
--   Aparte de los números imposibles de alcanzar, debemos agregar una historia de una tradición muy nuestra de **burocratizarlo todo**: sucesivos cambios en legislación y reglamentos para otorgar títulos (doctorales especialmente). 
+-   Aparte de los números imposibles de alcanzar, debemos agregar el tiempo que nos tomó contar con un primer reglamento definitivo de doctorados. 
 
--   Estas condiciones muy probablemente dejaron a las universidades sin posibilidad real de crear programas doctorales, dependiendo de los becarios en el exterior para cubrir esa demanda a futuro.
+-   Estas condiciones muy probablemente dejaron a las universidades sin posibilidad real de crear oportunamente programas doctorales, dependiendo de los becarios en el exterior para cubrir esa demanda a futuro.
 :::
 :::
 
@@ -672,13 +923,12 @@ ies_vigentes |> flextable::flextable() |> flextable::align(align = "center", par
 
 
 
-.
-
-.
+<br>
+<br>
 
 :::
 
-## La oferta de programas de doctorado
+## La oferta nacional de doctorado
 
 ```{r}
 #| eval: true
@@ -761,8 +1011,108 @@ plt_phds1 + plt_phds2 +
 
 ```
 
-# Reforma de la LOES 2018
- 
+
+## La oferta nacional de doctorado (%)
+
+
+
+::: columns
+::: {.column width="45%"}
+
+```{r, out.width="100%", fig.asp=0.72, fig.align="center"}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+porc_matric_total <- matri_ind_sum |>
+                           group_by(year) |>
+                           summarise(total = sum(TOTAL))
+
+ggplot(porc_matric_total, aes(x = year, y = total))+
+  geom_point()+
+  geom_path(linetype = "dashed")+
+  ggrepel::geom_label_repel(aes(label = total), size = 6)+
+  labs(title = "# de estudiantes en programas doctorales nacionales",
+       x = "Año", y = "#", caption = "Fuente: Base estadística de matrícula de UEP 2015 - 2023 (SENESCYT)")+
+  theme_bw(base_size = 20)+
+  scale_x_continuous(breaks = c(2015:2023))+
+  theme(legend.position = "bottom",
+        legend.text = element_text(size = 7),
+        panel.grid.minor = element_blank(),
+    plot.caption = element_text(hjust = 0))
+
+```
+
+:::
+
+::: {.column width="55%"}
+
+```{r, out.width="90%", fig.asp=0.85, fig.align="center"}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+porc_matric <- left_join(matri_ind_sum |>
+                           group_by(year) |>
+                           summarise(total = sum(TOTAL)),
+                         matri_ind_sum |>
+                           group_by(year, CAMPO_AMPLIO) |>
+                           summarise(nummer = sum(TOTAL)), 
+                         by = "year") |>
+  mutate(porcen = nummer / total) |>
+  ungroup() |>
+  group_by(year) |>
+  arrange(desc(CAMPO_AMPLIO)) |>
+  mutate(pos_label = cumsum(porcen) - porcen/2)
+
+ggplot(porc_matric, aes(x = factor(year), y = porcen, fill = CAMPO_AMPLIO))+
+  geom_bar(stat = "identity", position = "fill", color = "white")+
+  geom_text(aes(y= pos_label, label = scales::percent(porcen, accuracy = 0.1)),
+            color = "white", size = 4.5, fontface = "bold")+
+  scale_y_continuous(label = scales::percent)+
+  labs(title = "Distribución porcentual de estudiantes registrados en programas doctorales nacionales",
+       x = "Año", y = "%", caption = "Fuente: Base estadística de matrícula de UEP 2015 - 2023 (SENESCYT)",
+       fill = "CAMPO")+
+  theme_minimal(base_size = 14)+
+  theme(legend.position = "bottom",
+        legend.text = element_text(size = 7),
+    plot.caption = element_text(hjust = 0))+
+  guides(fill = guide_legend(nrow=5))
+
+```
+
+:::
+:::
+
+##
+
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+Reforma de la LOES 2018
+:::
+
+
+::::
+::::::
+
+![](images/img5.png){.image-left}
+
+::: footer
+
+Foto por <a href="https://unsplash.com/@darth_u?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vincent Lin</a> en <a href="https://unsplash.com/photos/a-close-up-of-a-spiral-staircase-in-a-building-gVG2kSmKS0k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+<br>
+<br>
+
+:::
+
 ##
  
 ```{r}
@@ -773,22 +1123,29 @@ plt_phds1 + plt_phds2 +
 
 crono |>
   filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.",
-                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light")) |>
+                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light", "Reglamento de doctorados 2016")) |>
   timeline(anio = 2018)
 
 ```
 
-## El Art. 117 y el CASES 
+## El Art. 117 y el CASES {.smaller}
 
-:::{.v-center-container}
-::: incremental
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+<br>
+<br>
 
 -   El Art. 117 Es reformado en su totalidad estableciendo que todas las universidades y escuelas politécnicas son instituciones de docencia e investigación.
 
 -   Se flexibiliza su capacidad de decidir las carreras o programas que oferten, indicando únicamente que aquellas que oferten programas doctorales, deberán ser acreditadas por el Consejo de Aseguramiento de la Calidad de la Educación Superior (CASES).
+:::
 
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike1.png)
 :::
 :::
+
+
 
 ##
 
@@ -800,21 +1157,57 @@ crono |>
 
 crono |>
   filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.", 
-                           "Proyecto de Fortalecimiento", "Plazo transitoria light")) |>
+                           "Proyecto de Fortalecimiento", "Plazo transitoria light", "Reglamento de doctorados 2016", "Reforma 2018")) |>
   timeline(anio = 2023)
 
 ```
 
-## La transitoria "light"
+## La transitoria "light" {.smaller}
 
-:::{.v-center-container}
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+<br>
+<br>
 
--   La transitoria décimo tercera es cambiada, estableciendo: **El requisito de doctorado (...) exigido para ser profesor titular principal (...) será obligatorio a partir del primero (1o.) de enero de 2023. De no cumplirse la condición, los profesores titulares principales pasarán a formar parte del escalafón previo en los términos y condiciones establecidos por el Consejo de Educación Superior.**
+-   La transitoria décimo tercera es cambiada, estableciendo: 
 
+**El requisito de doctorado (...) exigido para ser profesor titular principal (...) será obligatorio a partir del primero (1o.) de enero de 2023. De no cumplirse la condición, los profesores titulares principales pasarán a formar parte del escalafón previo en los términos y condiciones establecidos por el Consejo de Educación Superior.**
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike1.png)
+:::
 :::
 
 
-# Camino al 2023
+
+
+##
+
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+Hacia este momento
+:::
+
+
+::::
+::::::
+
+![](images/img6.png){.image-left}
+
+::: footer
+
+Foto por <a href="https://unsplash.com/@raysontjr?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rayson Tan</a> en <a href="https://unsplash.com/photos/white-concrete-stairs-with-no-people-FaQaE1pZ0WM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
+<br>
+<br>
+:::
+
 
 ##
  
@@ -826,7 +1219,7 @@ crono |>
 
 crono |>
   filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.",
-                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light",
+                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light", "Reglamento de doctorados 2016",
                            "Fin Becas Abiertas y Excelencia")) |>
   timeline(anio = 2019)
 
@@ -859,20 +1252,22 @@ df_bec |>
   group_by(SUBPROGRAMA, year_init) |>
   summarise(nummer = n())|>
   ggplot(aes(x = year_init, y = nummer, color = SUBPROGRAMA))+
-  geom_line()+
+  geom_line(linetype = "dashed")+
+  geom_point()+
   scale_x_continuous(breaks = c(2007:2022))+
   ggrepel::geom_label_repel(aes(label = nummer), size = 5)+
   theme_bw(base_size = 20)+
   theme(plot.caption = element_text(hjust = 0),
         legend.position = "bottom")+
   labs(x = "Año", title = "# de becarios por año de inicio de estudios becas\nConvocatoria abierta y Universidades de Excelencia", y = "#", color = "Tipo beca",
-       caption = "Fuente: base de datos de Becarios Actualiza agosto 2024 (SENESCYT)")
+       caption = "Fuente: base de datos de Becarios Actualizada agosto 2024 (SENESCYT)")
 
 ```
 
 :::
 :::
 :::
+
 
 ##
  
@@ -884,7 +1279,7 @@ df_bec |>
 
 crono |>
   filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.",
-                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light",
+                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light", "Reglamento de doctorados 2016",
                            "Fin Becas Abiertas y Excelencia",
                            "Actualización al Proyecto de Fortalecimiento")) |>
   timeline(anio = 2021)
@@ -900,10 +1295,61 @@ crono |>
 ::: footer
 Cuadro tomado de la Actualización del proyecto de Fortalecimiento del Conocimiento y Talento Humano, SENESCYT 2021
 
-.
-
-.
+<br>
+<br>
 :::
+
+## Total becarios al momento {.smaller}
+
+::: columns
+::: {.column width="50%"}
+::: incremental
+-   Hasta el año 2025, el programa de becas SENESCYT ha beneficiado a alrededor de 22500 personas con 7700 becas a nivel internacional y 14800 a nivel nacional.
+
+-   Hasta el año de corte de la base de Becarios, se observa que existen aún subprogramas de becas ofertando oportunidades de doctorado (por ejemplo: Fulbright y Cooperaciones internacionales).
+
+-   Sin embargo, las becas del proyecto de fortalecimiento inicial no se retomaron.
+
+-   Hoy por hoy, la mayor cantidad de becas SENESCYT está direccionada para estudios de pregrado a nivel nacional.
+:::
+:::
+::: {.column width="50%" }
+
+
+```{r, out.width="100%", fig.asp=0.8, fig.align="center"}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+df_cum <- df_bec |> 
+  filter(ESTADO_BECA != "INCUMPLIDOS") |>
+  arrange(NIVEL_DETALLADO, DESTINO, year_fini) |> 
+  group_by(NIVEL_DETALLADO, DESTINO, year_fini) |> 
+  summarise(cs = n()) |>
+  mutate(cum_sum = cumsum(cs)) 
+
+df_cum_lab <- df_cum |>
+  filter(year_fini == max(year_fini))
+
+df_cum |>
+  ggplot(aes(x = year_fini, y = cum_sum, color = NIVEL_DETALLADO)) +
+  geom_line(linetype = "dashed")+
+  ggrepel::geom_label_repel(data = df_cum_lab, aes(label = cum_sum), size = 6)+
+  facet_wrap2(vars(DESTINO), scales = "free_y") +
+  theme_bw(base_size = 20)+
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  labs(x = "Año", title = "Total de becarios SENESCYT por nivel obtenido y destino", y = "#", color = "Nivel",
+       caption = "Fuente: base de datos de Becarios Actualizada agosto 2024 (SENESCYT)\nNível excluido: POSTDOCTORADO\nComponente excluido: LINEA DE AYUDAS ECONOMICAS\nDatos filtrados por un mínimo de tiempo de estudios de un año\nEstado de beca excluído: INCUMPLIDOS\nTip de financiamiento incluido: solo SENESCYT")
+  
+  
+
+```
+
+:::
+:::
+
 
 
 ## {.smaller .nostretch}
@@ -921,11 +1367,10 @@ Cuadro tomado de la Actualización del proyecto de Fortalecimiento del Conocimie
 
 :::footer
 
-Imágen creada en Gemini.ai
+Imagen creada en Gemini.ai
 
-.
-
-.
+<br>
+<br>
 
 :::
 
@@ -939,32 +1384,62 @@ Imágen creada en Gemini.ai
 
 crono |>
   filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.",
-                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light",
+                           "Proyecto de Fortalecimiento", "Reforma 2018", "Plazo transitoria light", "Reglamento de doctorados 2016",
                            "Fin Becas Abiertas y Excelencia",
                            "Actualización al Proyecto de Fortalecimiento", "Reglamento Escalafón 2022")) |>
   timeline(anio = 2022)
 
 ```
 
-# Reglamento del Escalafón 2022 {.smaller}
+## Reglamento del Escalafón 2022 {.smaller}
 
-<!-- :::{.v-center-container} -->
-::: incremental
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="70%"}
+
+
 
 -   En 2022, es publicado el "Reglamento de Carrera y Escalafón del Personal Académico del Sistema de Educación Superior" en su décima disposición general se indica
 
 -   **El personal académico de las universidades (...) que alcanzaron la categoría de titular principal antes de la entrada en vigencia de la LOES del 12 de octubre del 2010, y que no cuenten con título de PhD hasta el primero de enero del 2023, pasarán a ser denominados profesores titulares principales de escalafón previo y se respetarán sus derechos adquiridos.**
 
-:::
 
-. . .
 
 ![](images/escalafon.png){fig-align="center"}
 
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike1.png)
+:::
+:::
 
 
+##
 
-# Radiografía en números
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+Radiografía en números
+:::
+
+
+::::
+::::::
+
+![](images/img7.png){.image-left}
+
+::: footer
+
+Foto por <a href="https://unsplash.com/@owenbeard?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Owen Beard</a> de <a href="https://unsplash.com/photos/citiscan-result-hand-ok-DK8jXx1B-1c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+<br>
+<br>
+:::
+
 
 ## Números en general {.smaller}
 
@@ -1155,7 +1630,7 @@ df_raw |>
 
 ```
 
-## Porcentage docentes sector privado vs. público {.smaller}
+## Porcentaje docentes sector privado vs. público {.smaller}
 
 :::{.center}
 ::: columns
@@ -1321,7 +1796,32 @@ ggplot(aes(x = factor(YEAR), y = porcen, fill = GRADO)) +
 
 <!-- ``` -->
 
-# Relaciones laborales
+##
+
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+Relaciones laborales
+:::
+
+
+::::
+::::::
+
+![](images/img8.png){.image-left}
+
+::: footer
+
+Foto por <a href="https://unsplash.com/@amstram?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Scott Graham</a> en <a href="https://unsplash.com/photos/person-holding-pencil-near-laptop-computer-5fNmWej4tAA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+<br>
+<br>
+      
+:::
 
 ## Relación laboral en universidades privadas (\%)
 
@@ -1464,7 +1964,7 @@ ggplot(aes(x = factor(YEAR), y = porcen, fill = GRADO)) +
 
 -   En esta se incluyeron variables para recolectar el número de becarios de doctorado vinculados a estas instituciones como una manera de reflejar el gasto de la SENESCYT en su preparación.
 
-## Doctorantes en la ACTI
+## Doctorantes en la ACTI*
 
 :::{.v-center-container}
 ::: columns
@@ -1479,7 +1979,8 @@ ggplot(aes(x = factor(YEAR), y = porcen, fill = GRADO)) +
 
 acti <- readRDS("datos/tics.rds")
 
-acti |> 
+acti1 <- acti |> 
+  # filter(ciiu2 != "SALUD HUMANA") |>
   group_by(year) |>
   summarise(Investigadores = sum(total_gentusa), Becarios_doctorado = sum(total_becarios)) |>
   pivot_longer(cols = c("Investigadores", "Becarios_doctorado"), names_to = "tipo", values_to = "nummer") |>
@@ -1495,6 +1996,7 @@ acti |>
   labs(x = "Año", title = "Total investigadores e investigadores becarios", y = "# Investigadores", caption = "Fuente: Base de datos ACTI 2009- 2014 (INEC, SENESCYT)") +
   theme(plot.caption = element_text(hjust = 0),
         legend.position = "bottom")
+acti1
 ```
 
 
@@ -1510,7 +2012,8 @@ acti |>
 #| warning: false
 #| out-width: "100%"
 
-acti |> 
+acti2<- acti |> 
+  # filter(ciiu2 != "SALUD HUMANA") |>
   group_by(year, tipo) |>
   summarise(Total_investigadores = sum(total_gentusa), Becarios_doctorado = sum(total_becarios)) |>
   pivot_longer(cols = c("Total_investigadores", "Becarios_doctorado"), names_to = "tipes", values_to = "nummer") |>
@@ -1521,28 +2024,920 @@ acti |>
   #geom_vline(xintercept = 2020, color = "red", linetype = "dashed")+
   ggrepel::geom_label_repel(aes(label = nummer), size = 5)+
   #xlim(c(2015,2022))+
-  theme_bw()+
   theme_bw(base_size = 18)+
   #facet_wrap(~clase)+
   labs(x = "Año", title = "Investigadores becarios de doctorado por tipo de institución", y = "# Investigadores", caption = "Fuente: Base de datos ACTI 2009- 2014 (INEC, SENESCYT)") +
   theme(plot.caption = element_text(hjust = 0),
         legend.position = "bottom")
+acti2
 ```
 
 :::
 :::
 :::
 
-## Desempleo de los becarios
+::: footer
 
-::: incremental
+\* ¿Son estos números representación de la realidad?
 
--   ¿Podemos cuántificarlo? [**si**, un poquito]{.fragment} [y en gran medida, **no**]{.fragment}
-
--   sera si o que mi jazmin
+<br>
+<br>
 
 :::
 
+
+
+
+
+## Empleo de los becarios {.smaller}
+
+::: incremental
+
+-   ¿Podemos cuántificarlo? [En una palabra: **no**]{.fragment} 
+    
+-   ¿Podemos hacernos una idea? [**muy difusa, si**. De manera indirecta]{.fragment}
+
+-   Como parte de las obligaciones contractuales de los becarios, la más importante sin duda, era la compensación:
+
+    -   Establecía como regla general el compensar con trabajo por el doble del tiempo estudiado.
+    
+    -   En un principio se obligaba a llevarla a cabo en Ecuador, luego cambió a poder hacerla también desde el exterior (en el año 2021).
+    
+    -   Varios mecanismos se establecieron para la misma.
+    
+-   Otra fuente de información es la ENEMDU, que gracias al uso de una nueva codificación de los títulos de nivel superior permite calcular indicadores de empleo de este segmento de la población desde 2016 (pero no específicamente de los becarios).
+:::
+
+## Compensación (todos los niveles) {.smaller}
+
+:::{.v-center-container}
+::: columns
+::: {.column width="30%"}
+
+-   En estudios: 6.4\%
+
+-   Ex becario/finalizo beca/terminó estudios: 64.5\%
+
+-   Incumplidos: 12.3\%
+
+-   En compensación: 6.1\%
+
+-   **No reporta compensación: 6.6\%**
+
+:::
+::: {.column width="70%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+df_bec |> tbl_compen()
+
+
+```
+
+:::
+:::
+:::
+
+
+
+## Compensación (solo maestrías) {.smaller}
+
+:::{.v-center-container}
+::: columns
+::: {.column width="30%"}
+
+-   En estudios: 17.7\%
+
+-   Ex becario/finalizo beca/terminó estudios: 49.2\%
+
+-   Incumplidos: 5.7\%
+
+-   En compensación: 6.2\%
+
+-   **No reporta compensación: 7.6\%**
+
+:::
+::: {.column width="70%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+df_bec |> 
+  filter(NIVEL_DETALLADO == "MAESTRIA") |>
+  tbl_compen()
+
+
+```
+
+:::
+:::
+:::
+
+
+
+## Compensación (solo doctorados) {.smaller}
+
+:::{.v-center-container}
+::: columns
+::: {.column width="30%"}
+
+-   En estudios: 0.3\%
+
+-   Ex becario/finalizo beca/terminó estudios: 84.5\%
+
+-   Incumplidos: 8.3\%
+
+-   En compensación: 35\%
+
+-   **No reporta compensación: 29\%**
+
+:::
+::: {.column width="70%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+df_bec |> 
+  filter(NIVEL_DETALLADO == "DOCTORADO") |>
+  tbl_compen()
+
+
+```
+
+:::
+:::
+:::
+
+## Desempleo {.smaller}
+
+:::{.v-center-container}
+::: columns
+::: {.column width="50%"}
+
+::: incremental
+
+-   A nivel nacional, el desempleo en 2024 fue de: 3.7\% (1 de cada 27 personas no tienen empleo).
+
+-   Para el segmento de ecuatorianos con postgrado, fue de 2.9\% (1 de cada 34 personas con postgrado no tienen empleo).
+:::
+
+
+:::
+::: {.column width="50%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+enemdu <- readRDS("datos/pea.rds")
+
+enemdu |>
+  filter(year != 2025) |>
+  mutate(DESEMPLEO = desem / pea,
+         DESEMPLEO_ABIERTO = desemab / pea,
+         DESEMPLEO_OCULTO = desemoc / pea) |>
+  pivot_longer(cols = c("DESEMPLEO", "DESEMPLEO_ABIERTO", "DESEMPLEO_OCULTO"), 
+               names_to = "tipo",
+               values_to = "desempleo") |>
+  ggplot(aes(x = year, y = desempleo, color = tipo)) +
+  geom_point()+
+  geom_line(linetype = "dashed")+
+  scale_y_continuous(label = scales::percent)+
+  scale_x_continuous(breaks = c(2016:2024))+
+  ggrepel::geom_label_repel(aes(label = scales::percent(desempleo, accuracy = 0.1)), size = 6)+
+  theme_bw(base_size = 18)+
+  #facet_wrap(~clase)+
+  labs(x = "Año", title = "Tasa de desempleo personas con postgrado", y = "%", caption = "Fuente: Encuesta Nacional de Empleo, Desempleo y Subempleo (INEC).") +
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")
+  
+```
+
+:::
+:::
+:::
+
+
+## Empleo y subempleo {.smaller}
+
+:::{.v-center-container}
+::: columns
+::: {.column width="50%"}
+
+::: incremental
+
+-   A nivel nacional, el empleo adecuado en 2024 fue de 35.9\% (1 de cada 3 personas tuvieron empleo adecuado), y el subempleo fue de 21\% (1 de cada 5 personas tuvieron subempleo).
+
+-   Para el segmento de ecuatorianos con postgrado, el empleo adecuado fue de 85.7\% (857 de cada 1000 personas con postgrado tuvieron empleo adecuado), y el subempleo fue de 5.6\% (1 de cada 18 personas con personas con postgrado tuvieron subempleo).
+:::
+
+:::
+::: {.column width="50%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+enemdu |>
+  filter(year != 2025) |>
+  mutate(ADECUADO = adec / pea,
+         SUBEMPLEO = sub / pea) |>
+  pivot_longer(cols = c("ADECUADO", "SUBEMPLEO"), 
+               names_to = "tipo",
+               values_to = "empleo") |>
+  ggplot(aes(x = year, y = empleo, color = tipo)) +
+  geom_point()+
+  geom_line(linetype = "dashed")+
+  scale_y_continuous(label = scales::percent)+
+  scale_x_continuous(breaks = c(2016:2024))+
+  ggrepel::geom_label_repel(aes(label = scales::percent(empleo, accuracy = 0.1)), size = 6)+
+  theme_bw(base_size = 18)+
+  #facet_wrap(~clase)+
+  labs(x = "Año", title = "Tipo de empleo personas con postgrado", y = "%", caption = "Fuente: Encuesta Nacional de Empleo, Desempleo y Subempleo (INEC).") +
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")
+  
+```
+
+:::
+:::
+:::
+
+##
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  filter(milestones %in% c("LOES 2000", "LOES 2010", "Plazo transitoria 13ra.", 
+                           "Proyecto de Fortalecimiento", "Plazo transitoria light", "Reglamento de doctorados 2016", "Reforma 2018", "Fin Becas Abiertas y Excelencia", "Reglamento Escalafón 2022", "Actualización al Proyecto de Fortalecimiento", "Reglamento de doctorados 2024")) |>
+  timeline(anio = 2024)
+
+```
+
+
+
+## Tipos de programas de doctorado
+
+:::{.v-center-container}
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+tabla_doc <- data.frame(
+  Característica = c(
+    "Enfoque inicial", "Plan de estudios", "Flexibilidad curricular", "Rol del tutor",
+    "Asignaturas externas", "Cursos de nivel inferior", "Inicio de investigación", "Oferta institucional"
+  ),
+  Estructurado = c(
+    "Fase de cursos al inicio con currículo fijo",
+    "Definido por la institución; cursos pueden ser tomados en otros programas afines",
+    "Baja: currículo fijo en los primeros años",
+    "Menor durante la fase de cursos, aumenta en fase de investigación",
+    "Permitidas si son parte de programas doctorales afines",
+    "Todos los cursos deben ser de grado doctoral",
+    "Se articula desde el inicio, pero tras la fase de formación teórica",
+    "Universidad debe tener el programa definido"
+  ),
+  Semiestructurado = c(
+    "Tronco común inicial, obligatorio para todos",
+    "Comienza con tronco común; luego asignaturas dependen del plan de investigación aprobado",
+    "Media: después del tronco común, el doctorando elige lo necesario según su tema",
+    "Acompaña desde el plan de investigación",
+    "Permitidas si cumplen requisitos (modalidad, carga horaria, acreditación, etc.)",
+    "Todos los cursos deben ser de grado doctoral",
+    "Comienza después del tronco común y aprobación del plan",
+    "Igual que el estructurado"
+  ),
+  Personalizado_Tutelado = c(
+    "Enfocado desde el inicio en la tesis de investigación",
+    "Totalmente guiado por el plan de investigación aprobado por el comité doctoral",
+    "Alta: el doctorando construye su trayecto según su investigación",
+    "Es central: tutor guía desde el inicio el diseño del plan de investigación",
+    "Idem semiestructurado, pero más centrado en pertinencia directa con el tema",
+    "Todos los cursos deben ser de grado doctoral",
+    "Comienza desde el primer momento del programa",
+    "Solo puede existir si ya hay programas estructurados o semiestructurados vigentes en la institución"
+  )
+)
+
+# Mostrar tabla con flextable
+# flextable(tabla_doc) |>
+#   set_header_labels(
+#     Característica = "🧾 Característica",
+#     Estructurado = "🧱 Estructurado",
+#     Semiestructurado = "🔀 Semiestructurado",
+#     Personalizado_Tutelado = "👤 Personalizado/Tutelado"
+#   ) |>
+#   autofit()
+
+
+
+# Crear tabla con gt
+tabla_doc |>
+  gt() |>
+  cols_label(
+    Característica = "🧾 Característica",
+    Estructurado = "🧱 Estructurado",
+    Semiestructurado = "🔀 Semiestructurado",
+    Personalizado_Tutelado = "👤 Personalizado/Tutelado"
+  ) |>
+  tab_header(
+    title = "Comparativo de Tipos de Doctorado"
+  ) |>
+  tab_options(
+    table.font.names = "Arial",
+    table.width = pct(100),
+    row.striping.include_table_body = TRUE
+  ) |>
+  opt_row_striping()
+
+```
+
+:::
+
+## Tipos de programas de doctorado {.smaller visibility="uncounted"}
+
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+<br>
+
+-   Enfoque inicial 
+
+-   Plan de estudios
+
+-   Flexibilidad curricular
+
+-   Rol del tutor
+
+-   Inicio de investigación
+
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+![](images/bike1.png)
+:::
+:::
+
+## Tipos de programas de doctorado {.smaller visibility="uncounted"}
+
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+<br>
+
+-   Enfoque inicial 
+
+-   Plan de estudios
+
+-   Flexibilidad curricular
+
+-   Rol del tutor
+
+-   Inicio de investigación
+
+-   [Cursos de nivel inferior]{style="color:red;"}
+
+-   [Oferta institucional]{style="color:red;"}
+
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+
+![](images/bike2.png)
+
+:::
+:::
+
+
+## Requisitos institucionales {.smaller}
+
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+<br>
+
+Artículo 14, literal b:
+
+<br>
+
+Haber ejecutado programas y/o proyectos de investigación en el campo del conocimiento específico o detallado del programa propuesto (...) durante los últimos [**cinco (5) años.**]{style="color:red;"}. Esto debe reflejarse en: la existencia de grupos de investigación activos, la publicación de libros o artículos en revistas especializadas indexadas (...) 
+
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+
+![](images/bike2.png)
+
+:::
+:::
+
+
+## Requisitos académicos {.smaller}
+
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+<br>
+
+Artículo 18:
+
+<br>
+
+Para el desarrollo y ejecución de programas doctorales se podrán conformar redes académicas entre universidades y escuelas politécnicas nacionales y de éstas con universidades o [**instituciones de investigación extranjeras**]{style="color:red;"} legalmente reconocidas, evaluadas, acreditadas o su equivalente en su país de origen.
+
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+
+![](images/bike2.png)
+
+:::
+:::
+
+##
+
+```{r}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+crono |>
+  timeline(anio = 2025)
+
+```
+
+##
+
+:::::: columns
+::: {.column width="37.5%"}
+
+:::
+
+:::: {.column width="60%"}
+::: {.title data-id="title"}
+Actualidad
+:::
+
+
+::::
+::::::
+
+![](images/img9.png){.image-left}
+
+::: footer
+
+Foto por <a href="https://unsplash.com/@chanchaikee?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chan Chai Kee</a> en <a href="https://unsplash.com/photos/a-label-on-a-green-shirt-that-says-today-iJWiEJ9bQMs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
+<br>    
+<br>
+:::
+
+## ¿Estamos tan mal? {.smaller}
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+
+
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+
+![](images/bike3.png)
+
+:::
+:::
+
+
+## ¿Estamos tan mal? {.smaller visibility="uncounted"}
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="50%"}
+
+<br>
+
+-   Dejando de lado la utopía de universidades encajando en un 100\% en el esquema anglosajón, el principal indicador que impulsó la reforma no pinta tan mal cuando nos comparamos a otros países en la región:
+
+```{r, fig.asp=0.7, out.width="70%", fig.align='center'}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+vecindad <- data.frame(
+  país = c("Ecuador", "Colombia", "Argentina", "Chile", "México"),
+  porcentaje = c("12.8%", "11.8%", "12.8%", "16.9%", "17.6%"),
+  año = c(2022, 2023, 2022, 2024, 2023),
+  fuente = c(
+    "SENESCYT",
+    "Ministerio de Educación Nacional",
+    "Ministerio de Educación Argentina",
+    "Subsecretaría de Educación Superior",
+    "Sistema Integrado de Información de la Educación Superior"
+  )
+)
+
+vecindad |>
+  gt() |>
+  cols_label(
+    país = "País",
+    porcentaje = "%",
+    año = "Año",
+    fuente = "Fuente"
+  ) |>
+  cols_align(
+    align = "center", columns = fuente  # <-- Esto centra la columna Fuente
+  ) |>
+  tab_header(
+    title = "Porcentaje de docentes con PhD"
+  ) |>
+  tab_options(
+    table.font.names = "Arial",
+    table.width = pct(100),
+    row.striping.include_table_body = TRUE
+  ) |>
+  opt_row_striping()
+
+```
+
+
+-   Pero, **aún nos queda mucho por mejorar.**
+
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+
+![](images/bike1.png)
+
+:::
+:::
+
+## Calidad y disponibilidad de datos {.smaller}
+
+::: {.columns  style='display: flex !important; height: 80%;'}
+::: {.column width="60%"}
+
+::: incremental
+<br>
+
+-   Aparentemente las decisiones políticas tomadas no tuvieron sustento técnico alguno.
+
+-   El más claro ejemplo, el plazo de 2017.
+
+-   En la toma de decisiones, el líneamiento mínimo que deberíamos esperar es la cuantificación del problema que queremos resolver.
+
+-   Y, lamentablemente al momento estamos perdiendo la oportunidad de levantar datos nuevos de mejor calidad y la consistencia de los disponibles.
+:::
+
+:::
+
+::: {.column  style='display: flex; justify-content: center; align-items: center;'}
+
+![](images/img10.png)
+
+:::
+:::
+
+::: footer
+
+Imagen creada en Gemini.ai
+
+<br>
+<br>
+:::
+
+## Un ejemplo de qué datos evitar {.smaller}
+
+![](images/mechita.png){fig-align="center"}
+
+::: footer
+
+Imagen creada con ChatGPT
+
+<br>
+<br>
+:::
+
+## Un ejemplo de qué datos evitar {.smaller visibility="uncounted"}
+
+::: {.columns}
+::: {.column width="50%"}
+
+<br>
+
+-   La base de datos de becarios es un **registro administrativo**.
+
+<br>
+
+-   La ACTI fue una **encuesta a instituciones**.
+
+<br>
+
+-   Dar prioridad a **registros administrativos** y **encuestas a individuos** (como la ENEMDU).
+
+:::
+
+::: {.column}
+
+```{r, fig.asp=1.05, out.width="85%", fig.align='center'}
+#|echo: false
+#|eval: true
+#|message: false
+#|warning: false
+
+df_bec2 <- df_raw_bec |>
+  #filter(PROGRAMA_GENERAL == "PROGRAMA DE BECAS SENESCYT") |>
+  mutate(FECHA_INICIO_ESTUDIOS = as_date(FECHA_INICIO_ESTUDIOS, origin = "1899-12-30"),
+         FECHA_FIN_ESTUDIOS = as_date(FECHA_FIN_ESTUDIOS, origin = "1899-12-30"),
+         FECHA_DE_SUSCRIPCION = as_date(as.numeric(FECHA_DE_SUSCRIPCION), origin = "1899-12-30"),
+         #year_init = year(FECHA_DE_SUSCRIPCION),
+         year_init = year(FECHA_INICIO_ESTUDIOS),
+         year_fini = year(FECHA_FIN_ESTUDIOS),
+         duracion = interval(FECHA_INICIO_ESTUDIOS, FECHA_FIN_ESTUDIOS)/months(1),
+         IDENTIFICADOR_BECARIO = recode(IDENTIFICADOR_BECARIO,
+                                        `ok` = "OK")) |>
+  filter(IDENTIFICADOR_BECARIO == "OK") |>
+  filter(!SUBPROGRAMA %in% c("LINEA DE AYUDAS ECONOMICAS") & duracion >=12) |>
+  #filter(FINANCIAMIENTO %in% c("SENESCYT", "GASTO CORRIENTE SENESCYT")) |>
+  filter(!NIVEL_DETALLADO %in% c("CAPACITACION", "EDUCACION BASICA Y BACHILLERATO", "INVESTIGACION", "TECNICO / TECNOLOGICO", "NIVELACION"))
+
+popplers <- df_bec2 |>
+  filter(NIVEL_DE_ESTUDIOS == "POSTGRADO" & 
+           NIVEL_DETALLADO != "POSTDOCTORADO" & 
+           #NIVEL_DETALLADO != "ESPECIALIZACION" &
+           year_init <= 2014 &
+           year_init >= 2009) |>
+  #  filter(PROVINCIA_RESIDENCIA_HOMOLOGADA == "EXTERIOR") |>
+  group_by(NIVEL_DETALLADO, year_init) |>
+  summarise(nummer = n()) |>
+  ggplot(aes(x = year_init, y = nummer, color = NIVEL_DETALLADO))+
+  geom_line(linetype = "dashed")+
+  geom_point()+
+  ggrepel::geom_label_repel(aes(label = nummer), size = 5)+
+  theme_bw(base_size = 18)+
+  theme(plot.caption = element_text(hjust = 0),
+        legend.position = "bottom")+
+  labs(title = "# de becarios de postgrado que iniciaron\nsus estudios entre 2009 y 2014", x = "Año de Inicio", y = "#",
+       color = "Nivel", caption = "Fuente: Base de datos de Becarios actualizada agosto 2024 (SENESCYT)\nNíveles excluidos: POSTDOCTORADO\nComponente Excluído: LINEA DE AYUDAS ECONOMICAS\nDatos filtrados por un mínimo de tiempo de estudios de un año")
+
+popplers/acti1
+
+```
+
+:::
+:::
+
+## Datos que faltan: ¿fuga de cerebros?
+
+
+![](images/fuga.png){fig-align="center"}
+
+::: footer
+
+Imagen creada con ChatGPT
+
+<br>
+<br>
+
+:::
+
+
+## Datos que faltan: ¿fuga de cerebros? {.smaller}
+
+:::{.v-center-container}
+
+::: incremental
+
+-   La SENESCYT lleva a cabo el seguimiento de los becarios a través del Sistema de Información y de Atención al Usuario (SIAU).
+
+-   En este portal, el becario reporta periodicamente el progreso de la compensación compartiendo, entre otras, información laboral y a veces de su residencia actual.
+
+-   Sin embargo, si el becario no ha reportado compensación alguna, los datos de residencia permanecen tal cual fueron ingresados al inicio de su contrato de beca.
+
+-   Esto hace que el campo correspondiente a la residencia del becario en la base de datos sea poco confiable.
+
+-   En su lugar, quizá la única aproximación que tenemos al número de becarios que "fugaron" es concentrarnos en los que estudiaron en el extranjero y *no reportan compensación*, especialmente si tenemos en mente que:
+
+    -   Si el becario estudió en el exterior, le sería más fácil a aplicar a un empleo inmediatamente terminado sus estudios en el país anfitrión o inclusive otro.
+    
+    <!-- -   Becarios de doctorado así como de cualquier otro nivel que estudiaron en universidades del programa de excelencia, tuvieron más posibilidades de quedarse en el país anfitrión o incluso otro. -->
+
+-   Esto sin embargo, no consideraría el número que han migrado después de terminar su compensación en Ecuador.
+
+:::
+
+:::
+
+## Sin compensación y estudios en el extranjero {.smaller}
+
+
+::: columns
+::: {.column width="30%"}
+<br>
+
+-   Todos: 19.4\%
+
+
+
+:::
+::: {.column width="70%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+cat("\nBecarios que estudiaron en el extranjero: TODOS\n")
+df_bec |> filter(DESTINO == "INTERNACIONAL") |>
+  tbl_compen()
+
+
+```
+
+:::
+:::
+
+
+
+## Sin compensación y estudios en el extranjero {.smaller visibility="uncounted"}
+
+
+::: columns
+::: {.column width="30%"}
+<br>
+
+-   Todos: 19.4\%
+
+-   [Pregrado: 29.6\%]{style="color:red;"}
+
+
+
+
+
+
+:::
+::: {.column width="70%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+cat("\nBecarios que estudiaron en el extranjero: PREGRADO\n")
+df_bec |> filter(DESTINO == "INTERNACIONAL" & NIVEL_DETALLADO == "PREGRADO") |>
+  tbl_compen()
+
+
+```
+
+:::
+:::
+
+
+## Sin compensación y estudios en el extranjero {.smaller visibility="uncounted"}
+
+
+::: columns
+::: {.column width="30%"}
+<br>
+
+-   Todos: 19.4\%
+
+-   [Pregrado: 29.6\%]{style="color:red;"}
+
+-   Maestría: 11.2\%
+
+
+:::
+::: {.column width="70%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+cat("\nBecarios que estudiaron en el extranjero: MAESTRIA\n")
+df_bec |> filter(DESTINO == "INTERNACIONAL" & NIVEL_DETALLADO == "MAESTRIA") |>
+  tbl_compen()
+
+
+```
+
+:::
+:::
+
+
+## Sin compensación y estudios en el extranjero {.smaller visibility="uncounted"}
+
+
+::: columns
+::: {.column width="30%"}
+<br>
+
+-   Todos: 19.4\%
+
+-   [Pregrado: 29.6\%]{style="color:red;"}
+
+-   Maestría: 11.2\%
+
+-   Especialización: 18\%
+
+
+:::
+::: {.column width="70%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+cat("\nBecarios que estudiaron en el extranjero: ESPECIALIZACION\n")
+df_bec |> filter(DESTINO == "INTERNACIONAL" & NIVEL_DETALLADO == "ESPECIALIZACION") |>
+  tbl_compen()
+
+
+```
+
+:::
+:::
+
+
+## Sin compensación y estudios en el extranjero {.smaller visibility="uncounted"}
+
+
+::: columns
+::: {.column width="30%"}
+<br>
+
+-   Todos: 19.4\%
+
+-   [Pregrado: 29.6\%]{style="color:red;"}
+
+-   Maestría: 11.2\%
+
+-   Especialización: 18\%
+
+-   [Doctorado: 28.9\%]{style="color:red;"}
+
+
+:::
+::: {.column width="70%" }
+
+
+```{r, fig.asp=0.8}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| out-width: "100%"
+
+cat("\nBecarios que estudiaron en el extranjero: DOCTORADO\n")
+df_bec |> filter(DESTINO == "INTERNACIONAL" & NIVEL_DETALLADO == "DOCTORADO") |>
+  tbl_compen()
+
+
+```
+
+:::
+:::
 <!-- # ¿Fallamos? -->
 
 <!-- ## ¿Quién valida a quién en la universidad? {.smaller} -->
@@ -1565,42 +2960,9 @@ acti |>
 
 <!-- ::: -->
 
-<!-- ## Una vista al vecindario -->
 
 
-<!-- ```{r, fig.asp=0.7, out.width="70%", fig.align='center'} -->
-<!-- #|echo: false -->
-<!-- #|eval: true -->
-<!-- #|message: false -->
-<!-- #|warning: false -->
 
-<!-- library(knitr) -->
-<!-- library(dplyr) -->
-
-<!-- vecindad <- data.frame( -->
-<!--   país = c("Ecuador", "Colombia", "Argentina", "Chile", "México"), -->
-<!--   porcentaje = c("12.8%", "11.8%", "12.8%", "16.9%", "17.6%"), -->
-<!--   año = c(2022, 2023, 2022, 2024, 2023), -->
-<!--   fuente = c( -->
-<!--     "SENESCYT", -->
-<!--     "Ministerio de Educación Nacional", -->
-<!--     "Ministerio de Educación Argentina", -->
-<!--     "Subsecretaría de Educación Superior", -->
-<!--     "Sistema Integrado de Información de la Educación Superior" -->
-<!--   ) -->
-<!-- ) -->
-
-<!-- vecindad %>% -->
-<!--   kable( -->
-<!--     caption = "Porcentaje de docentes con PhD en algunos países de América Latina", -->
-<!--     align = "lccc" -->
-<!--   ) -->
-
-<!-- ``` -->
-
-<!-- . . . -->
-
-<!-- **Pero entonces, no estamos tan mal... verdad?** -->
 
 <!-- # Becarios: entre buenas intenciones, controversia, y fuga de cerebros? -->
 
