@@ -1,0 +1,47 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').prepend('<div class="zoomDiv" style="opacity:0; width:0; transition: opacity 0.3s;"><img src="" class="zoomImg" style="cursor:pointer; max-width: 90vw; max-height: 90vh; height: auto; width: auto;"></div>');
+
+    $('img:not(.zoomImg)').click(function() {
+      const $img = $(this)[0];
+      const naturalWidth = $img.naturalWidth;
+      const naturalHeight = $img.naturalHeight;
+
+      const currentWidth = $img.width;
+      const currentHeight = $img.height;
+
+      if (currentWidth < naturalWidth || currentHeight < naturalHeight) {
+        $('.zoomImg').attr('src', $(this).attr('src')).css({
+          // solo definimos maximos para que mantenga proporción
+          'max-width': '90vw',
+          'max-height': '90vh',
+          width: 'auto',
+          height: 'auto'
+        });
+        $('.zoomDiv').css({
+          opacity: '1',
+          width: 'auto',
+          border: '1px solid white',
+          borderRadius: '5px',
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          marginRight: '-50%',
+          transform: 'translate(-50%, -50%)',
+          boxShadow: '0px 0px 50px #888888',
+          zIndex: '50',
+          overflow: 'auto',
+          maxHeight: '100%',
+          backgroundColor: 'rgba(0,0,0,0.8)',
+          padding: '10px',
+          cursor: 'zoom-out'
+        });
+      }
+    });
+
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0'});
+    });
+  });
+</script>

@@ -11,8 +11,11 @@ datos/
 .00_TICK.R
 .00_memendum.R
 .biblio.txt
+.respaldo.txt
 00_Auxiliares.R
 00_TICK.R
 00_becarios.R
 00_exploracion.R
 00_memendum.R
+respaldo.txt
+
